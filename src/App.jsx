@@ -1,6 +1,6 @@
 import Header from './components/header'
 import Home from './components/home'
-import Main from './components/main'
+import ExerciseSuggestions from './components/exercise-suggestions'
 import './App.css'
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
@@ -35,7 +35,7 @@ function App() {
           </Route>
           <Route
             path='/exercise-suggestions'
-            element={<Main exercises={exercises} />}
+            element={<ExerciseSuggestions exercises={exercises} />}
           >
           </Route>
         </Routes>

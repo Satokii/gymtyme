@@ -16,7 +16,7 @@
 }
 
 .header-nav-list {
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   gap: 20px;
 }
 
