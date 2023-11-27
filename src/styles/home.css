@@ -1,0 +1,38 @@
+/* HOME */
+.home {
+    grid-template-rows: 100px 60px 1fr;
+    place-items: center;
+    padding: 50px 200px;
+}
+
+/* HOME HEADER */
+.home-header {
+    font-size: 30px;
+}
+
+/* SUB HEADER */
+.home-what-to-do-header {
+    font-size: 24px;
+}
+
+/* OPTIONS LIST */
+.home-options-list {
+    place-content: center;
+    gap: 20px;
+    list-style-type: '🏋️';
+    list-style-position: inside;
+    padding: 30px;
+}
+
+.home-options-list > li {
+    border:solid 1px rgba(0, 0, 0, 0.209);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.home-options-list > li:hover {
+    cursor: pointer;
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}

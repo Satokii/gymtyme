@@ -12,13 +12,10 @@
 /* EXERCISES HEADER */
 .exercises-header {
     padding: 20px;
+    font-size: 30px;
 }
 
 /* EXERCISES LIST */
-.exercises-list {
-    /* gap: 10px; */
-}
-
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
     grid-template-columns: 1fr repeat(2, auto);

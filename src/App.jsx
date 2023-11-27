@@ -39,7 +39,7 @@ function App() {
           >
           </Route>
         </Routes>
-        <footer>Here lies the footer</footer>
+        <footer className='footer'>Here lies the footer</footer>
       </div>
     </>
   )
