@@ -3,6 +3,7 @@
     gap: 30px;
     padding: 10px 20px;
     align-items: center;
+    border: dashed 2px blue;
 }
 
 .header-logo {
