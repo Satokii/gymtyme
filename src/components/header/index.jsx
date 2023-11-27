@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import '../../styles/header.css'
 
 function Header() {
+
+    const navigate = useNavigate()
 
     return (
         <header className="header grid">
@@ -9,7 +12,7 @@ function Header() {
                 <ul className='header-nav-list grid'>
                     <li>View Session</li>
                     <li>Create Workout</li>
-                    <li>Workout Suggestions</li>
+                    <li onClick={() => navigate('/exercise-suggestions')}>Workout Suggestions</li>
                 </ul>
             </nav>
             <div className='header-profile'>Profile</div>

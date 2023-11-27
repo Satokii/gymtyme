@@ -1,26 +1,44 @@
 import Header from './components/header'
+import Home from './components/home'
+import Main from './components/main'
 import './App.css'
 import { useEffect, useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
-  const [workout, setWorkout] = useState([])
+  const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
-  // INCLUDE A WORKOUT REFRESH BUTTON SO USER CAN CHANGE LIST OF WORKOUTS
+  //  root for filtering by specific muscle group and equipment: 'https://wger.de/api/v2/exercise?muscles=1&equipment=3&language=0'
+
+  const [exercises, setExercises] = useState([])
+
+  // TODO: INCLUDE A WORKOUT REFRESH BUTTON SO USER CAN CHANGE LIST OF WORKOUTS
 
   useEffect(() => {
-    fetch('https://wger.de/api/v2/exercise/')
+    fetch(baseURL)
     .then(res => res.json())
-    .then(data => setWorkout(data.results))
+    .then(data => setExercises(data.results))
   }, [])
-  
-workout.map(y => console.log(y.name))
 
+  if (!exercises) return <p>Loading exercises...</p>
+  
   return (
     <>
       <div className='container grid'>
         <Header />
-        <main>I am the main</main>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          >
+          </Route>
+          <Route
+            path='/exercise-suggestions'
+            element={<Main exercises={exercises} />}
+          >
+          </Route>
+        </Routes>
         <footer>Here lies the footer</footer>
       </div>
     </>

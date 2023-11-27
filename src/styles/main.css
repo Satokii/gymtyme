@@ -1,0 +1,59 @@
+/* MAIN */
+.main {
+    padding: 50px 200px;
+}
+
+/* EXERCISES CONTAINER */
+.exercises-container {
+    place-items: center;
+    border: solid 1px black;
+}
+
+/* EXERCISES HEADER */
+.exercises-header {
+    padding: 20px;
+}
+
+/* EXERCISES LIST */
+.exercises-list {
+    /* gap: 10px; */
+}
+
+/* INDIVIDUAL EXERCISE ITEM */
+.exercise-item-container {
+    grid-template-columns: 1fr repeat(2, auto);
+    align-items: center;
+}
+
+.exercise-name {
+    padding: 10px;
+}
+
+/* BUTTONS */
+.exercise-btn-container {
+    padding: 10px;
+}
+
+.add-to-workout-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.add-to-workout-btn:hover {
+    background-color: khaki;
+}
+
+.add-to-favourites-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.add-to-favourites-btn:hover {
+    background-color: rosybrown;
+}
