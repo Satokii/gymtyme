@@ -1,0 +1,25 @@
+.header {
+    grid-template-columns: 150px 1fr 80px;
+    gap: 30px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.header-logo {
+    border: solid 1px red;
+    place-self: center;
+}
+
+.header-nav {
+    justify-self: end;
+}
+
+.header-nav-list {
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+
+.header-profile {
+    border: solid 1px green;
+    place-self: center;
+}

@@ -1,0 +1,8 @@
+.grid {
+    display: grid;
+  }
+
+  /* CONTAINER */
+  .container {
+    grid-template-rows: 100px 1fr 150px;
+  }
