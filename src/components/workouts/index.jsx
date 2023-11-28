@@ -2,7 +2,7 @@ import { useState } from 'react'
 import NewWorkout from './components/NewWorkout'
 import '../../styles/workouts/workouts.css'
 
-function Workouts() {
+function Workouts({ currentWorkout, setCurrentWorkout }) {
 
     const [toggleShow, setToggleShow] = useState(null)
 
@@ -29,7 +29,7 @@ function Workouts() {
                 <button onClick={() => toggleAll()}>View All Workouts</button>
             </div>
             <div className='workouts-sections grid'>
-                {toggleShow === 'new' && <NewWorkout />}
+                {toggleShow === 'new' && <NewWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
                 {toggleShow === 'current' && <section>Current workout</section>}
                 {toggleShow === 'all' && <section>All workouts</section>}
             </div>

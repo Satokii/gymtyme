@@ -10,7 +10,7 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
     function decreaseSet(exercise) {
         if (exercise.sets > 0) {
             exercise.sets --
-            setExercises([... exercises])
+            setExercises([...exercises])
         }
     }
 
@@ -22,7 +22,7 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
     function decreaseRep(exercise) {
         if (exercise.reps > 0) {
             exercise.reps --
-            setExercises([... exercises])
+            setExercises([...exercises])
         }
     }
 

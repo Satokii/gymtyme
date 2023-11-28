@@ -35,7 +35,7 @@ function App() {
           </Route>
           <Route
             path='/workouts'
-            element={<Workouts />}
+            element={<Workouts currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
           >
 
           </Route>
