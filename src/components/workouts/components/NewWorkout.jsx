@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
+import Workouts from '..'
 
 function NewWorkout({ currentWorkout, setCurrentWorkout }) {
 
@@ -41,7 +42,6 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
     function handleChange(e) {
         const { name, value } = e.target
         setForm({...form, [name]: value})
-        console.log(e.target.name)
     }
 
     function handleSubmit(e) {
@@ -64,13 +64,15 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             <th>Number of Reps</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    {currentWorkout.map((workout, index) =>
+                    <tbody key={`${workout.name}-${index}`}>
                         <tr>
-                            <td>Bench Press</td>
-                            <td>3</td>
-                            <td>12</td>
+                            <td>{workout.name}</td>
+                            <td>{workout.sets}</td>
+                            <td>{workout.reps}</td>
                         </tr>   
                     </tbody>
+                     )}
                 </table>
             </div>
             {showAddBtn ? <button onClick={() => {
