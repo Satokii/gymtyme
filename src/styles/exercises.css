@@ -6,6 +6,7 @@
 /* EXERCISES CONTAINER */
 .exercises-container {
     place-items: center;
+    padding-bottom: 20px;
     border: solid 1px black;
 }
 
@@ -16,26 +17,84 @@
 }
 
 /* EXERCISES LIST */
+.exercises-list {
+    gap: 20px;
+}
+
+/* EXERCISES LIST */
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
-    grid-template-columns: 1fr repeat(2, auto);
+    grid-template-columns: 1fr repeat(2, 90px) repeat(2, auto);
+    gap: 10px;
+    height: 60px;
     align-items: center;
 }
 
 .exercise-name {
-    padding: 10px;
+    padding-top: 10px;
+    font-weight: bold;
 }
 
-/* BUTTONS */
+/* SETS/REPS */
+.sets-container, .reps-container {
+    grid-template-rows: repeat(2, auto);
+    gap: 5px;
+    justify-items: center;
+}
+
+.count-container {
+    grid-template-columns: repeat(3, 20px);
+    gap: 7px;
+    justify-items: center;
+    align-items: center;
+}
+
+.count-container > button {
+    width: 20px;
+    height: 20px;
+    align-content: center;
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+.add-btn {
+    font-size: 14px;
+    background-color: lightskyblue;
+}
+
+.add-btn:hover {
+    background-color: dodgerblue;
+}
+
+.minus-btn {
+    font-size: 17px;
+    background-color: lightcoral;
+}
+
+.minus-btn:hover {
+    background-color: red;
+}
+
+.current-val {
+    place-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+/* ADD TO WORKOUT/FAVOURITES BUTTONS */
 .exercise-btn-container {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
 
 .add-to-workout-btn {
     padding: 5px 10px;
     border: none;
-    border-radius: 20px;
-    background-color: blue;
+    border-radius: 10px;
+    background-color: lightgreen;
     cursor: pointer;
 }
 
@@ -46,8 +105,8 @@
 .add-to-favourites-btn {
     padding: 5px 10px;
     border: none;
-    border-radius: 20px;
-    background-color: red;
+    border-radius: 10px;
+    background-color: dodgerblue;
     cursor: pointer;
 }
 
