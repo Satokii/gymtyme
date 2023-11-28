@@ -39,10 +39,6 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
         exercise.reps = 0
         setExercises([...exercises])
     }
-    
-    console.log('workouts:', currentWorkout)
-    console.log('favourites:', favourites)
-    console.log('exercises:', exercises)
 
     return (
         <main className="main">

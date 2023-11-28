@@ -1,7 +1,6 @@
 import Header from './components/header'
 import Home from './components/home'
-import CreateWorkout from './components/create-workout'
-import ViewWorkout from './components/view-workout'
+import Workouts from './components/view-workout'
 import Exercises from './components/exercises'
 import './App.css'
 import { useState } from 'react'
@@ -35,13 +34,8 @@ function App() {
           >
           </Route>
           <Route
-            path='/create-workout'
-            element={<CreateWorkout />}
-          >
-          </Route>
-          <Route
-            path='/view-workout'
-            element={<ViewWorkout />}
+            path='/workouts'
+            element={<Workouts />}
           >
 
           </Route>

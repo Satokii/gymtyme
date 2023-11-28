@@ -18,15 +18,9 @@ function Header() {
                     </NavLink>
                     <NavLink
                         className={toggleClassName}
-                        to="/create-workout"
-                    >
-                        Create Workout 
-                    </NavLink>
-                    <NavLink
-                        className={toggleClassName}
-                        to="/view-workout"
+                        to="/workouts"
                         >
-                        View Workout
+                        Workouts
                     </NavLink>
                     <NavLink
                         className={toggleClassName}
