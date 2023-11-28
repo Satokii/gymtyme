@@ -46,7 +46,7 @@ function App() {
           </Route>
           <Route
             path='/exercises'
-            element={<Exercises exercises={exercises} workoutExercise={workoutExercise} setWorkoutExercise={setWorkoutExercise} />}
+            element={<Exercises exercises={exercises} setExercises={setExercises} workoutExercise={workoutExercise} setWorkoutExercise={setWorkoutExercise} />}
           >
           </Route>
         </Routes>

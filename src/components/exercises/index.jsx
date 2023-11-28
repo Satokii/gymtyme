@@ -1,19 +1,42 @@
-import { useState } from 'react'
 import '../../styles/exercises.css'
 
-function Exercises({ exercises, workoutExercise, setWorkoutExercise }) {
-
-    // const [setsCount, setSetsCount] = useState([])
-    // const [repsCount, setRepsCount] = useState([])
+function Exercises({ exercises, setExercises, workoutExercise, setWorkoutExercise }) {
 
     function increaseSet(exercise) {
-        const selectedWorkout = workoutExercise.find((workout) => workout.id === exercise.id)
-        exercise.sets += 1
-        console.log('click')
-        console.log(exercise)
-        // setWorkoutExercise([...workoutExercise])
+        exercise.sets ++
+        setExercises([...exercises])
     }
-    // console.log(workoutExercise)
+
+    function decreaseSet(exercise) {
+        if (exercise.sets > 0) {
+            exercise.sets --
+            setExercises([... exercises])
+        }
+    }
+
+    function increaseRep(exercise) {
+        exercise.reps ++
+        setExercises([...exercises])
+    }
+
+    function decreaseRep(exercise) {
+        if (exercise.reps > 0) {
+            exercise.reps --
+            setExercises([... exercises])
+        }
+    }
+
+    function addToWorkout(exercise) {
+        exercise.sets = 0
+        exercise.reps = 0
+        setExercises([...exercises])
+    }
+
+    function addToFavourites(exercise) {
+        exercise.sets = 0
+        exercise.reps = 0
+        setExercises([...exercises])
+    }
  
     return (
         <main className="main">
@@ -26,7 +49,7 @@ function Exercises({ exercises, workoutExercise, setWorkoutExercise }) {
                             <div className='sets-container grid'>
                                 <p>Sets</p>
                                 <div className='count-container grid'>
-                                    <button className='minus-btn grid'>-</button>
+                                    <button className='minus-btn grid' onClick={() => decreaseSet(exercise)}>-</button>
                                     <span className='current-val grid'>{exercise.sets}</span>
                                     <button className='add-btn grid' onClick={() => increaseSet(exercise)}>+</button>
                                 </div>
@@ -34,16 +57,16 @@ function Exercises({ exercises, workoutExercise, setWorkoutExercise }) {
                             <div className='reps-container grid'>
                                 <p>Reps</p>
                                 <div className='count-container grid'>
-                                    <button className='minus-btn grid'>-</button>
-                                    <span className='current-val grid'>0</span>
-                                    <button className='add-btn grid'>+</button>
+                                    <button className='minus-btn grid' onClick={() => decreaseRep(exercise)}>-</button>
+                                    <span className='current-val grid'>{exercise.reps}</span>
+                                    <button className='add-btn grid' onClick={() => increaseRep(exercise)}>+</button>
                                 </div>
                             </div>
                             <div className='exercise-btn-container'>
-                                <button className='add-to-workout-btn'>Add to Workout</button>
+                                <button className='add-to-workout-btn' onClick={() => addToWorkout(exercise)}>Add to Workout</button>
                             </div>
                             <div className='exercise-btn-container'>
-                                <button className='add-to-favourites-btn'>Add to Favourites</button>
+                                <button className='add-to-favourites-btn' onClick={() => addToFavourites(exercise)}>Add to Favourites</button>
                             </div>
                         </li> 
                     )}
