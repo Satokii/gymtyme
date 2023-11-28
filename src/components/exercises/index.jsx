@@ -1,7 +1,20 @@
+import { useState } from 'react'
 import '../../styles/exercises.css'
 
-function Exercises({ exercises }) {
+function Exercises({ exercises, workoutExercise, setWorkoutExercise }) {
 
+    // const [setsCount, setSetsCount] = useState([])
+    // const [repsCount, setRepsCount] = useState([])
+
+    function increaseSet(exercise) {
+        const selectedWorkout = workoutExercise.find((workout) => workout.id === exercise.id)
+        exercise.sets += 1
+        console.log('click')
+        console.log(exercise)
+        // setWorkoutExercise([...workoutExercise])
+    }
+    // console.log(workoutExercise)
+ 
     return (
         <main className="main">
             <section className='exercises-container grid'>
@@ -14,8 +27,8 @@ function Exercises({ exercises }) {
                                 <p>Sets</p>
                                 <div className='count-container grid'>
                                     <button className='minus-btn grid'>-</button>
-                                    <span className='current-val grid'>0</span>
-                                    <button className='add-btn grid'>+</button>
+                                    <span className='current-val grid'>{exercise.sets}</span>
+                                    <button className='add-btn grid' onClick={() => increaseSet(exercise)}>+</button>
                                 </div>
                             </div>
                             <div className='reps-container grid'>
