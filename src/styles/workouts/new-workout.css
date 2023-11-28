@@ -1,8 +1,9 @@
 .create-new-workout {
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 50px repeat(3, auto);
+    gap: 20px;
     width: 500px;
     place-items: center;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     border-radius: 10px;
 }
 

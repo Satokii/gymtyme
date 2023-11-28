@@ -65,7 +65,7 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
                                 </div>
                             </div>
                             <div className='exercise-btn-container'>
-                                <button className='add-to-workout-btn' onClick={() => addToWorkout(exercise)}>Add to Workout</button>
+                                <button className='add-to-workout-btn' onClick={() => addToWorkout(exercise)}>Add to Current Workout</button>
                             </div>
                             <div className='exercise-btn-container'>
                                 <button className='add-to-favourites-btn' onClick={() => addToFavourites(exercise)}>Add to Favourites</button>
