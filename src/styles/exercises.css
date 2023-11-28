@@ -18,7 +18,7 @@
 /* EXERCISES LIST */
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
-    grid-template-columns: 1fr repeat(2, 90px) repeat(2, auto);
+    grid-template-columns: 1fr repeat(2, 90px) repeat(2, auto) 50px;
     gap: 10px;
     height: 80px;
     align-items: center;
@@ -107,4 +107,19 @@
 
 .add-to-favourites-btn:hover {
     background-color: rosybrown;
+}
+
+/* RESET */
+.reset-container {
+    place-content: center;
+}
+
+.reset-btn {
+    background-color: red;
+    font-size: 14px;
+    border: none;
+    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }

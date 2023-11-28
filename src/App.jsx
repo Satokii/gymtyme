@@ -10,10 +10,11 @@ import ExerciseData from './data/exercise'
 
 function App() {
 
-  // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
-
   const [exercises, setExercises] = useState(ExerciseData)
-  const [workoutExercise, setWorkoutExercise] = useState([])
+  const [currentWorkout, setCurrentWorkout] = useState([])
+  const [favourites, setFavourites] = useState([])
+
+  // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
   // TODO: INCLUDE A WORKOUT REFRESH BUTTON SO USER CAN CHANGE LIST OF WORKOUTS
 
@@ -46,7 +47,7 @@ function App() {
           </Route>
           <Route
             path='/exercises'
-            element={<Exercises exercises={exercises} setExercises={setExercises} workoutExercise={workoutExercise} setWorkoutExercise={setWorkoutExercise} />}
+            element={<Exercises exercises={exercises} setExercises={setExercises} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} favourites={favourites} setFavourites={setFavourites} />}
           >
           </Route>
         </Routes>

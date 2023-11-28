@@ -1,6 +1,6 @@
 import '../../styles/exercises.css'
 
-function Exercises({ exercises, setExercises, workoutExercise, setWorkoutExercise }) {
+function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout, favourites, setFavourites }) {
 
     function increaseSet(exercise) {
         exercise.sets ++
@@ -27,17 +27,23 @@ function Exercises({ exercises, setExercises, workoutExercise, setWorkoutExercis
     }
 
     function addToWorkout(exercise) {
-        exercise.sets = 0
-        exercise.reps = 0
-        setExercises([...exercises])
+        setCurrentWorkout([...currentWorkout, exercise])
     }
 
     function addToFavourites(exercise) {
+        setFavourites([...favourites, exercise])
+    }
+
+    function handleReset(exercise) {
         exercise.sets = 0
         exercise.reps = 0
         setExercises([...exercises])
     }
- 
+    
+    console.log('workouts:', currentWorkout)
+    console.log('favourites:', favourites)
+    console.log('exercises:', exercises)
+
     return (
         <main className="main">
             <section className='exercises-container grid'>
@@ -67,6 +73,9 @@ function Exercises({ exercises, setExercises, workoutExercise, setWorkoutExercis
                             </div>
                             <div className='exercise-btn-container'>
                                 <button className='add-to-favourites-btn' onClick={() => addToFavourites(exercise)}>Add to Favourites</button>
+                            </div>
+                            <div className='reset-container grid'>
+                                <button className='reset-btn' onClick={() => handleReset(exercise)}>Reset</button>
                             </div>
                         </li> 
                     )}
