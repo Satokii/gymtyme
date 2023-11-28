@@ -1,6 +1,6 @@
 import Header from './components/header'
 import Home from './components/home'
-import Workouts from './components/view-workout'
+import Workouts from './components/workouts'
 import Exercises from './components/exercises'
 import './App.css'
 import { useState } from 'react'

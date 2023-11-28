@@ -1,0 +1,19 @@
+.create-new-workout {
+    grid-template-rows: 50px 1fr;
+    width: 500px;
+    place-items: center;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+form input, form label {
+    display: block;
+}
+
+form label {
+    padding: 5px 0;
+}
+
+form input {
+    padding: 5px;
+}
