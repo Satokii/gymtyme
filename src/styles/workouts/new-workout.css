@@ -1,12 +1,42 @@
 .create-new-workout {
     grid-template-rows: 50px repeat(3, auto);
     gap: 20px;
-    width: 500px;
+    min-width: 500px;
     place-items: center;
     /* border: solid 1px black; */
     border-radius: 10px;
 }
 
+/* WORKOUT TABLE */
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+    border-spacing: 0;
+}
+
+th {
+    background-color: dodgerblue;
+}
+
+th, td {
+    padding: 5px 10px;
+    border-top-width: 0;
+    border-left-width: 0;
+}
+
+th:last-child, td:last-child {
+    border-right-width: 0;
+}
+  
+tr:last-child td {
+    border-bottom-width: 0;
+}
+
+/* ADD EXERCISE FORM */
 form input, form label {
     display: block;
 }
@@ -18,3 +48,4 @@ form label {
 form input {
     padding: 5px;
 }
+

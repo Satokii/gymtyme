@@ -35,8 +35,10 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
     const INITIAL_FORM_STATE = {
         name: '',
         sets: '',
-        reps: ''
+        reps: '',
+        group: ''
     }
+
     const [form, setForm] = useState(INITIAL_FORM_STATE)
 
     function handleChange(e) {
@@ -56,23 +58,25 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
         <section className="create-new-workout grid">
             <h3>My Workout</h3>
             <div>
-                <table>
+                <table className='workout-table'>
                     <thead>
                         <tr>
                             <th>Exercise Name</th>
-                            <th>Number of Sets</th>
-                            <th>Number of Reps</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                            <th>Muscle Group</th>
                         </tr>
                     </thead>
+                    <tbody>
                     {currentWorkout.map((workout, index) =>
-                    <tbody key={`${workout.name}-${index}`}>
-                        <tr>
+                        <tr key={`${workout.name}-${index}`}>
                             <td>{workout.name}</td>
                             <td>{workout.sets}</td>
                             <td>{workout.reps}</td>
+                            <td>{workout.group}</td>
                         </tr>   
-                    </tbody>
                      )}
+                    </tbody>
                 </table>
             </div>
             {showAddBtn ? <button onClick={() => {
@@ -119,53 +123,21 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             required
                         />
                     </label>
+                    <label htmlFor="muscle-group">
+                    Muscle Group (optional):
+                        <input 
+                            type="text"
+                            id='group'
+                            name='group'
+                            placeholder='e.g. Chest'
+                            onChange={e => handleChange(e)}
+                            value={form.group}
+                        />
+                    </label>
                     <button type='submit'>Add to Workout</button>
                 </form>
                 <button onClick={() => handleCancel()}>Cancel</button>
             </div>}
-            {/* <div>
-                <h3>Add an exercise to your workout:</h3>
-                <form className='new-workout-form'>
-                    <label htmlFor="exercise-name">
-                    Exercise Name:
-                        <input 
-                            type="text"
-                            id='exercise-name'
-                            name='exercise-name'
-                            placeholder='e.g. Bench Press'
-                            // onChange={}
-                            // value={}
-                            required
-                        />
-                    </label>
-                    <label htmlFor="sets">
-                    Number of Sets:
-                        <input 
-                            type="number"
-                            id='sets'
-                            name='sets'
-                            placeholder='e.g. 3'
-                            // onChange={}
-                            // value={}
-                            required
-                        />
-                    </label>
-                    <label htmlFor="reps">
-                    Number of Reps:
-                        <input 
-                            type="number"
-                            id='reps'
-                            name='reps'
-                            placeholder='e.g. 12'
-                            // onChange={}
-                            // value={}
-                            required
-                        />
-                    </label>
-                    <button type='submit'>Add to Workout</button>
-                </form>
-            </div> */}
-            
         </section>
     )
 }
