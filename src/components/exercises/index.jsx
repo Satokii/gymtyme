@@ -1,6 +1,6 @@
-import '../../styles/exercise-suggestions.css'
+import '../../styles/exercises.css'
 
-function ExerciseSuggestions({ exercises }) {
+function Exercises({ exercises }) {
 
     return (
         <main className="main">
@@ -25,4 +25,4 @@ function ExerciseSuggestions({ exercises }) {
     )
 }
 
-export default ExerciseSuggestions
+export default Exercises

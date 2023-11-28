@@ -1,6 +1,8 @@
 import Header from './components/header'
 import Home from './components/home'
-import ExerciseSuggestions from './components/exercise-suggestions'
+import CreateWorkout from './components/create-workout'
+import ViewWorkout from './components/view-workout'
+import Exercises from './components/exercises'
 import './App.css'
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
@@ -34,8 +36,19 @@ function App() {
           >
           </Route>
           <Route
-            path='/exercise-suggestions'
-            element={<ExerciseSuggestions exercises={exercises} />}
+            path='/create-workout'
+            element={<CreateWorkout />}
+          >
+          </Route>
+          <Route
+            path='/view-workout'
+            element={<ViewWorkout />}
+          >
+
+          </Route>
+          <Route
+            path='/exercises'
+            element={<Exercises exercises={exercises} />}
           >
           </Route>
         </Routes>

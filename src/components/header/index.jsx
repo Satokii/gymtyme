@@ -1,20 +1,40 @@
-import { useNavigate } from 'react-router-dom'
 import '../../styles/header.css'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
 
-    const navigate = useNavigate()
+    const toggleClassName = ({ isActive }) => (isActive ? "active_link" : "inactive-link");
 
     return (
         <header className="header grid">
             <h1 className='header-logo'>Logo</h1>
             <nav className='header-nav grid'>
-                <ul className='header-nav-list grid'>
-                    <li onClick={() => navigate('/')}>Home</li>
-                    <li>Create Workout</li>
-                    <li>View Workout</li>
-                    <li onClick={() => navigate('/exercise-suggestions')}>Exercise Suggestions</li>
-                </ul>
+                <div className='header-nav-list grid'>
+                    <NavLink
+                        className={toggleClassName}
+                        to="/"
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        className={toggleClassName}
+                        to="/create-workout"
+                    >
+                        Create Workout 
+                    </NavLink>
+                    <NavLink
+                        className={toggleClassName}
+                        to="/view-workout"
+                        >
+                        View Workout
+                    </NavLink>
+                    <NavLink
+                        className={toggleClassName}
+                        to="/exercises"
+                        >
+                        Exercises
+                    </NavLink>
+                </div>
             </nav>
             <div className='header-profile'>Profile</div>
         </header>
