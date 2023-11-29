@@ -34,7 +34,7 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
             </div>
             <div className='workouts-sections grid'>
                 {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showWorkout={showWorkout} setShowWorkout={setShowWorkout} />}
-                {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} showWorkout={showWorkout} setShowWorkout={setShowWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+                {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showWorkout={showWorkout} setShowWorkout={setShowWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                 {toggleShow === 'all' && <section>All workouts</section>}
             </div>
         </section>

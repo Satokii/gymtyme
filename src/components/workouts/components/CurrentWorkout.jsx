@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../../../styles/workouts/current-workout.css'
 
-function CurrentWorkout({ currentWorkout, showWorkout, setShowWorkout, allWorkouts, setAllWorkouts }) {
+function CurrentWorkout({ currentWorkout, setCurrentWorkout, showWorkout, setShowWorkout, allWorkouts, setAllWorkouts }) {
 
     const [showWorkoutHint, setShowWorkoutHint] = useState(true)
 
@@ -17,8 +17,11 @@ function CurrentWorkout({ currentWorkout, showWorkout, setShowWorkout, allWorkou
         }
 
         console.log(allWorkouts)
-        function handleDelete() {
 
+        function handleDelete() {
+            setCurrentWorkout([])
+            setShowWorkoutHint(true)
+            setShowWorkout(false)
         }
 
     return (
@@ -49,7 +52,7 @@ function CurrentWorkout({ currentWorkout, showWorkout, setShowWorkout, allWorkou
                 </table>
                 <div className='current-workout--btns-container grid'>
                     <button className='current-workout--complete-btn' onClick={() => handleSave()}>Complete and save workout</button>
-                    <button className='current-workout--delete-btn'>Delete workout</button>
+                    <button className='current-workout--delete-btn' onClick={() => handleDelete()}>Delete workout</button>
                 </div>
             </div>
             : null}
