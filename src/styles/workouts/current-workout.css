@@ -5,7 +5,7 @@
 
 .current-workout--container > h3 {
     text-align: center;
-    font-size: 28px;
+    font-size: 40px;
 }
 
 .current-workout--workout-table {
@@ -18,4 +18,38 @@
     font-weight: 600;
     text-align: center;
     color: #99fbfb;
+}
+
+.current-workout--btns-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.current-workout--btns-container > button {
+    border: none;
+    height: fit-content;
+    color: white;
+    padding: 3px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.current-workout--complete-btn {
+    background-color: green;
+}
+
+.current-workout--complete-btn:hover {
+    cursor: pointer;
+    background-color: #04d704;
+}
+
+.current-workout--delete-btn {
+    background-color: rgb(187, 3, 3)
+}
+
+.current-workout--delete-btn:hover {
+    cursor: pointer;
+    background-color: #ff0000
 }
