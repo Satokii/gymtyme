@@ -1,6 +1,6 @@
 /* WORKOUTS */
 .workouts-container {
-    grid-template-rows: 60px auto auto 1fr;
+    grid-template-rows: 60px repeat(2, auto)1fr;
     min-height: 100vh;
     padding: 50px 200px;
     justify-items: center;
@@ -9,12 +9,16 @@
 }
 
 .workouts-header {
-    font-size: 40px;
+    font-size: 44px;
 }
 
 .workouts-info-container {
     place-items: center;
     font-size: 20px;
+}
+
+.workouts-info-container > h3 {
+    margin-top: 30px;
 }
 
 /* BUTTONS */
@@ -27,28 +31,30 @@
 .button-options button {
     padding: 10px 30px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 18px;
     font-weight: bold;
     color: white;
 }
 
 .create-new-workout-btn {
-    background-color: red;
+    background-color: skyblue;
 }
 
 .create-new-workout-btn:hover {
     cursor: pointer;
-    background-color: darkred;
+    background-color: #4693b2;
+    transform: translateY(3px);
 }
 
 .view-current-workout-btn {
-    background-color: green;
+    background-color: fuchsia;
 }
 
 .view-current-workout-btn:hover {
     cursor: pointer;
-    background-color: #026002;
+    background-color: #9c049c;
+    transform: translateY(3px);
 }
 
 .view-all-workouts-btn {
@@ -58,4 +64,5 @@
 .view-all-workouts-btn:hover {
     cursor: pointer;
     background-color: #c16c06;
+    transform: translateY(3px);
 }

@@ -1,13 +1,35 @@
 .create-new-workout {
-    grid-template-rows: 50px repeat(3, auto);
+    grid-template-rows: 40px repeat(3, auto) 1fr;
     gap: 20px;
     min-width: 500px;
-    padding: 20px 0;
+    padding: 50px;
     justify-items: center;
 }
 
 .create-new-workout > h3 {
     font-size: 28px;
+}
+
+/* ADD EXERCISE BUTTON */
+.add-exercise-btn-container {
+    align-self: center;
+}
+
+.add-exercise-btn {
+    padding: 3px 10px;
+    color: #07bd07;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 1px white, 0 0 3px white;
+    border-radius: 5px;
+}
+
+.add-exercise-btn:hover {
+    cursor: pointer;
+    background-color: #11032a;
+    box-shadow: 0 0 2px #14072a, 0 0 8px white;
 }
 
 /* WORKOUT TABLE */
@@ -19,6 +41,8 @@ td {
 
 table {
     border-spacing: 0;
+    width: 400px;
+    margin-top: 5px;
 }
 
 th {
@@ -39,20 +63,8 @@ tr:last-child td {
     border-bottom-width: 0;
 }
 
-/* ADD EXERCISE BUTTON */
-.add-exercise-btn {
-    align-self: start;
-    padding: 10px 20px;
-    color: white;
-    font-size: 20px;
-    border: solid 1px #0c0678;
-    border-radius: 20px;
-    background-color: #0c0678;
-}
-
-.add-exercise-btn:hover {
-    cursor: pointer;
-    background-color: rgb(4, 163, 163)
+td:nth-last-child(-n + 3) {
+    text-align: center;
 }
 
 /* ADD EXERCISE FORM */
@@ -77,15 +89,15 @@ tr:last-child td {
     min-width: 400px;
 }
 
-form input, form label {
+.new-workout-form input, form label {
     display: block;
 }
 
-form label {
+.new-workout-form label {
     padding: 5px 0;
 }
 
-form input {
+.new-workout-form input {
     padding: 5px;
 }
 
@@ -108,6 +120,7 @@ form input {
     transition: .5s;
 }
 
+/* FORM SUBMIT BUTTON */
 .add-exercise-submit-btn {
     padding: 10px 20px;
     color: #03ac03;
@@ -125,6 +138,7 @@ form input {
     box-shadow: 0 0 5px #03ac03, 0 0 20px #03ac03, 0 0 40px #03ac03;
 }
 
+/* CANCEL FORM BUTTON */
 .cancel-add-exercise-btn {
     padding: 10px 20px;
     color: red;

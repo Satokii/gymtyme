@@ -17,7 +17,7 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
             
         }
         else {
-            return 'Add an exercise'
+            return 'Add Exercise'
         }
     }
 
@@ -56,6 +56,12 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
     return (
         <section className="create-new-workout grid">
             <h3>My Workout</h3>
+            <div className='add-exercise-btn-container '>
+                {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
+                    handleAddExercise()
+                    handleShow()
+                }}>{toggleAddCancel()}</button> : null}
+            </div>
             <div>
                 <table className='workout-table'>
                     <thead>
@@ -78,10 +84,6 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                     </tbody>
                 </table>
             </div>
-            {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
-                handleAddExercise()
-                handleShow()
-            }}>{toggleAddCancel()}</button> : null}
             {showForm && 
             <div className='add-exercise-form-container grid'>
                 <h3>Exercise Details</h3>
