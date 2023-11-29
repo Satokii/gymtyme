@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
+import CurrentWorkout from './CurrentWorkout'
 
-function NewWorkout({ newWorkout, setNewWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
+function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
 
     // DISPLAYING WORKOUT AND FORM
     const [showForm, setShowForm] = useState(false)
@@ -42,6 +43,10 @@ function NewWorkout({ newWorkout, setNewWorkout, setCurrentWorkout, showWorkout,
             setShowWorkout(true)
             setShowWorkoutHint(false)
            }
+        if (newWorkout.length === 0) {
+            setShowWorkout(false)
+            setShowWorkoutHint(true)
+        }
     }, [newWorkout, setShowWorkout])
 
     // HANDLING FORM INPUT AND SUBMISSION
@@ -74,10 +79,24 @@ function NewWorkout({ newWorkout, setNewWorkout, setCurrentWorkout, showWorkout,
         setNewWorkout([...updatedWorkout])
     }
 
+    // ALERT MESSAGE
+    function showAlert() {
+            if (confirm('Warning \n\nSaving this workout will overwrite your current workout. \nWould you like to continue?')) {
+                console.log('hey')
+                setCurrentWorkout([...newWorkout])
+                setNewWorkout([])
+            }
+        }
+
     // HANDLE CONFIRM WORKOUT BUTTON
     function handleSubmitWorkout() {
-        setCurrentWorkout([...newWorkout])
-        setNewWorkout([])
+        if (currentWorkout.length > 0) {
+            showAlert()
+        }
+        else {
+            setCurrentWorkout([...newWorkout])
+            setNewWorkout([])
+        }    
     }
 
     return (
