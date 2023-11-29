@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NewWorkout from './components/NewWorkout'
+import CurrentWorkout from './components/CurrentWorkout'
 import '../../styles/workouts/workouts.css'
 
 function Workouts({ currentWorkout, setCurrentWorkout }) {
@@ -31,7 +32,7 @@ function Workouts({ currentWorkout, setCurrentWorkout }) {
             </div>
             <div className='workouts-sections grid'>
                 {toggleShow === 'new' && <NewWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
-                {toggleShow === 'current' && <section>Current workout</section>}
+                {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout}/>}
                 {toggleShow === 'all' && <section>All workouts</section>}
             </div>
         </section>

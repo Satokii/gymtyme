@@ -1,0 +1,13 @@
+.current-workout-container {
+    grid-template-rows: 40px auto;
+    padding: 50px;
+}
+
+.current-workout-container > h3 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.current-workout--workout-table {
+    margin-top: 30px;
+}

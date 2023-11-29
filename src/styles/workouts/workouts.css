@@ -1,6 +1,6 @@
 /* WORKOUTS */
 .workouts-container {
-    grid-template-rows: 60px repeat(2, auto)1fr;
+    grid-template-rows: 60px repeat(2, auto) 1fr;
     min-height: 100vh;
     padding: 50px 200px;
     justify-items: center;

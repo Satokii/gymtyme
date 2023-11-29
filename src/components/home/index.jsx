@@ -7,12 +7,12 @@ function Home() {
 
     return (
         <section className="home grid">
-            <h2 className='home-header'>Welcome back</h2>
+            <h2 className='home-header'>Welcome back!</h2>
             <h3 className='home-what-to-do-header'>What would you like to do?</h3>
             <ul className='home-options-list grid'>
                 <li onClick={() => navigate('/workouts')}>Go to the workouts page</li>
-                <li onClick={() => navigate('/exercises')}>Some exercise suggestions</li>
-                <li>See your previous workouts</li>
+                <li onClick={() => navigate('/exercises')}>See exercise suggestions</li>
+                <li>View your previous workouts</li>
             </ul>
         </section>
     )

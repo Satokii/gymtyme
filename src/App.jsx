@@ -2,6 +2,7 @@ import Header from './components/header'
 import Home from './components/home'
 import Workouts from './components/workouts'
 import Exercises from './components/exercises'
+import Footer from './components/footer'
 import './App.css'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
@@ -45,7 +46,7 @@ function App() {
           >
           </Route>
         </Routes>
-        <footer className='footer'>Here lies the footer</footer>
+        <Footer />
       </div>
     </>
   )
