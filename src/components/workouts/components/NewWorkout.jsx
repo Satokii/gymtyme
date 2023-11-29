@@ -53,6 +53,11 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
         setShowForm(false)
     }
 
+    function RemoveExercise(exercise) {
+        const updatedWorkout = currentWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
+        setCurrentWorkout([...updatedWorkout])
+    }
+
     return (
         <section className="create-new-workout grid">
             <h3>My Workout</h3>
@@ -70,20 +75,40 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             <th>Sets</th>
                             <th>Reps</th>
                             <th>Muscle Group</th>
+                            <th>Remove Exercise</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {currentWorkout.map((workout, index) =>
-                        <tr key={`${workout.name}-${index}`}>
-                            <td>{workout.name}</td>
-                            <td>{workout.sets}</td>
-                            <td>{workout.reps}</td>
-                            <td>{workout.group}</td>
+                    {currentWorkout.map((exercise, index) =>
+                        <tr key={`${exercise.name}-${index}`}>
+                            <td>{exercise.name}</td>
+                            <td>{exercise.sets}</td>
+                            <td>{exercise.reps}</td>
+                            <td>{exercise.group}</td>
+                            <td className='remove-exercise-btn' onClick={() => RemoveExercise(exercise)}>❌</td>
                         </tr>   
                      )}
                     </tbody>
                 </table>
             </div>
+            {/* <div className='new-workout-container grid'>
+                <div className='new-workout-headers grid'>
+                    <h4>Exercise Name</h4>
+                    <h4>Sets</h4>
+                    <h4>Reps</h4>
+                    <h4>Muscle Group</h4>
+                    <h4>Delete Exercise</h4>
+                </div>
+                {currentWorkout.map((workout, index) =>
+                <div className='new-workout-exercise grid' key={`${workout.name}-${index}`}>
+                    <p>{workout.name}</p>
+                    <p>{workout.sets}</p>
+                    <p>{workout.reps}</p>
+                    <p>{workout.group}</p>
+                    <p>x</p>
+                </div>
+                )}
+            </div> */}
             {showForm && 
             <div className='add-exercise-form-container grid'>
                 <h3>Exercise Details</h3>

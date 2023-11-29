@@ -1,50 +1,48 @@
 import "../../styles/exercises.css";
 
-function Exercises({
-  exercises,
-  setExercises,
-  currentWorkout,
-  setCurrentWorkout,
-  favourites,
-  setFavourites,
-}) {
-  function increaseSet(exercise) {
-    exercise.sets++;
-    setExercises([...exercises]);
-  }
+function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout, favourites, setFavourites }) {
 
-  function decreaseSet(exercise) {
-    if (exercise.sets > 0) {
-      exercise.sets--;
-      setExercises([...exercises]);
+    function increaseSet(exercise) {
+        exercise.sets++;
+        setExercises([...exercises]);
     }
-  }
 
-  function increaseRep(exercise) {
-    exercise.reps++;
-    setExercises([...exercises]);
-  }
-
-  function decreaseRep(exercise) {
-    if (exercise.reps > 0) {
-      exercise.reps--;
-      setExercises([...exercises]);
+    function decreaseSet(exercise) {
+        if (exercise.sets > 0) {
+        exercise.sets--;
+        setExercises([...exercises]);
+        }
     }
-  }
 
-  function addToWorkout(exercise) {
-    setCurrentWorkout([...currentWorkout, exercise]);
-  }
+    function increaseRep(exercise) {
+        exercise.reps++;
+        setExercises([...exercises]);
+    }
 
-  function addToFavourites(exercise) {
-    setFavourites([...favourites, exercise]);
-  }
+    function decreaseRep(exercise) {
+        if (exercise.reps > 0) {
+        exercise.reps--;
+        setExercises([...exercises]);
+        }
+    }
 
-  function handleReset(exercise) {
-    exercise.sets = 0;
-    exercise.reps = 0;
-    setExercises([...exercises]);
-  }
+    function addToWorkout(exercise) {
+        const updatedExercise = {...exercise, id: `${exercise.name.split(" ").join("-")}-${Math.random()}`}
+
+        setCurrentWorkout([...currentWorkout, updatedExercise]);
+    }
+
+    function addToFavourites(exercise) {
+        const updatedExercise = {...exercise, id: `${exercise.name.split(" ").join("-")}-${Math.random()}`}
+
+        setFavourites([...favourites, updatedExercise]);
+    }
+
+    function handleReset(exercise) {
+        exercise.sets = 0;
+        exercise.reps = 0;
+        setExercises([...exercises]);
+    }
 
     return (
         <section className="exercises-container grid">
