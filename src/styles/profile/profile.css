@@ -1,0 +1,22 @@
+.profile--container {
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+    padding: 50px 200px;
+    justify-items: center;
+    background: linear-gradient(#1d1231, #411960);
+    color: white;
+}
+
+/* .profile-container h2 {
+    font-size: 60px;
+} */
+
+/* PROFILE NAV BAR */
+.profile--nav {
+    grid-template-rows: repeat(4, auto);
+    align-content: center;
+}
+
+.active {
+    color: red;
+}

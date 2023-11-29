@@ -74,11 +74,6 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
         setShowForm(false)
     }
 
-    // function removeExercise(exercise) {
-    //     const updatedWorkout = newWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
-    //     setNewWorkout([...updatedWorkout])
-    // }
-
     // ALERT MESSAGE
     function showAlert() {
             if (confirm('Warning \n\nSaving this workout will overwrite your current workout. \nWould you like to continue?')) {

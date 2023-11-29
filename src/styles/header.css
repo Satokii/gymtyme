@@ -1,5 +1,5 @@
 .header {
-    grid-template-columns: 150px 1fr 80px;
+    grid-template-columns: auto 1fr 80px;
     gap: 30px;
     padding: 10px 20px;
     align-items: center;
@@ -9,8 +9,10 @@
 }
 
 .header-logo {
-    border: solid 1px red;
     place-self: center;
+    padding-left: 20px;
+    font-size: 50px;
+    text-decoration: underline;
 }
 
 .header-nav {
@@ -18,15 +20,24 @@
 }
 
 .header-nav-list {
-  grid-template-columns: repeat(3, auto);
-  gap: 20px;
-  font-size: 30px;
-  font-weight: bold;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .header-profile {
+    height: 70px;
+    width: 70px;
     border: solid 1px green;
-    place-self: center;
+    background-color: green;
+    border-radius: 9999px;
+    place-content: center;
+}
+
+.header-profile:hover {
+  cursor: pointer;
+  background-color: red;
 }
 
 /* NAV LINKS */
@@ -36,18 +47,18 @@
     color: #181818;
     color: white;
     border-bottom: 3px solid transparent;
-  }
+}
 
-  .inactive-link:hover {
+.inactive-link:hover {
     transform: translateY(-1px);
     text-shadow: 0 0 5px turquoise, 0 0 10px turquoise, 0 0 20px turquoise;
-  }
+}
  
 
-  .active_link {
+.active_link {
     cursor: default;
     color: white;
     text-shadow: 1px 1px 1px black;
-    border-bottom: 2px solid white;
+    border-bottom: 4px solid white;
     transition: border-bottom .5s ease-in-out;
-  }
+}

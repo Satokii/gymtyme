@@ -7,6 +7,7 @@ import './App.css'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ExerciseData from './data/exercise'
+import Profile from './components/profile'
 
 function App() {
 
@@ -45,6 +46,12 @@ function App() {
             path='/exercises'
             element={<Exercises exercises={exercises} setExercises={setExercises} newWorkout={newWorkout} setNewWorkout={setNewWorkout} favourites={favourites} setFavourites={setFavourites} />}
           >
+          </Route>
+          <Route
+            path='/profile'
+            element={<Profile />}
+          >
+
           </Route>
         </Routes>
         <Footer />

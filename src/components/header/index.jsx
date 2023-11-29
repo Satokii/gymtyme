@@ -1,13 +1,14 @@
 import '../../styles/header.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function Header() {
 
+    const navigate = useNavigate()
     const toggleClassName = ({ isActive }) => (isActive ? "active_link" : "inactive-link");
 
     return (
         <header className="header grid">
-            <h1 className='header-logo'>Logo</h1>
+            <h1 className='header-logo'>GymTyme</h1>
             <nav className='header-nav grid'>
                 <div className='header-nav-list grid'>
                     <NavLink
@@ -30,7 +31,7 @@ function Header() {
                     </NavLink>
                 </div>
             </nav>
-            <div className='header-profile'>Profile</div>
+            <div className='header-profile grid' onClick={() => navigate('/profile')}>Profile</div>
         </header>
     )
 }

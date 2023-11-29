@@ -31,7 +31,7 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
             <div className='button-options grid'>
                 <button className='create-new-workout-btn' onClick={() => toggleNew()}>Create a New Workout</button>
                 <button className='view-current-workout-btn' onClick={() => toggleCurrent()}>View Current Workout</button>
-                <button className='view-all-workouts-btn' onClick={() => toggleAll()}>View All Workouts</button>
+                <button className='view-all-workouts-btn' onClick={() => toggleAll()}>View Completed Workouts</button>
             </div>
             <div className='workouts-sections grid'>
                 {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showWorkout={showWorkout} setShowWorkout={setShowWorkout} />}
