@@ -9,12 +9,12 @@
 }
 
 .workouts-header {
-    font-size: 44px;
+    font-size: 60px;
 }
 
 .workouts-info-container {
     place-items: center;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .workouts-info-container > h3 {
@@ -32,7 +32,7 @@
     padding: 10px 30px;
     border: none;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
 }

@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
 
-function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout }) {
+function NewWorkout({ newWorkout, setNewWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
 
     // DISPLAYING WORKOUT AND FORM
     const [showForm, setShowForm] = useState(false)
     const [showAddBtn, setShowAddBtn] = useState(true)
+    const [showWorkoutHint, setShowWorkoutHint] = useState(true)
 
     function handleAddExercise() {
         setShowForm(!showForm)
@@ -29,6 +30,19 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
         setShowAddBtn(true)
         setShowForm(false)
     }
+
+    function handleShowHint() {
+        if (newWorkout.length === 0) {
+            setShowWorkoutHint(true)
+        }
+    }
+
+    useEffect(() => {
+        if (newWorkout.length > 0) {
+            setShowWorkout(true)
+            setShowWorkoutHint(false)
+           }
+    }, [newWorkout, setShowWorkout])
 
     // HANDLING FORM INPUT AND SUBMISSION
     const INITIAL_FORM_STATE = {
@@ -69,12 +83,15 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
     return (
         <section className="create-new-workout grid">
             <h3>New Workout</h3>
+            {showWorkoutHint ? <p className='add-exercise-hint'>Add an exercise to begin</p> : null }
             <div className='add-exercise-btn-container '>
                 {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
                     handleAddExercise()
                     handleShow()
+                    handleShowHint()
                 }}>{toggleAddCancel()}</button> : null}
             </div>
+            {showWorkout ?
             <div className='grid'>
                 <table className='workout-table'>
                     <thead>
@@ -98,8 +115,9 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
                      )}
                     </tbody>
                 </table>
-                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (saves to current workout)</button>
-            </div>
+                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (save to current workout)</button>
+            </div>  
+            : null}
             {showForm && 
             <div className='add-exercise-form-container grid'>
                 <h3>Exercise Details</h3>

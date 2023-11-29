@@ -1,24 +1,22 @@
 import { useEffect, useState } from 'react'
 import '../../../styles/workouts/current-workout.css'
 
-function CurrentWorkout({ currentWorkout }) {
+function CurrentWorkout({ currentWorkout, showWorkout, setShowWorkout }) {
 
     const [showWorkoutHint, setShowWorkoutHint] = useState(true)
-    const [showForm, setShowForm] = useState(false)
 
         useEffect(() => {
             if (currentWorkout.length > 0) {
                 setShowWorkoutHint(false)
-                setShowForm(true)
+                setShowWorkout(true)
                }
-        }, [currentWorkout])    
+        }, [currentWorkout, setShowWorkout])    
 
     return (
         <section className="current-workout--container grid">
             <h3>Current Workout</h3>
             {showWorkoutHint ? <p>Oops, it looks like you don't have a current workout. <br /> Create a new workout and add it to your current workout to begin</p> : null}
-            {showForm ? 
-            
+            {showWorkout ? 
             <div className='current-workout--workout-table'>
                 <table className='workout-table'>
                     <thead>
