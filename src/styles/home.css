@@ -1,9 +1,9 @@
 /* HOME */
 .home {
-    grid-template-rows: 60px 100px auto  1fr;
+    grid-template-rows: 60px repeat(3, auto) 1fr;
+    gap: 20px;
     justify-items: center;
     padding: 50px 200px;
-    min-height: 100vh;
     color: white;
     background: linear-gradient(#1d1231, #411960);
 }
@@ -16,14 +16,13 @@
 /* SUB HEADER */
 .home-what-to-do-header {
     align-self: end;
+    margin-top: 20px;
     font-size: 34px;
     color: #00c3ff;
 }
 
 /* OPTIONS LIST */
 .home-options-list {
-    margin-top: 40px;
-    /* min-height: 500px; */
     place-content: center;
     gap: 30px;
     list-style-type: '🏋️';
@@ -48,4 +47,20 @@
     border-color: lightskyblue;
     box-shadow: 0 0 5px lightskyblue, 0 0 10px lightskyblue;
     transform: translateX(20px);
+}
+
+.home-gif {
+    object-fit: cover;
+    width: 600px;
+    height: 300px;
+    border: solid 1px white;
+    border-radius: 20px;
+}
+
+.home-gif-main {
+    box-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 50px turquoise;
+}
+
+.home-gif-alt {
+    box-shadow: 0 0 5px lime, 0 0 20px lime, 0 0 50px limegreen;
 }

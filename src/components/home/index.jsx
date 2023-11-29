@@ -1,9 +1,18 @@
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import HomeGif from '../../assets/home/home-exercise-gif.gif'
+import HomeGifAlt from '../../assets/home/home-exercise-gif-alt.gif'
 import '../../styles/home.css'
 
 function Home() {
 
+    const [gif, setGif] = useState(true)
+
     const navigate = useNavigate()
+
+    function toggleGif() {
+        setGif(!gif)
+    }
 
     return (
         <section className="home grid">
@@ -14,6 +23,12 @@ function Home() {
                 <li onClick={() => navigate('/exercises')}>See exercise suggestions</li>
                 <li>View your previous workouts</li>
             </ul>
+            <div onMouseOver={() => toggleGif()}>
+                {gif ? 
+                <img className='home-gif home-gif-main' src={HomeGif} alt="home gif" /> 
+                : <img className='home-gif home-gif-alt' src={HomeGifAlt} alt="home gif alt" />
+                }
+            </div>            
         </section>
     )
 }

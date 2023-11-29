@@ -14,6 +14,7 @@ function App() {
   const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
   const [currentWorkout, setCurrentWorkout] = useState([])
+  const [allWorkouts, setAllWorkouts] = useState([])
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -39,7 +40,6 @@ function App() {
             path='/workouts'
             element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
           >
-
           </Route>
           <Route
             path='/exercises'

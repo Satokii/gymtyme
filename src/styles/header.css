@@ -19,7 +19,7 @@
 .header-nav-list {
   grid-template-columns: repeat(3, auto);
   gap: 20px;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@
 
   .inactive-link:hover {
     transform: translateY(-1px);
-    text-shadow: 1px 1px 1px white, 0 0 3px white;
+    text-shadow: 0 0 5px turquoise, 0 0 10px turquoise, 0 0 20px turquoise;
   }
  
 

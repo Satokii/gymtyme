@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
-import CurrentWorkout from './CurrentWorkout'
 
 function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
 
@@ -82,7 +81,6 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
     // ALERT MESSAGE
     function showAlert() {
             if (confirm('Warning \n\nSaving this workout will overwrite your current workout. \nWould you like to continue?')) {
-                console.log('hey')
                 setCurrentWorkout([...newWorkout])
                 setNewWorkout([])
             }
@@ -134,7 +132,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
                      )}
                     </tbody>
                 </table>
-                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (save to current workout)</button>
+                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Save as Current Workout</button>
             </div>  
             : null}
             {showForm && 

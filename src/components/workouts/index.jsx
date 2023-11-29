@@ -23,6 +23,7 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
             <h2 className='workouts-header'>Workouts</h2>
             <div className='workouts-info-container grid'>
                 <h3>Welcome to the workouts page.</h3>
+                <p>Here you'll find a quick overview of all workout options.</p>
                 <br />
                 <p>Choose an option to get started:</p>
             </div>
