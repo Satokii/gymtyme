@@ -45,9 +45,11 @@ function Profile() {
         <section className="profile--container grid">
             {/* <h2>Profile</h2> */}
             <nav className='profile--nav grid'>
-                {selectedNav.map((nav, index) => 
-                    <div key={`${nav.title}-${index}`} className={nav.className} onClick={(e) => toggleSelectedNav(e)}>{nav.title}</div>
-                )}
+                <ul className='profile--nav-list grid'>
+                    {selectedNav.map((nav, index) => 
+                        <li key={`${nav.title}-${index}`} className={nav.className} onClick={(e) => toggleSelectedNav(e)}>{nav.title}</li>
+                    )}
+                </ul>
             </nav>
             <div></div>
         </section>

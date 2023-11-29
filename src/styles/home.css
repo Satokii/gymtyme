@@ -1,25 +1,72 @@
 /* HOME */
 .home {
-    grid-template-rows: 60px repeat(3, auto) 1fr;
-    gap: 20px;
     min-height: 100vh;
     justify-items: center;
-    padding: 50px 200px;
+    align-items: center;
     color: white;
     background: linear-gradient(#1d1231, #411960);
 }
 
-/* HOME HEADER */
-.home-header {
-    font-size: 60px;
+.home-cover-menu {
+    font-size: 80px;
+    color: #690daf;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.click-to-start {
+    text-transform: uppercase;
+}
+
+.click-to-start:hover {
+    color: #018805;
+    text-shadow: 0 0 2px black, 0 0 5px black;
+}
+
+.home-container {
+    display: none;
+    background: linear-gradient(#1d1231, #411960);
+}
+
+.home-container:target {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: start;
+    justify-content: center;
+}
+
+.content {
+    grid-template-rows: 60px repeat(2, auto);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    padding: 100px 200px;
+    color: #fff;
+    animation: 1s zoom-in;
+    text-align: center;
+}
+@keyframes zoom-in {
+   from {
+    transform: scale(0);
+   }
+   to  {
+    transform: scale(1);
+   }
 }
 
 /* SUB HEADER */
 .home-what-to-do-header {
     align-self: end;
-    margin-top: 20px;
-    font-size: 34px;
+    font-size: 60px;
     color: turquoise;
+    opacity: 0;
+    animation: 2s ease-in 0.2s 1 forwards fade-in;
 }
 
 /* OPTIONS LIST */
@@ -29,6 +76,8 @@
     list-style-type: '🏋️';
     list-style-position: inside;
     padding: 30px;
+    opacity: 0;
+    animation: 2s ease-in 0.9s 1 forwards fade-in;
 }
 
 .home-options-list > li {
@@ -50,12 +99,15 @@
     transform: translateX(20px);
 }
 
+/* GIF */
 .home-gif {
     object-fit: cover;
     width: 600px;
     height: 300px;
     border: solid 1px white;
     border-radius: 20px;
+    opacity: 0;
+    animation: 2s ease-in 1.3s 1 forwards fade-in;
 }
 
 .home-gif-main {
@@ -64,4 +116,13 @@
 
 .home-gif-alt {
     box-shadow: 0 0 5px lime, 0 0 20px lime, 0 0 50px limegreen;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
