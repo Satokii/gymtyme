@@ -3,7 +3,8 @@
     gap: 30px;
     padding: 10px 20px;
     align-items: center;
-    background-color: rgb(143, 143, 143);
+    background-color: rgb(12, 12, 31);
+    color: white;
 }
 
 .header-logo {
@@ -32,6 +33,7 @@
     cursor: pointer;
     text-decoration: none;
     color: #181818;
+    color: white;
     border-bottom: 3px solid transparent;
   }
 

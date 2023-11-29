@@ -41,7 +41,18 @@ tr:last-child td {
 
 /* ADD EXERCISE BUTTON */
 .add-exercise-btn {
-    align-self: center;
+    align-self: start;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    border: solid 1px #0c0678;
+    border-radius: 20px;
+    background-color: #0c0678;
+}
+
+.add-exercise-btn:hover {
+    cursor: pointer;
+    background-color: rgb(4, 163, 163)
 }
 
 /* ADD EXERCISE FORM */
