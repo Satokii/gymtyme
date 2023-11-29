@@ -34,7 +34,7 @@
 
 /* WORKOUT TABLE */
 table, th, td {
-  border: solid 1px black;
+  border: solid 1px white;
 }
 
 table {
@@ -71,6 +71,23 @@ td:nth-last-child(-n + 4) {
 
 .remove-exercise-btn {
     cursor: pointer;
+}
+
+/* CONFIRM WORKOUT BUTTON */
+.confirm-workout-btn {
+    justify-self: center;
+    margin-top: 10px;
+    padding: 2px 5px;
+    color: white;
+    background-color: transparent;
+    background-color: black;
+    background-color: darkgreen;
+}
+
+.confirm-workout-btn:hover {
+    cursor: pointer;
+    transform: translateY(2px);
+    box-shadow: 0 0 5px black;
 }
 
 /* ADD EXERCISE FORM */
@@ -162,55 +179,3 @@ td:nth-last-child(-n + 4) {
     border-radius: 5px;
     box-shadow: 0 0 5px #e83737, 0 0 20px #e83737, 0 0 40px #e83737;
 }
-
-
-/* .new-workout-container {
-    grid-auto-rows: 30px auto;
-}
-
-.new-workout-headers {
-    grid-template-columns: 1fr repeat(2, 60px) 1fr 1fr;
-}
-
-.new-workout-exercise {
-    grid-template-columns: 1fr repeat(2, 60px) 1fr 1fr;
-}
-
-.new-workout-container, .new-workout-container h4, .new-workout-container p {
-    border: solid 1px black;
-}
-
-.new-workout-container {
-    border-spacing: 0;
-    margin-top: 5px;
-}
-
-.new-workout-headers h4 {
-    background-color: dodgerblue;
-}
-
-.new-workout-headers h4:first-child {
-    text-align: start;
-}
-
-.new-workout-headers h4, .new-workout-exercise p {
-    padding: 5px 10px;
-    border-top-width: 0;
-    border-left-width: 0;
-}
-
-.new-workout-headers h4:last-child, .new-workout-exercise p:last-child {
-    border-right-width: 0;
-}
-
-.new-workout-exercise:last-child p {
-    border-bottom-width: 0;
-}
-
-.new-workout-headers h4:nth-last-child(-n + 3) {
-    text-align: center;
-}
-
-.new-workout-exercise p:nth-last-child(-n + 3) {
-    text-align: center;
-} */

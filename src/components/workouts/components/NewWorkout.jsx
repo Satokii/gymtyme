@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
 
-function NewWorkout({ currentWorkout, setCurrentWorkout }) {
+function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout }) {
 
     // DISPLAYING WORKOUT AND FORM
     const [showForm, setShowForm] = useState(false)
@@ -32,6 +32,7 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
 
     // HANDLING FORM INPUT AND SUBMISSION
     const INITIAL_FORM_STATE = {
+        id: '',
         name: '',
         sets: '',
         reps: '',
@@ -45,17 +46,25 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
         setForm({...form, [name]: value})
     }
 
-    function handleSubmit(e) {
+    function handleSubmitForm(e) {
         e.preventDefault()
-        setCurrentWorkout([...currentWorkout, form])
+        const updatedExercise = {...form, id: `${form.name.split(" ").join("-")}-${Math.random()}`}
+        setNewWorkout([...newWorkout, updatedExercise])
         setForm(INITIAL_FORM_STATE)
         setShowAddBtn(true)
         setShowForm(false)
     }
 
     function RemoveExercise(exercise) {
-        const updatedWorkout = currentWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
-        setCurrentWorkout([...updatedWorkout])
+        const updatedWorkout = newWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
+        setNewWorkout([...updatedWorkout])
+    }
+
+    // HANDLE CONFIRM WORKOUT BUTTON
+    function handleSubmitWorkout() {
+        setCurrentWorkout([...newWorkout])
+        console.log(currentWorkout)
+        setNewWorkout([])
     }
 
     return (
@@ -67,7 +76,7 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                     handleShow()
                 }}>{toggleAddCancel()}</button> : null}
             </div>
-            <div>
+            <div className='grid'>
                 <table className='workout-table'>
                     <thead>
                         <tr>
@@ -79,7 +88,7 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                         </tr>
                     </thead>
                     <tbody>
-                    {currentWorkout.map((exercise, index) =>
+                    {newWorkout.map((exercise, index) =>
                         <tr key={`${exercise.name}-${index}`}>
                             <td>{exercise.name}</td>
                             <td>{exercise.sets}</td>
@@ -90,29 +99,12 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                      )}
                     </tbody>
                 </table>
+                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (move to current workout)</button>
             </div>
-            {/* <div className='new-workout-container grid'>
-                <div className='new-workout-headers grid'>
-                    <h4>Exercise Name</h4>
-                    <h4>Sets</h4>
-                    <h4>Reps</h4>
-                    <h4>Muscle Group</h4>
-                    <h4>Delete Exercise</h4>
-                </div>
-                {currentWorkout.map((workout, index) =>
-                <div className='new-workout-exercise grid' key={`${workout.name}-${index}`}>
-                    <p>{workout.name}</p>
-                    <p>{workout.sets}</p>
-                    <p>{workout.reps}</p>
-                    <p>{workout.group}</p>
-                    <p>x</p>
-                </div>
-                )}
-            </div> */}
             {showForm && 
             <div className='add-exercise-form-container grid'>
                 <h3>Exercise Details</h3>
-                <form className='new-workout-form grid' onSubmit={(e) => handleSubmit(e)}>
+                <form className='new-workout-form grid' onSubmit={(e) => handleSubmitForm(e)}>
                     <div className='add-exercise-input-container'>
                         <label htmlFor="exercise-name">Exercise Name:</label>
                         <input 

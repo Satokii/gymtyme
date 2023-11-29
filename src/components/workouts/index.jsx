@@ -3,7 +3,7 @@ import NewWorkout from './components/NewWorkout'
 import CurrentWorkout from './components/CurrentWorkout'
 import '../../styles/workouts/workouts.css'
 
-function Workouts({ currentWorkout, setCurrentWorkout }) {
+function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout }) {
 
     const [toggleShow, setToggleShow] = useState(null)
 
@@ -31,8 +31,8 @@ function Workouts({ currentWorkout, setCurrentWorkout }) {
                 <button className='view-all-workouts-btn' onClick={() => toggleAll()}>View All Workouts</button>
             </div>
             <div className='workouts-sections grid'>
-                {toggleShow === 'new' && <NewWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
-                {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout}/>}
+                {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
+                {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} />}
                 {toggleShow === 'all' && <section>All workouts</section>}
             </div>
         </section>

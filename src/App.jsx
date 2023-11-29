@@ -11,8 +11,9 @@ import ExerciseData from './data/exercise'
 function App() {
 
   const [exercises, setExercises] = useState(ExerciseData)
-  const [currentWorkout, setCurrentWorkout] = useState([])
+  const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
+  const [currentWorkout, setCurrentWorkout] = useState([])
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -36,13 +37,13 @@ function App() {
           </Route>
           <Route
             path='/workouts'
-            element={<Workouts currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
+            element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} />}
           >
 
           </Route>
           <Route
             path='/exercises'
-            element={<Exercises exercises={exercises} setExercises={setExercises} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} favourites={favourites} setFavourites={setFavourites} />}
+            element={<Exercises exercises={exercises} setExercises={setExercises} newWorkout={newWorkout} setNewWorkout={setNewWorkout} favourites={favourites} setFavourites={setFavourites} />}
           >
           </Route>
         </Routes>

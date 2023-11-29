@@ -1,6 +1,6 @@
 import "../../styles/exercises.css";
 
-function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout, favourites, setFavourites }) {
+function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites }) {
 
     function increaseSet(exercise) {
         exercise.sets++;
@@ -29,7 +29,7 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
     function addToWorkout(exercise) {
         const updatedExercise = {...exercise, id: `${exercise.name.split(" ").join("-")}-${Math.random()}`}
 
-        setCurrentWorkout([...currentWorkout, updatedExercise]);
+        setNewWorkout([...newWorkout, updatedExercise]);
     }
 
     function addToFavourites(exercise) {
@@ -95,7 +95,7 @@ function Exercises({ exercises, setExercises, currentWorkout, setCurrentWorkout,
                         className="add-to-workout-btn"
                         onClick={() => addToWorkout(exercise)}
                     >
-                        Add to Current Workout
+                        Add to New Workout
                     </button>
                     </div>
                     <div className="exercise-btn-container">
