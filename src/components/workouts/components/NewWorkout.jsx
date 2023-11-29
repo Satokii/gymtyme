@@ -74,10 +74,10 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
         setShowForm(false)
     }
 
-    function RemoveExercise(exercise) {
-        const updatedWorkout = newWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
-        setNewWorkout([...updatedWorkout])
-    }
+    // function removeExercise(exercise) {
+    //     const updatedWorkout = newWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
+    //     setNewWorkout([...updatedWorkout])
+    // }
 
     // ALERT MESSAGE
     function showAlert() {
@@ -111,7 +111,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
             </div>
             {showWorkout ?
             <div className='grid'>
-                <NewWorkoutTable newWorkout={newWorkout} RemoveExercise={RemoveExercise} />
+                <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
                 <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Save as Current Workout</button>
             </div>  
             : null}

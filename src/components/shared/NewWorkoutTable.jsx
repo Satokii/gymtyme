@@ -1,4 +1,9 @@
-function NewWorkoutTable({ newWorkout, RemoveExercise }) {
+function NewWorkoutTable({ newWorkout, setNewWorkout }) {
+
+    function removeExercise(exercise) {
+        const updatedWorkout = newWorkout.filter((exerciseToRemove) => exerciseToRemove !== exercise)
+        setNewWorkout([...updatedWorkout])
+    }
 
     return (
         <table className='workout-table'>
@@ -18,7 +23,7 @@ function NewWorkoutTable({ newWorkout, RemoveExercise }) {
                     <td>{exercise.sets}</td>
                     <td>{exercise.reps}</td>
                     <td>{exercise.group}</td>
-                    <td className='remove-exercise-btn' onClick={() => RemoveExercise(exercise)}>❌</td>
+                    <td className='remove-exercise-btn' onClick={() => removeExercise(exercise)}>❌</td>
                 </tr>   
             )}
             </tbody>

@@ -1,22 +1,32 @@
 /* EXERCISES CONTAINER */
 .exercises-container {
-    place-items: center;
-    padding: 50px 200px;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    justify-items: center;
+    padding: 50px 100px;
     color: white;
     background: linear-gradient(#1d1231, #411960);
     padding-bottom: 20px;
 }
 
-/* EXERCISES HEADER */
+/* EXERCISE CONTAINER HEADERS */
+.workout-preview-header  {
+    align-items: end;
+    padding-bottom: 30px;
+    font-size: 40px;
+    height: 100px;
+}
+
 .exercises-header {
     padding-bottom: 30px;
     font-size: 60px;
+    height: 100px;
 }
 
 /* EXERCISES LIST */
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
-    grid-template-columns: 400px repeat(2, 120px) repeat(3, auto);
+    grid-template-columns: 300px repeat(2, 120px) repeat(3, auto);
     gap: 10px;
     height: 100px;
     align-items: center;

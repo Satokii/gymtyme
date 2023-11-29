@@ -1,3 +1,4 @@
+import NewWorkoutTable from "../shared/NewWorkoutTable";
 import "../../styles/exercises.css";
 
 function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites }) {
@@ -46,77 +47,83 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
 
     return (
         <section className="exercises-container grid">
-            <h2 className="exercises-header">Exercise Suggestions</h2>
-            <ul className="exercises-list grid">
-                {exercises.map((exercise, index) => (
-                <li
-                    className="exercise-item-container grid"
-                    key={`${exercise.id}-${index}`}
-                >
-                    <p className="exercise-name">{exercise.name}</p>
-                    <div className="sets-container grid">
-                    <p>Sets</p>
-                    <div className="count-container grid">
-                        <button
-                        className="minus-btn grid"
-                        onClick={() => decreaseSet(exercise)}
-                        >
-                        -
-                        </button>
-                        <span className="current-val grid">{exercise.sets}</span>
-                        <button
-                        className="add-btn grid"
-                        onClick={() => increaseSet(exercise)}
-                        >
-                        +
-                        </button>
-                    </div>
-                    </div>
-                    <div className="reps-container grid">
-                    <p>Reps</p>
-                    <div className="count-container grid">
-                        <button
-                        className="minus-btn grid"
-                        onClick={() => decreaseRep(exercise)}
-                        >
-                        -
-                        </button>
-                        <span className="current-val grid">{exercise.reps}</span>
-                        <button
-                        className="add-btn grid"
-                        onClick={() => increaseRep(exercise)}
-                        >
-                        +
-                        </button>
-                    </div>
-                    </div>
-                    <div className="exercise-btn-container">
-                    <button
-                        className="add-to-workout-btn"
-                        onClick={() => addToWorkout(exercise)}
+            <div>
+                <h2 className="workout-preview-header grid">Workout Preview</h2>
+                <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
+            </div>
+            <div>
+                <h2 className="exercises-header">Exercise Suggestions</h2>
+                <ul className="exercises-list grid">
+                    {exercises.map((exercise, index) => (
+                    <li
+                        className="exercise-item-container grid"
+                        key={`${exercise.id}-${index}`}
                     >
-                        Add to New Workout
-                    </button>
-                    </div>
-                    <div className="exercise-btn-container">
-                    <button
-                        className="add-to-favourites-btn"
-                        onClick={() => addToFavourites(exercise)}
-                    >
-                        Add to Favourites
-                    </button>
-                    </div>
-                    <div className="reset-container grid">
-                    <button
-                        className="reset-btn"
-                        onClick={() => handleReset(exercise)}
-                    >
-                        Reset
-                    </button>
-                    </div>
-                </li>
-                ))}
-            </ul>
+                        <p className="exercise-name">{exercise.name}</p>
+                        <div className="sets-container grid">
+                        <p>Sets</p>
+                        <div className="count-container grid">
+                            <button
+                            className="minus-btn grid"
+                            onClick={() => decreaseSet(exercise)}
+                            >
+                            -
+                            </button>
+                            <span className="current-val grid">{exercise.sets}</span>
+                            <button
+                            className="add-btn grid"
+                            onClick={() => increaseSet(exercise)}
+                            >
+                            +
+                            </button>
+                        </div>
+                        </div>
+                        <div className="reps-container grid">
+                        <p>Reps</p>
+                        <div className="count-container grid">
+                            <button
+                            className="minus-btn grid"
+                            onClick={() => decreaseRep(exercise)}
+                            >
+                            -
+                            </button>
+                            <span className="current-val grid">{exercise.reps}</span>
+                            <button
+                            className="add-btn grid"
+                            onClick={() => increaseRep(exercise)}
+                            >
+                            +
+                            </button>
+                        </div>
+                        </div>
+                        <div className="exercise-btn-container">
+                        <button
+                            className="add-to-workout-btn"
+                            onClick={() => addToWorkout(exercise)}
+                        >
+                            Add to New Workout
+                        </button>
+                        </div>
+                        <div className="exercise-btn-container">
+                        <button
+                            className="add-to-favourites-btn"
+                            onClick={() => addToFavourites(exercise)}
+                        >
+                            Add to Favourites
+                        </button>
+                        </div>
+                        <div className="reset-container grid">
+                        <button
+                            className="reset-btn"
+                            onClick={() => handleReset(exercise)}
+                        >
+                            Reset
+                        </button>
+                        </div>
+                    </li>
+                    ))}
+                </ul>
+            </div>
         </section>
     )
 }
