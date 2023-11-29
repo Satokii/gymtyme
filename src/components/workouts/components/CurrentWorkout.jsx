@@ -14,9 +14,10 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showWorkout, setSho
         
         function handleSave() {
             setAllWorkouts([...allWorkouts, [...currentWorkout]])
+            setCurrentWorkout([])
+            setShowWorkoutHint(true)
+            setShowWorkout(false)
         }
-
-        console.log(allWorkouts)
 
         function handleDelete() {
             setCurrentWorkout([])

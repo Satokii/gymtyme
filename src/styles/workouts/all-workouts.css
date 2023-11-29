@@ -1,0 +1,23 @@
+.all-workouts--container {
+    grid-template-rows: 40px 1fr;
+    padding: 50px;
+}
+
+.all-workouts--container h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.all-workouts--tables-container {
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.all-workouts--tables {
+    min-width: 400px;
+}
+
+.all-workouts--tables td:first-child {
+    text-align: start;
+    width: 300px;
+}
