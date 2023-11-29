@@ -21,6 +21,7 @@ function Workouts({ currentWorkout, setCurrentWorkout }) {
             <h2 className='workouts-header'>Workouts</h2>
             <div className='workouts-info-container grid'>
                 <h3>Welcome to the workouts page.</h3>
+                <br />
                 <p>Choose an option to get started:</p>
             </div>
             <div className='button-options grid'>

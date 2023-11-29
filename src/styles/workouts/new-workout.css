@@ -2,9 +2,12 @@
     grid-template-rows: 50px repeat(3, auto);
     gap: 20px;
     min-width: 500px;
-    place-items: center;
-    /* border: solid 1px black; */
-    border-radius: 10px;
+    padding: 20px 0;
+    justify-items: center;
+}
+
+.create-new-workout > h3 {
+    font-size: 28px;
 }
 
 /* WORKOUT TABLE */
@@ -36,7 +39,33 @@ tr:last-child td {
     border-bottom-width: 0;
 }
 
+/* ADD EXERCISE BUTTON */
+.add-exercise-btn {
+    align-self: center;
+}
+
 /* ADD EXERCISE FORM */
+.add-exercise-form-container {
+    background: rgba(0,0,0,.5);
+    padding: 30px 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    place-content: center;
+}
+
+.add-exercise-form-container > h3 {
+    font-size: 26px;
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.new-workout-form {
+    min-width: 400px;
+}
+
 form input, form label {
     display: block;
 }
@@ -49,3 +78,56 @@ form input {
     padding: 5px;
 }
 
+.add-exercise-input-container input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: transparent;
+}
+
+.add-exercise-input-container label {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.add-exercise-submit-btn {
+    padding: 10px 20px;
+    color: #03ac03;
+    letter-spacing: 2px;
+    border: none;
+    background-color: transparent;
+    transition: .6s;
+}
+
+.add-exercise-submit-btn:hover {
+    cursor: pointer;
+    background-color: #03ac03;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03ac03, 0 0 20px #03ac03, 0 0 40px #03ac03;
+}
+
+.cancel-add-exercise-btn {
+    padding: 10px 20px;
+    color: red;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    border: none;
+    background-color: transparent;
+    transition: .6s;
+}
+
+.cancel-add-exercise-btn:hover {
+    cursor: pointer;
+    background-color: #e83737;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #e83737, 0 0 20px #e83737, 0 0 40px #e83737;
+}

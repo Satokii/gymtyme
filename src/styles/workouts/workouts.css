@@ -1,12 +1,15 @@
 /* WORKOUTS */
 .workouts-container {
     grid-template-rows: 60px auto 80px 1fr;
+    min-height: 100vh;
     padding: 50px 200px;
-    place-items: center;
+    justify-items: center;
+    background: linear-gradient(#1d1231, #411960);
+    color: white;
 }
 
 .workouts-header {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .workouts-info-container {
@@ -16,4 +19,5 @@
 .button-options {
     grid-template-columns: repeat(3, auto);
     gap: 10px;
+    align-items: center;
 }

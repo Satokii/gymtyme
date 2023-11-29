@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import '../../../styles/workouts/new-workout.css'
-import Workouts from '..'
 
 function NewWorkout({ currentWorkout, setCurrentWorkout }) {
 
@@ -79,16 +78,16 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                     </tbody>
                 </table>
             </div>
-            {showAddBtn ? <button onClick={() => {
+            {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
                 handleAddExercise()
                 handleShow()
             }}>{toggleAddCancel()}</button> : null}
             {showForm && 
-            <div>
-                <h3>Add an exercise to your workout:</h3>
-                <form className='new-workout-form' onSubmit={(e) => handleSubmit(e)}>
-                    <label htmlFor="exercise-name">
-                    Exercise Name:
+            <div className='add-exercise-form-container grid'>
+                <h3>Exercise Details</h3>
+                <form className='new-workout-form grid' onSubmit={(e) => handleSubmit(e)}>
+                    <div className='add-exercise-input-container'>
+                        <label htmlFor="exercise-name">Exercise Name:</label>
                         <input 
                             type="text"
                             id='name'
@@ -98,9 +97,9 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             value={form.exercise}
                             required
                         />
-                    </label>
-                    <label htmlFor="sets">
-                    Number of Sets:
+                    </div>
+                    <div className='add-exercise-input-container'>
+                        <label htmlFor="sets">Number of Sets:</label>
                         <input 
                             type="number"
                             id='sets'
@@ -109,10 +108,10 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             onChange={e => handleChange(e)}
                             value={form.sets}
                             required
-                        />
-                    </label>
-                    <label htmlFor="reps">
-                    Number of Reps:
+                        />   
+                    </div>
+                    <div className='add-exercise-input-container'>
+                        <label htmlFor="reps">Number of Reps:</label>
                         <input 
                             type="number"
                             id='reps'
@@ -122,9 +121,9 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             value={form.reps}
                             required
                         />
-                    </label>
-                    <label htmlFor="muscle-group">
-                    Muscle Group (optional):
+                    </div>
+                    <div className='add-exercise-input-container'>
+                        <label htmlFor="muscle-group">Muscle Group (optional):</label>
                         <input 
                             type="text"
                             id='group'
@@ -133,10 +132,10 @@ function NewWorkout({ currentWorkout, setCurrentWorkout }) {
                             onChange={e => handleChange(e)}
                             value={form.group}
                         />
-                    </label>
-                    <button type='submit'>Add to Workout</button>
+                    </div>
+                    <button className='add-exercise-submit-btn' type='submit'>ADD TO WORKOUT</button>
                 </form>
-                <button onClick={() => handleCancel()}>Cancel</button>
+                <button className='cancel-add-exercise-btn' onClick={() => handleCancel()}>CANCEL</button>
             </div>}
         </section>
     )
