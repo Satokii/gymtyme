@@ -1,13 +1,21 @@
-.current-workout-container {
-    grid-template-rows: 40px auto;
+.current-workout--container {
+    grid-template-rows: 40px repeat(2, auto);
     padding: 50px;
 }
 
-.current-workout-container > h3 {
+.current-workout--container > h3 {
     text-align: center;
     font-size: 28px;
 }
 
 .current-workout--workout-table {
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.current-workout--container > p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #99fbfb;
 }

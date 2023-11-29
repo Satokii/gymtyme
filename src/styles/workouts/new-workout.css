@@ -76,7 +76,7 @@ td:nth-last-child(-n + 4) {
 /* CONFIRM WORKOUT BUTTON */
 .confirm-workout-btn {
     justify-self: center;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 2px 5px;
     color: white;
     background-color: transparent;

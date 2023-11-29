@@ -63,13 +63,12 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
     // HANDLE CONFIRM WORKOUT BUTTON
     function handleSubmitWorkout() {
         setCurrentWorkout([...newWorkout])
-        console.log(currentWorkout)
         setNewWorkout([])
     }
 
     return (
         <section className="create-new-workout grid">
-            <h3>My Workout</h3>
+            <h3>New Workout</h3>
             <div className='add-exercise-btn-container '>
                 {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
                     handleAddExercise()
@@ -99,7 +98,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
                      )}
                     </tbody>
                 </table>
-                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (move to current workout)</button>
+                <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Confirm workout (saves to current workout)</button>
             </div>
             {showForm && 
             <div className='add-exercise-form-container grid'>
