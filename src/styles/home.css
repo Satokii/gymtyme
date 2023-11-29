@@ -2,6 +2,7 @@
 .home {
     grid-template-rows: 60px repeat(3, auto) 1fr;
     gap: 20px;
+    min-height: 100vh;
     justify-items: center;
     padding: 50px 200px;
     color: white;

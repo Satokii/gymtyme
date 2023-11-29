@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import NewWorkoutTable from '../../shared/NewWorkoutTable'
 import '../../../styles/workouts/new-workout.css'
 
 function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
@@ -110,28 +111,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
             </div>
             {showWorkout ?
             <div className='grid'>
-                <table className='workout-table'>
-                    <thead>
-                        <tr>
-                            <th>Exercise Name</th>
-                            <th>Sets</th>
-                            <th>Reps</th>
-                            <th>Muscle Group</th>
-                            <th>Remove Exercise</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {newWorkout.map((exercise, index) =>
-                        <tr key={`${exercise.name}-${index}`}>
-                            <td>{exercise.name}</td>
-                            <td>{exercise.sets}</td>
-                            <td>{exercise.reps}</td>
-                            <td>{exercise.group}</td>
-                            <td className='remove-exercise-btn' onClick={() => RemoveExercise(exercise)}>❌</td>
-                        </tr>   
-                     )}
-                    </tbody>
-                </table>
+                <NewWorkoutTable newWorkout={newWorkout} RemoveExercise={RemoveExercise} />
                 <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Save as Current Workout</button>
             </div>  
             : null}
