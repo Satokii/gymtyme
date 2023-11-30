@@ -16,6 +16,8 @@ function App() {
   const [favourites, setFavourites] = useState([])
   const [currentWorkout, setCurrentWorkout] = useState([])
   const [allWorkouts, setAllWorkouts] = useState([])
+  const [showNewWorkout, setShowNewWorkout] = useState(false)
+  const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -39,7 +41,7 @@ function App() {
           </Route>
           <Route
             path='/workouts'
-            element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+            element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} />}
           >
           </Route>
           <Route
@@ -49,9 +51,8 @@ function App() {
           </Route>
           <Route
             path='/profile'
-            element={<Profile />}
+            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
           >
-
           </Route>
         </Routes>
         <Footer />

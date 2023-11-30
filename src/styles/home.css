@@ -51,6 +51,7 @@
     animation: 1s zoom-in;
     text-align: center;
 }
+
 @keyframes zoom-in {
    from {
     transform: scale(0);

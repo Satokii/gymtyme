@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import NewWorkoutTable from '../../shared/NewWorkoutTable'
 import '../../../styles/workouts/new-workout.css'
 
-function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showWorkout, setShowWorkout }) {
+function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout }) {
 
     // DISPLAYING WORKOUT AND FORM
     const [showForm, setShowForm] = useState(false)
@@ -40,14 +40,14 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
 
     useEffect(() => {
         if (newWorkout.length > 0) {
-            setShowWorkout(true)
+            setShowNewWorkout(true)
             setShowWorkoutHint(false)
            }
         if (newWorkout.length === 0) {
-            setShowWorkout(false)
+            setShowNewWorkout(false)
             setShowWorkoutHint(true)
         }
-    }, [newWorkout, setShowWorkout])
+    }, [newWorkout, setShowNewWorkout])
 
     // HANDLING FORM INPUT AND SUBMISSION
     const INITIAL_FORM_STATE = {
@@ -104,7 +104,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
                     handleShowHint()
                 }}>{toggleAddCancel()}</button> : null}
             </div>
-            {showWorkout ?
+            {showNewWorkout ?
             <div className='grid'>
                 <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
                 <button className='confirm-workout-btn grid' onClick={() => handleSubmitWorkout()}>Save as Current Workout</button>

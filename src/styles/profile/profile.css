@@ -1,3 +1,4 @@
+/* PROFILE */
 .profile--container {
     grid-template-columns: auto 1fr;
     min-height: 100vh;
@@ -7,9 +8,9 @@
     color: white;
 }
 
-/* .profile-container h2 {
+.profile-container h2 {
     font-size: 60px;
-} */
+}
 
 /* PROFILE NAV BAR */
 .profile--nav {
@@ -26,8 +27,18 @@
     border: solid 1px white;
     border-radius: 15px;
     padding: 10px 20px;
+    /* font-weight: bold; */
+}
+
+.profile--nav-list li:hover {
+    background-color: red;
 }
 
 .active {
     color: red;
+}
+
+/* PROFILE */
+.profile--menu-pages-container {
+    align-content: center;
 }

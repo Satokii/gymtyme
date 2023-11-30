@@ -1,32 +1,36 @@
 import { useState } from 'react'
+import NewWorkout from '../workouts/components/NewWorkout'
+import CurrentWorkout from '../workouts/components/CurrentWorkout'
+import AllWorkouts from '../workouts/components/AllWorkouts'
 import '../../styles/profile/profile.css'
 
-function Profile() {
-
+function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts }) {
+    
     const INITIAL_NAV_STATE = [
         {
             title:'New Workout',
-            active: false,
-            className: 'inactive'
+            className: 'inactive',
+            click: 'new'
         },
         {
             title: 'Current Workout',
-            active: false,
-            className: 'inactive'
+            className: 'inactive',
+            click: 'current'
         },
         {
             title: 'Completed Workout',
-            active: false,
-            className: 'inactive'
+            className: 'inactive',
+            click: 'completed'
         },
         {
             title: 'Favourite Exercises',
-            active: false,
-            className: 'inactive'
+            className: 'inactive',
+            click: 'favourites'
         }
     ]
 
     const [selectedNav, setSelectedNav] = useState(INITIAL_NAV_STATE)
+    const [showPage, setShowPage] = useState(null)
 
     function toggleSelectedNav(navItem) {
         const updatedNav = selectedNav.map((nav) => {
@@ -40,18 +44,32 @@ function Profile() {
         setSelectedNav(updatedNav)
     }
 
-
     return (
         <section className="profile--container grid">
-            {/* <h2>Profile</h2> */}
             <nav className='profile--nav grid'>
                 <ul className='profile--nav-list grid'>
                     {selectedNav.map((nav, index) => 
-                        <li key={`${nav.title}-${index}`} className={nav.className} onClick={(e) => toggleSelectedNav(e)}>{nav.title}</li>
+                        <li 
+                            key={`${nav.title}-${index}`} 
+                            className={nav.className} 
+                            onClick={(e) => {
+                                toggleSelectedNav(e)
+                                setShowPage(nav.click)
+                            }}
+                            >{nav.title}
+                        </li>
                     )}
                 </ul>
             </nav>
-            <div></div>
+            <div className='profile--menu-pages-container grid'>
+                {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
+                {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+                {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}
+                {showPage === 'favourites' && 
+                <section id='fourth'>
+                    <h3>Menu 4</h3>
+                </section>}
+            </div>
         </section>
     )
 }
