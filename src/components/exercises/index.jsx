@@ -1,7 +1,15 @@
 import NewWorkoutTable from "../shared/NewWorkoutTable";
 import "../../styles/exercises.css";
+import { useNavigate } from "react-router-dom";
 
-function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites }) {
+function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites, setToggleShow }) {
+
+    const navigate = useNavigate()
+
+    function handleWorkoutNav() {
+        setToggleShow('new')
+        navigate('/workouts')
+    }
 
     function increaseSet(exercise) {
         exercise.sets++;
@@ -49,6 +57,7 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
         <section className="exercises-container grid">
             <div>
                 <h2 className="workout-preview-header grid">Workout Preview</h2>
+                <button className="workout-preview-workout-btn" onClick={() => handleWorkoutNav()}>See your new workout</button>
                 <div className='workout-preview-table'>
                     <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
                 </div>

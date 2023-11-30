@@ -20,6 +20,8 @@ function App() {
   const [allWorkouts, setAllWorkouts] = useState([])
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
+  const [toggleShow, setToggleShow] = useState(null)
+
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -43,12 +45,12 @@ function App() {
           </Route>
           <Route
             path='/workouts'
-            element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} />}
+            element={<Workouts newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} toggleShow={toggleShow} setToggleShow={setToggleShow} />}
           >
           </Route>
           <Route
             path='/exercises'
-            element={<Exercises exercises={exercises} setExercises={setExercises} newWorkout={newWorkout} setNewWorkout={setNewWorkout} favourites={favourites} setFavourites={setFavourites} />}
+            element={<Exercises exercises={exercises} setExercises={setExercises} newWorkout={newWorkout} setNewWorkout={setNewWorkout} favourites={favourites} setFavourites={setFavourites} setToggleShow={setToggleShow} />}
           >
           </Route>
           <Route

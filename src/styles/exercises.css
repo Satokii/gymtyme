@@ -27,6 +27,23 @@
     animation: 2s ease 0.7s forwards fade-in;
 }
 
+/* WORKOUT PREVIEW */
+.workout-preview-workout-btn {
+    padding: 5px 10px;
+    background-color: forestgreen;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: none;
+    opacity: 0;
+    animation: 2s ease 0.5s forwards fade-in;
+}
+
+.workout-preview-workout-btn:hover {
+    cursor: pointer;
+    background-color: #0abb0a;
+}
+
 .workout-preview-table {
     opacity: 0;
     animation: 2s ease 0.5s forwards fade-in;

@@ -78,3 +78,9 @@
     background-color: #c16c06;
     transform: translateY(3px);
 }
+
+/* WORKOUTS SECTIONS */
+.workouts-sections {
+    opacity: 0;
+    animation: 2s ease 1s forwards fade-in; 
+}
