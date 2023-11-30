@@ -15,6 +15,7 @@
 .profile--nav {
     align-content: center;
     background-color : #212020;
+    border-right: solid 1px #17a4a4;
     box-shadow: inset -8px 0 20px -6px black, 8px 0 10px -6px black;
     padding-right: 40px;
 }
@@ -38,7 +39,7 @@
 .profile--nav-list li:hover {
     cursor: pointer;
     background-color: black;
-    transform: translate(20px, -5px);
+    transform: translate(20px);
     border-color: #db9200;
     box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
 }
@@ -51,29 +52,29 @@
 #nav-new {
     opacity: 0;
     animation-name: fade-in, slide-right;
-    animation-duration: 2s;
-    animation-delay: 0.4s;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
     animation-fill-mode: forwards;
 }
 #nav-current {
     opacity: 0;
     animation-name: fade-in, slide-right;
-    animation-duration: 2s;
-    animation-delay: 0.6s;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
     animation-fill-mode: forwards;
 }
 #nav-completed {
     opacity: 0;
     animation-name: fade-in, slide-right;
-    animation-duration: 2s;
-    animation-delay: 0.8s;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 #nav-favourites {
     opacity: 0;
     animation-name: fade-in, slide-right;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
     animation-fill-mode: forwards;
 }
 

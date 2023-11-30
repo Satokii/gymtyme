@@ -3,9 +3,10 @@
     gap: 30px;
     padding: 10px 20px;
     align-items: center;
-    background-color: #080838;
+    /* background-color: #080838; */
+    background-color : #212020;
     color: white;
-    border-bottom: solid 40px #17a4a4;
+    border-bottom: solid 1px #17a4a4;
 }
 
 .header-logo {

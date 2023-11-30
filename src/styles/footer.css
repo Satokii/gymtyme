@@ -1,4 +1,6 @@
 /* FOOTER */
 .footer {
-    background-color: rgb(12, 12, 31);
+    /* background-color: #0c0c1f; */
+    background-color : #212020;
+    border-top: solid 1px #17a4a4;
 }
