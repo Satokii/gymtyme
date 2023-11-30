@@ -8,7 +8,16 @@ function Header() {
 
     return (
         <header className="header grid">
-            <h1 className='header-logo' onClick={() => navigate('/')}>GymTyme</h1>
+            <h1 className='header-logo' onClick={() => navigate('/')}>
+                <span>G</span>
+                <span>y</span>
+                <span>m</span>
+                <span>T</span>
+                <span>y</span>
+                <span>m</span>
+                <span>e</span>
+                {/* GymTyme */}
+            </h1>
             <nav className='header-nav grid'>
                 <div className='header-nav-list grid'>
                     <NavLink
