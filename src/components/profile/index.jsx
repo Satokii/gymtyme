@@ -51,7 +51,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     return (
         <section className="profile--container grid">
             <nav className='profile--nav grid'>
-                <ul className='profile--nav-list grid'>
+                <ul className='profile--nav-list btn-ani-target grid'>
                     {selectedNav.map((nav, index) => 
                         <li 
                             key={`${nav.title}-${index}`}
@@ -61,7 +61,12 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                                 toggleSelectedNav(e)
                                 setShowPage(nav.click)
                             }}
-                            >{nav.title}
+                            >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            {nav.title}
                         </li>
                     )}
                 </ul>

@@ -28,10 +28,10 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
             :<div id='home' className='home-container'>
                 <div className='content grid'>
                     <h3 className='home-what-to-do-header grid'>What would you like to do?</h3>
-                    <ul className='home-options-list grid'>
-                        <li onClick={() => navigate('/workouts')}>Go to the workouts page</li>
-                        <li onClick={() => navigate('/exercises')}>See exercise suggestions</li>
-                        <li>View your previous workouts</li>
+                    <ul className='home-options-list btn-ani-target grid'>
+                        <li onClick={() => navigate('/workouts')}><span></span><span></span><span></span><span></span>Go to the workouts page </li>
+                        <li onClick={() => navigate('/exercises')}><span></span><span></span><span></span><span></span>See exercise suggestions</li>
+                        <li><span></span><span></span><span></span><span></span>View your previous workouts</li>
                     </ul>
                     <div onMouseOver={() => toggleGif()}>
                         {gif ? 

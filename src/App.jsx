@@ -10,6 +10,7 @@ import Profile from './components/profile'
 
 import './App.css'
 import './styles/animations.css'
+import './styles/btn-rotation.css'
 
 function App() {
 
