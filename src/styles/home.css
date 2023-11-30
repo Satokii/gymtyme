@@ -8,8 +8,7 @@
 }
 
 .home-cover-menu {
-    font-size: 80px;
-    color: #690daf;
+    font-size: 100px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -22,10 +21,8 @@
 
 .click-to-start:hover {
     color: #018805;
-    color: #032e48;
-    font-size: 60px;
     text-shadow: 0 0 10px #a8f8ff;
-    /* text-shadow: 0 0 2px black, 0 0 5px black; */
+    text-shadow: 0 0 2px black, 0 0 5px black;
 }
 
 .home-container {
