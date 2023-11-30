@@ -12,8 +12,8 @@
 .header-logo {
     place-self: center;
     padding-left: 20px;
-    font-size: 50px;
-    text-decoration: underline;
+    font-size: 70px;
+    text-decoration: underline #07bd07;
 }
 
 .header-nav {
@@ -22,8 +22,8 @@
 
 .header-nav-list {
     grid-template-columns: repeat(3, auto);
-    gap: 20px;
-    font-size: 30px;
+    gap: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -59,8 +59,8 @@
 
 .active_link {
     cursor: default;
-    color: white;
+    color: #07bd07;
     text-shadow: 1px 1px 1px black;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid #07bd07;
     transition: border-bottom .5s ease-in-out;
 }

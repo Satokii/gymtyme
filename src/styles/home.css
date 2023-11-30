@@ -15,15 +15,28 @@
     text-shadow: 1px 1px 2px black;
 }
 
+.home-cover-menu > p {
+    margin-bottom: 100px;
+}
+
+.home-cover-menu > p >span {
+    text-decoration: underline #07bd07;
+}
+
 .click-to-start {
     text-transform: uppercase;
+    padding: 10px 40px;
+    background-color: #11032a;
+    border: none;
+    box-shadow: 0 0 1px white, 0 0 3px white;
+    border-radius: 100px;
+    transition: 0.3s ease;
 }
 
 .click-to-start:hover {
-    color: #a8f8ff;
-    color: #ffd277;
-    text-shadow: 0 0 10px #a8f8ff;
-    text-shadow: 0 0 2px black, 0 0 5px black;
+    cursor: pointer;
+    color: #07bd07;
+    box-shadow: 0 0 5px #03e9f4,0 0 25px #03e9f4,0 0 50px #03e9f4,0 0 100px #03e9f4;
 }
 
 .home-container {
@@ -32,7 +45,6 @@
 
 .home-container:target {
     position: absolute;
-    top: 150px;
     width: 100%;
     height: 100%;
     display: grid;
@@ -41,7 +53,7 @@
 }
 
 .content {
-    grid-template-rows: 60px repeat(2, auto);
+    grid-template-rows: 80px repeat(2, auto);
     gap: 40px;
     width: 100vw;
     height: 100vh;
@@ -57,7 +69,7 @@
 /* SUB HEADER */
 .home-what-to-do-header {
     align-self: end;
-    font-size: 60px;
+    font-size: 80px;
     opacity: 0;
     animation: 1s ease 0.2s forwards fade-in;
 }
@@ -88,6 +100,10 @@
     transform: scale(1.03);
     border-color: #db9200;
     box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
+}
+
+.home-options-list > li:active {
+    transform: scale(0.95);
 }
 
 /* GIF */

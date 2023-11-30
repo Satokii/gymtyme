@@ -17,7 +17,7 @@ function Home() {
     return (
         <section className="home grid">
             <div className='home-cover-menu'>
-                <p>Welcome to GymTyme</p>
+                <p>Welcome to <span>GymTyme</span></p>
                 <a className='click-to-start' href="#home">Click to Start</a>
             </div>
             <div id='home' className='home-container'>
