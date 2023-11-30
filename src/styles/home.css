@@ -70,6 +70,7 @@
 /* OPTIONS LIST */
 .home-options-list {
     place-content: center;
+    text-align: start;
     gap: 30px;
     list-style-type: '🏋️';
     list-style-position: inside;

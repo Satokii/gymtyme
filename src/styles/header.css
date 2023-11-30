@@ -1,5 +1,5 @@
 .header {
-    grid-template-columns: auto 1fr 80px;
+    grid-template-columns: auto 1fr 100px;
     gap: 30px;
     padding: 10px 20px;
     align-items: center;
@@ -17,11 +17,13 @@
 }
 
 .header-nav {
-    justify-self: end;
+    justify-items: end;
+    margin-right: 20px;
 }
 
 .header-nav-list {
     grid-template-columns: repeat(3, auto);
+    place-items: center;
     gap: 50px;
     font-size: 40px;
     font-weight: bold;
@@ -30,6 +32,7 @@
 .header-profile {
     height: 70px;
     width: 70px;
+    margin-right: 40px;
     border: solid 1px green;
     background-color: green;
     border-radius: 9999px;
