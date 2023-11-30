@@ -1,7 +1,7 @@
 import '../../styles/header.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-function Header() {
+function Header( { setShowInitialDisplay }) {
 
     const navigate = useNavigate()
     const toggleClassName = ({ isActive }) => (isActive ? "active_link" : "inactive-link");
@@ -14,6 +14,7 @@ function Header() {
                     <NavLink
                         className={toggleClassName}
                         to="/"
+                        onClick={() => setShowInitialDisplay(false)}
                     >
                         Home
                     </NavLink>

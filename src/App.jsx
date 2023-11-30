@@ -13,6 +13,7 @@ import './styles/animations.css'
 
 function App() {
 
+  const [showInitialDisplay, setShowInitialDisplay] = useState(true)
   const [exercises, setExercises] = useState(ExerciseData)
   const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
@@ -36,11 +37,11 @@ function App() {
   return (
     <>
       <div className='container grid'>
-        <Header />
+        <Header setShowInitialDisplay={setShowInitialDisplay} />
         <Routes>
           <Route
             path='/'
-            element={<Home />}
+            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay}/>}
           >
           </Route>
           <Route
