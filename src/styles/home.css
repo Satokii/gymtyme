@@ -28,6 +28,8 @@
 
 .home-cover-menu > p >span {
     text-decoration: underline #07bd07;
+    text-underline-offset: 18px;
+    text-decoration-skip-ink: none;
 }
 
 .click-to-start {
