@@ -1,20 +1,19 @@
 import '../../styles/header.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-function Header( { setShowInitialDisplay }) {
+function Header() {
 
     const navigate = useNavigate()
     const toggleClassName = ({ isActive }) => (isActive ? "active_link" : "inactive-link");
 
     return (
         <header className="header grid">
-            <h1 className='header-logo'>GymTyme</h1>
+            <h1 className='header-logo' onClick={() => navigate('/')}>GymTyme</h1>
             <nav className='header-nav grid'>
                 <div className='header-nav-list grid'>
                     <NavLink
                         className={toggleClassName}
                         to="/"
-                        onClick={() => setShowInitialDisplay(false)}
                     >
                         Home
                     </NavLink>

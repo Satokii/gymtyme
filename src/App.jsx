@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <div className='container grid'>
-        <Header setShowInitialDisplay={setShowInitialDisplay} />
+        <Header />
         <Routes>
           <Route
             path='/'
