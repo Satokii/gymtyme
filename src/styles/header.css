@@ -38,7 +38,8 @@
 
 .header-profile:hover {
   cursor: pointer;
-  background-color: red;
+  background-color: darkgreen;
+  box-shadow: 0 0 3px white, 0 0 10px white;
 }
 
 /* NAV LINKS */

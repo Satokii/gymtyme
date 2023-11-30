@@ -13,15 +13,14 @@
 .workout-preview-header  {
     align-items: end;
     padding-bottom: 30px;
-    font-size: 40px;
+    font-size: 50px;
     height: 100px;
     opacity: 0;
     animation: 1s ease 0.2s forwards fade-in;
 }
 
 .exercises-header {
-    padding-bottom: 30px;
-    font-size: 60px;
+    font-size: 80px;
     height: 100px;
     opacity: 0;
     animation: 1s ease 0.4s forwards fade-in;
@@ -29,19 +28,26 @@
 
 /* WORKOUT PREVIEW */
 .workout-preview-workout-btn {
-    padding: 5px 10px;
-    background-color: forestgreen;
-    color: white;
-    font-size: 20px;
-    margin-bottom: 5px;
     border: none;
+    color: white;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #11032a;
+    box-shadow: 0 0 1px white, 0 0 3px white;
     opacity: 0;
     animation: 1s ease 0.3s forwards fade-in;
 }
 
 .workout-preview-workout-btn:hover {
     cursor: pointer;
-    background-color: #0abb0a;
+    color: #07bd07;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
+}
+
+.workout-preview-workout-btn:active {
+    transform: scale(0.95);
 }
 
 .workout-preview-table {
@@ -57,17 +63,19 @@
 
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
-    grid-template-columns: 300px repeat(2, 120px) repeat(3, auto);
-    gap: 10px;
-    height: 100px;
+    grid-template-columns: 400px repeat(5, auto);
+    gap: 30px;
+    padding: 10px 10px 20px 10px;
+    height: fit-content;
     align-items: center;
     border-bottom: solid 1px gray;
 }
 
 .exercise-name {
-    font-size: 26px;
-    padding-top: 10px;
+    font-size: 36px;
+    padding-top: 20px;
     font-weight: bold;
+    border-left: none;
 }
 
 /* SETS/REPS */
@@ -76,7 +84,6 @@
     gap: 5px;
     justify-items: center;
     font-size: 24px;
-    align-self: start;
 }
 
 .count-container {
@@ -86,71 +93,62 @@
     align-items: center;
 }
 
-.count-container > button {
-    width: 30px;
-    height: 30px;
-    align-content: center;
-    cursor: pointer;
+.count-container > * {
+    width: 40px;
+    height: 40px;
+    place-content: center;
     border-radius: 4px;
-}
-
-.add-btn {
-    font-size: 20px;
-    background-color: lightseagreen;
-    border: solid 1px #0c8781;
+    font-size: 24px;
+    color: white;
+    border: none;
+    background-color: #11032a;
+    box-shadow: 0 0 1px white, 0 0 3px white;
 }
 
 .add-btn:hover {
-    background-color: #00f5e9;
-}
-
-.minus-btn {
-    font-size: 20px;
-    background-color: lightcoral;
-    border: solid 1px #810c0c;
+    cursor: pointer;
+    color: #07bd07;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 .minus-btn:hover {
-    background-color: red;
+    cursor: pointer;
+    color: red;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
-.current-val {
-    place-content: center;
-    width: 30px;
-    height: 30px;
-    font-size: 22px;
-    border: solid 1px white;
-    border-radius: 4px;
+.add-btn:active, .minus-btn:active {
+    transform: scale(0.95);
 }
 
 /* ADD TO WORKOUT/FAVOURITES BUTTONS */
 .exercise-btn-container {
-    padding: 10px 10px 0 10px;
+    padding-top: 20px;
     font-size: 22px;
 }
 
-.add-to-workout-btn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #f175f5;
+.exercise-btn-container > button {
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #11032a;
+    box-shadow: 0 0 1px white, 0 0 3px white;
 }
 
 .add-to-workout-btn:hover {
-    background-color: #ee29f5;
-}
-
-.add-to-favourites-btn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #439cf6;
-    cursor: pointer;
+    color: #ee29f5;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 .add-to-favourites-btn:hover {
-    background-color: #0672df;
+    color: #0080ff;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
+}
+
+.add-to-workout-btn:active, .add-to-favourites-btn:active {
+    transform: scale(0.95);
 }
 
 /* RESET */
@@ -160,16 +158,25 @@
 }
 
 .reset-btn {
-    background-color: #c60808;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    border: none;
-    border-radius: 9999px;
     width: 60px;
     height: 60px;
-    cursor: pointer;
+    border: none;
+    border-radius: 9999px;
+    background: linear-gradient(to right,darkred,red,darkred,darkred,red,darkred);
+    background-size: 250%;
+    color: white;
+    transition-duration: 1s;
 }
 
 .reset-btn:hover {
+    cursor: pointer;
     background-color: #ff0505;
+    background-position: right;
+    transition-duration: 0.8s;
+}
+
+.reset-btn:active {
+    transform: scale(0.5);
 }

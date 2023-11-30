@@ -109,7 +109,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
                 <button className='see-example-exercises-btn' onClick={() => {
                     navigate('/exercises')
                     window.scrollTo(0, 0)
-                }}>See Exercise Suggestions</button></> : null}
+                }}>Exercise Suggestions</button></> : null}
             </div>
             {showNewWorkout ?
             <div className='grid'>

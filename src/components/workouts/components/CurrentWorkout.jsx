@@ -52,7 +52,7 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showCurrentWorkout,
                     </tbody>
                 </table>
                 <div className='current-workout--btns-container grid'>
-                    <button className='current-workout--complete-btn' onClick={() => handleSave()}>Complete and save workout</button>
+                    <button className='current-workout--complete-btn' onClick={() => handleSave()}>Complete workout</button>
                     <button className='current-workout--delete-btn' onClick={() => handleDelete()}>Delete workout</button>
                 </div>
             </div>

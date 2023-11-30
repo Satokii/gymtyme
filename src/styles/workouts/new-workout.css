@@ -13,13 +13,13 @@
 /* ADD EXERCISE HINT */
 .add-exercise-hint {
     margin-bottom: 10px;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 500;
-    color: rgb(250, 243, 240);
-    text-shadow: 2px 2px black, 0 0 5px turquoise, 0 0 10px turquoise, 0 0 20px turquoise;
+    color: #faf3f0;
+    text-shadow: 0 0 5px orange;
 }
 
-/* ADD EXERCISE BUTTON */
+/* ADD EXERCISE BUTTONS */
 .add-exercise-btn-container {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
@@ -28,10 +28,9 @@
 
 .add-exercise-btn, .see-example-exercises-btn {
     padding: 3px 10px;
-    color: #07bd07;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: transparent;
+    color: white;
+    background-color: #11032a;
+    font-size: 30px;
     border: none;
     box-shadow: 0 0 1px white, 0 0 3px white;
     border-radius: 5px;
@@ -39,8 +38,8 @@
 
 .add-exercise-btn:hover, .see-example-exercises-btn:hover {
     cursor: pointer;
-    background-color: #11032a;
-    box-shadow: 0 0 2px #14072a, 0 0 8px white;
+    color: #07bd07;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 /* WORKOUT TABLE */
@@ -88,36 +87,35 @@ td:nth-last-child(-n + 4) {
 /* CONFIRM WORKOUT BUTTON */
 .confirm-workout-btn {
     justify-self: center;
-    align-self: center;
     margin-top: 20px;
-    padding: 4px;
     color: white;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: transparent;
-    background-color: black;
-    background-color: darkgreen;
+    font-size: 24px;
+    padding: 3px 10px;
+    background-color: #11032a;
+    border: none;
+    box-shadow: 0 0 1px white, 0 0 3px white;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
 .confirm-workout-btn:hover {
     cursor: pointer;
-    transform: translateY(2px);
-    box-shadow: 0 0 5px black;
-    background-color: #015601;
+    color: orange;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 /* ADD EXERCISE FORM */
 .add-exercise-form-container {
     background: rgba(0,0,0,.5);
     padding: 30px 50px;
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     place-content: center;
 }
 
 .add-exercise-form-container > h3 {
-    font-size: 26px;
+    font-size: 32px;
     text-decoration: underline 2px;
     text-underline-offset: 4px;
     margin-bottom: 30px;
@@ -144,7 +142,9 @@ td:nth-last-child(-n + 4) {
     width: 100%;
     padding: 10px 0;
     margin-bottom: 30px;
-    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -153,7 +153,7 @@ td:nth-last-child(-n + 4) {
 
 .add-exercise-input-container label {
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 26px;
     color: #fff;
     pointer-events: none;
     transition: .5s;
@@ -162,6 +162,7 @@ td:nth-last-child(-n + 4) {
 /* FORM SUBMIT BUTTON */
 .add-exercise-submit-btn {
     padding: 10px 20px;
+    font-size: 22px;
     color: #03ac03;
     letter-spacing: 2px;
     border: none;
@@ -180,6 +181,7 @@ td:nth-last-child(-n + 4) {
 /* CANCEL FORM BUTTON */
 .cancel-add-exercise-btn {
     padding: 10px 20px;
+    font-size: 22px;
     color: red;
     margin-top: 10px;
     letter-spacing: 2px;

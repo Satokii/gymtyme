@@ -1,6 +1,7 @@
 .current-workout--container {
     grid-template-rows: 40px repeat(2, auto);
     padding: 50px;
+    gap: 10px;
 }
 
 .current-workout--container > h3 {
@@ -32,24 +33,19 @@
     color: white;
     padding: 3px 10px;
     font-size: 20px;
-    font-weight: 500;
     border-radius: 5px;
-}
-
-.current-workout--complete-btn {
-    background-color: green;
+    background-color: #11032a;
+    box-shadow: 0 0 1px white, 0 0 3px white;
 }
 
 .current-workout--complete-btn:hover {
     cursor: pointer;
-    background-color: #04d704;
-}
-
-.current-workout--delete-btn {
-    background-color: rgb(187, 3, 3)
+    color: #07bd07;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 .current-workout--delete-btn:hover {
     cursor: pointer;
-    background-color: #ff0000
+    color: red;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
