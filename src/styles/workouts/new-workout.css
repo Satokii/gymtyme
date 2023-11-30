@@ -21,10 +21,12 @@
 
 /* ADD EXERCISE BUTTON */
 .add-exercise-btn-container {
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
     align-self: center;
 }
 
-.add-exercise-btn {
+.add-exercise-btn, .see-example-exercises-btn {
     padding: 3px 10px;
     color: #07bd07;
     font-size: 24px;
@@ -35,7 +37,7 @@
     border-radius: 5px;
 }
 
-.add-exercise-btn:hover {
+.add-exercise-btn:hover, .see-example-exercises-btn:hover {
     cursor: pointer;
     background-color: #11032a;
     box-shadow: 0 0 2px #14072a, 0 0 8px white;

@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import NewWorkoutTable from '../../shared/NewWorkoutTable'
 import '../../../styles/workouts/new-workout.css'
+import { useNavigate } from 'react-router-dom'
 
 function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout }) {
+
+    const navigate = useNavigate()
 
     // DISPLAYING WORKOUT AND FORM
     const [showForm, setShowForm] = useState(false)
@@ -19,7 +22,7 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
             
         }
         else {
-            return 'Add Exercise'
+            return 'Add A New Exercise'
         }
     }
 
@@ -97,12 +100,16 @@ function NewWorkout({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorko
         <section className="create-new-workout grid">
             <h3>New Workout</h3>
             {showWorkoutHint ? <p className='add-exercise-hint'>Add an exercise to begin</p> : null }
-            <div className='add-exercise-btn-container '>
-                {showAddBtn ? <button className='add-exercise-btn grid' onClick={() => {
+            <div className='add-exercise-btn-container grid'>
+                {showAddBtn ? <><button className='add-exercise-btn grid' onClick={() => {
                     handleAddExercise()
                     handleShow()
                     handleShowHint()
-                }}>{toggleAddCancel()}</button> : null}
+                }}>{toggleAddCancel()}</button>
+                <button className='see-example-exercises-btn' onClick={() => {
+                    navigate('/exercises')
+                    window.scrollTo(0, 0)
+                }}>See Exercise Suggestions</button></> : null}
             </div>
             {showNewWorkout ?
             <div className='grid'>
