@@ -15,8 +15,7 @@
     margin-bottom: 10px;
     font-size: 28px;
     font-weight: 500;
-    color: #faf3f0;
-    text-shadow: 0 0 5px orange;
+    color: #99fbfb;
 }
 
 /* ADD EXERCISE BUTTONS */
@@ -40,6 +39,10 @@
     cursor: pointer;
     color: #07bd07;
     box-shadow: 0 0 2px #14072a, 0 0 4px white;
+}
+
+.add-exercise-btn:active, .see-example-exercises-btn:active {
+    transform: scale(0.95);
 }
 
 /* WORKOUT TABLE */
@@ -104,6 +107,10 @@ td:nth-last-child(-n + 4) {
     box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
+.confirm-workout-btn:active {
+    transform: scale(0.95);
+}
+
 /* ADD EXERCISE FORM */
 .add-exercise-form-container {
     background: rgba(0,0,0,.5);
@@ -144,7 +151,7 @@ td:nth-last-child(-n + 4) {
     margin-bottom: 30px;
     font-size: 22px;
     font-weight: bold;
-    color: #007bff;
+    color: #4ef8f8;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -159,41 +166,40 @@ td:nth-last-child(-n + 4) {
     transition: .5s;
 }
 
-/* FORM SUBMIT BUTTON */
-.add-exercise-submit-btn {
+/* FORM SUBMIT/CANCEL BUTTONS */
+.add-exercise-submit-btn, .cancel-add-exercise-btn {
+    cursor: pointer;
     padding: 10px 20px;
     font-size: 22px;
-    color: #03ac03;
     letter-spacing: 2px;
     border: none;
+    border-radius: 30px;
     background-color: transparent;
-    transition: .6s;
+    transition: 0.5s;
+}
+
+.add-exercise-submit-btn {
+    color: #03ac03;
+}
+
+.cancel-add-exercise-btn {
+    color: red;
+    margin-top: 10px;
+}
+
+.add-exercise-submit-btn:hover, .cancel-add-exercise-btn:hover {
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4,0 0 20px #03e9f4,0 0 40px #03e9f4,0 0 60px #03e9f4;
 }
 
 .add-exercise-submit-btn:hover {
-    cursor: pointer;
     background-color: #03ac03;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03ac03, 0 0 20px #03ac03, 0 0 40px #03ac03;
-}
-
-/* CANCEL FORM BUTTON */
-.cancel-add-exercise-btn {
-    padding: 10px 20px;
-    font-size: 22px;
-    color: red;
-    margin-top: 10px;
-    letter-spacing: 2px;
-    border: none;
-    background-color: transparent;
-    transition: .6s;
 }
 
 .cancel-add-exercise-btn:hover {
-    cursor: pointer;
-    background-color: #e83737;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #e83737, 0 0 20px #e83737, 0 0 40px #e83737;
+    background-color: red;
+}
+
+.add-exercise-submit-btn:active, .cancel-add-exercise-btn:active {
+    transform: scale(0.95);
 }

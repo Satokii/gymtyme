@@ -15,8 +15,8 @@
 
 .current-workout--container > p {
     margin-top: 10px;
-    font-size: 20px;
-    font-weight: 600;
+    line-height: 2;
+    font-size: 28px;
     text-align: center;
     color: #99fbfb;
 }
@@ -28,6 +28,7 @@
 }
 
 .current-workout--btns-container > button {
+    cursor: pointer;
     border: none;
     height: fit-content;
     color: white;
@@ -39,13 +40,15 @@
 }
 
 .current-workout--complete-btn:hover {
-    cursor: pointer;
     color: #07bd07;
     box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 .current-workout--delete-btn:hover {
-    cursor: pointer;
     color: red;
     box-shadow: 0 0 2px #14072a, 0 0 4px white;
+}
+
+.current-workout--btns-container > button:active {
+    transform: scale(0.95);
 }

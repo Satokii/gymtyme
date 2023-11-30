@@ -28,7 +28,7 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showCurrentWorkout,
     return (
         <section className="current-workout--container grid">
             <h3>Current Workout</h3>
-            {showWorkoutHint ? <p>Oops, it looks like you don't have a current workout. <br /> Create a new workout and add it to your current workout to begin</p> : null}
+            {showWorkoutHint ? <p>Oops... it looks like you don't have a current workout. <br /> Create a new workout to begin...</p> : null}
             {showCurrentWorkout ? 
             <div className='current-workout--workout-table grid'>
                 <table className='workout-table'>
@@ -52,8 +52,8 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showCurrentWorkout,
                     </tbody>
                 </table>
                 <div className='current-workout--btns-container grid'>
-                    <button className='current-workout--complete-btn' onClick={() => handleSave()}>Complete workout</button>
-                    <button className='current-workout--delete-btn' onClick={() => handleDelete()}>Delete workout</button>
+                    <button className='current-workout--complete-btn' onClick={() => handleSave()}>Complete Workout</button>
+                    <button className='current-workout--delete-btn' onClick={() => handleDelete()}>Delete Workout</button>
                 </div>
             </div>
             : null}

@@ -53,35 +53,21 @@
     background-color: skyblue;
 }
 
-.create-new-workout-btn:hover {
-    cursor: pointer;
-    background-color: #4693b2;
-    transform: translateY(3px);
-}
-
 .view-current-workout-btn {
     background-color: fuchsia;
-}
-
-.view-current-workout-btn:hover {
-    cursor: pointer;
-    background-color: #9c049c;
-    transform: translateY(3px);
 }
 
 .view-all-workouts-btn {
     background-color: orange;
 }
 
-.view-all-workouts-btn:hover {
+.button-options button:hover {
     cursor: pointer;
-    background-color: #c16c06;
-    transform: translateY(3px);
+    box-shadow: 0 0 2px white, 0 0 10px white;
 }
 
 .button-options button:active {
-    opacity: 0.7;
-    background-color: black;
+    transform: scale(0.95);
 }
 
 /* WORKOUTS SECTIONS */
