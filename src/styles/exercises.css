@@ -15,15 +15,29 @@
     padding-bottom: 30px;
     font-size: 40px;
     height: 100px;
+    opacity: 0;
+    animation: 2s ease 0.2s forwards fade-in;
 }
 
 .exercises-header {
     padding-bottom: 30px;
     font-size: 60px;
     height: 100px;
+    opacity: 0;
+    animation: 2s ease 0.7s forwards fade-in;
+}
+
+.workout-preview-table {
+    opacity: 0;
+    animation: 2s ease 0.5s forwards fade-in;
 }
 
 /* EXERCISES LIST */
+.exercises-list {
+    opacity: 0;
+    animation: 2s ease 1.1s forwards fade-in;
+}
+
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
     grid-template-columns: 300px repeat(2, 120px) repeat(3, auto);

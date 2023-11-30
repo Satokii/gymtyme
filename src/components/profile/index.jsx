@@ -10,22 +10,26 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
         {
             title:'New Workout',
             className: 'inactive',
-            click: 'new'
+            click: 'new',
+            id: 'nav-new'
         },
         {
             title: 'Current Workout',
             className: 'inactive',
-            click: 'current'
+            click: 'current',
+            id: 'nav-current'
         },
         {
             title: 'Completed Workout',
             className: 'inactive',
-            click: 'completed'
+            click: 'completed',
+            id: 'nav-completed'
         },
         {
             title: 'Favourite Exercises',
             className: 'inactive',
-            click: 'favourites'
+            click: 'favourites',
+            id: 'nav-favourites'
         }
     ]
 
@@ -50,7 +54,8 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                 <ul className='profile--nav-list grid'>
                     {selectedNav.map((nav, index) => 
                         <li 
-                            key={`${nav.title}-${index}`} 
+                            key={`${nav.title}-${index}`}
+                            id={nav.id}
                             className={nav.className} 
                             onClick={(e) => {
                                 toggleSelectedNav(e)
@@ -62,13 +67,16 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                 </ul>
             </nav>
             <div className='profile--menu-pages-container grid'>
-                {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
-                {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
-                {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}
-                {showPage === 'favourites' && 
-                <section id='fourth'>
-                    <h3>Menu 4</h3>
-                </section>}
+                <h3 className='profile--header'>Profile</h3>
+                <div>
+                    {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
+                    {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+                    {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}
+                    {showPage === 'favourites' && 
+                    <section id='fourth'>
+                        <h3>Menu 4</h3>
+                    </section>}
+                </div>
             </div>
         </section>
     )

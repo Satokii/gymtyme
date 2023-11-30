@@ -49,7 +49,9 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
         <section className="exercises-container grid">
             <div>
                 <h2 className="workout-preview-header grid">Workout Preview</h2>
-                <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
+                <div className='workout-preview-table'>
+                    <NewWorkoutTable newWorkout={newWorkout} setNewWorkout={setNewWorkout} />
+                </div>
             </div>
             <div>
                 <h2 className="exercises-header">Exercise Suggestions</h2>

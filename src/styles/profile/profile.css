@@ -2,7 +2,6 @@
 .profile--container {
     grid-template-columns: auto 1fr;
     min-height: 100vh;
-    padding: 50px 200px;
     justify-items: center;
     background: linear-gradient(#1d1231, #411960);
     color: white;
@@ -15,6 +14,9 @@
 /* PROFILE NAV BAR */
 .profile--nav {
     align-content: center;
+    background-color : #212020;
+    box-shadow: inset -8px 0 20px -6px black, 8px 0 10px -6px black;
+    padding-right: 40px;
 }
 
 .profile--nav-list {
@@ -24,21 +26,67 @@
 }
 
 .profile--nav-list li {
-    border: solid 1px white;
-    border-radius: 15px;
-    padding: 10px 20px;
-    /* font-weight: bold; */
+    border: solid 1px #171313;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 5px 20px;
+    background-color: #0f0202;
+    text-align: center;
+    transition: 0.6s;
 }
 
 .profile--nav-list li:hover {
-    background-color: red;
+    cursor: pointer;
+    background-color: black;
+    transform: translate(20px, -5px);
+    border-color: #db9200;
+    box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
 }
 
 .active {
-    color: red;
+    color: #db0adb;
+    box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
+}
+
+#nav-new {
+    opacity: 0;
+    animation-name: fade-in, slide-right;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+#nav-current {
+    opacity: 0;
+    animation-name: fade-in, slide-right;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+#nav-completed {
+    opacity: 0;
+    animation-name: fade-in, slide-right;
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+#nav-favourites {
+    opacity: 0;
+    animation-name: fade-in, slide-right;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 /* PROFILE */
 .profile--menu-pages-container {
+    grid-template-rows: 60px 1fr;
+    padding: 50px 200px;
     align-content: center;
+}
+
+.profile--header {
+    font-size: 60px;
+    text-align: center;
+    opacity: 0;
+    animation: 2s ease 0.2s forwards fade-in;
 }
