@@ -51,7 +51,6 @@
 /* MAIN CONTENT */
 .content {
     grid-template-rows: 80px repeat(2, auto);
-    /* gap: 10px; */
     height: 100vh;
     width: 100vw;
     align-items: center;
@@ -59,7 +58,6 @@
     padding: 30px;
     color: #fff;
     text-align: center;
-    /* background: linear-gradient(#1d1231, #411960); */
 }
 
 /* SUB HEADER */
@@ -113,9 +111,9 @@
 }
 
 .home-gif-main {
-    box-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 50px turquoise;
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 30px turquoise;
 }
 
 .home-gif-alt {
-    box-shadow: 0 0 5px lime, 0 0 20px lime, 0 0 50px limegreen;
+    box-shadow: 0 0 5px #07bd07, 0 0 10px #07bd07, 0 0 30px #07bd07;
 }
