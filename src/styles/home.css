@@ -13,9 +13,9 @@
     top: -150px;
     bottom: -150px;
     width: 100vw;
-    padding: 350px;
+    padding-top: 200px;
     background: linear-gradient(#1d1231, #411960);
-    font-size: 100px;
+    font-size: 80px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -23,7 +23,7 @@
 }
 
 .home-cover-menu > p {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 .home-cover-menu > p >span {
@@ -48,14 +48,14 @@
     box-shadow: 0 0 5px #03e9f4,0 0 25px #03e9f4,0 0 50px #03e9f4,0 0 100px #03e9f4;
 }
 
+/* MAIN CONTENT */
 .content {
     grid-template-rows: 80px repeat(2, auto);
-    gap: 40px;
-    width: 100vw;
-    height: 100vh;
+    gap: 20px;
+    height: 100%;
     align-items: center;
     justify-items: center;
-    padding: 100px 200px;
+    padding: 50px;
     color: #fff;
     text-align: center;
     background: linear-gradient(#1d1231, #411960);
@@ -64,7 +64,7 @@
 /* SUB HEADER */
 .home-what-to-do-header {
     align-self: end;
-    font-size: 80px;
+    font-size: 60px;
     opacity: 0;
     animation: 1s ease 0.2s forwards fade-in;
 }
@@ -84,7 +84,7 @@
 .home-options-list > li {
     border:solid 1px #0f0202;
     padding: 10px 15px;
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: 1px;
     background-color: #0f0202;
     position: relative;

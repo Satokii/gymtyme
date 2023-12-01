@@ -7,13 +7,13 @@
 }
 
 .create-new-workout > h3 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 /* ADD EXERCISE HINT */
 .add-exercise-hint {
     margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: #99fbfb;
 }
@@ -29,7 +29,7 @@
     padding: 3px 10px;
     color: white;
     background-color: #11032a;
-    font-size: 30px;
+    font-size: 24px;
     border: none;
     box-shadow: 0 0 1px white, 0 0 3px white;
     border-radius: 5px;
@@ -48,7 +48,7 @@
 /* WORKOUT TABLE */
 table, th, td {
   border: solid 1px white;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 table {
@@ -92,7 +92,7 @@ td:nth-last-child(-n + 4) {
     justify-self: center;
     margin-top: 20px;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     padding: 3px 10px;
     background-color: #11032a;
     border: none;
@@ -122,7 +122,7 @@ td:nth-last-child(-n + 4) {
 }
 
 .add-exercise-form-container > h3 {
-    font-size: 32px;
+    font-size: 28px;
     text-decoration: underline 2px;
     text-underline-offset: 4px;
     margin-bottom: 30px;
@@ -149,8 +149,9 @@ td:nth-last-child(-n + 4) {
     width: 100%;
     padding: 10px 0;
     margin-bottom: 30px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: #4ef8f8;
     border: none;
     border-bottom: 1px solid #fff;
@@ -160,7 +161,7 @@ td:nth-last-child(-n + 4) {
 
 .add-exercise-input-container label {
     padding: 10px 0;
-    font-size: 26px;
+    font-size: 24px;
     color: #fff;
     pointer-events: none;
     transition: .5s;
@@ -170,7 +171,7 @@ td:nth-last-child(-n + 4) {
 .add-exercise-submit-btn, .cancel-add-exercise-btn {
     cursor: pointer;
     padding: 10px 20px;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 2px;
     border: none;
     border-radius: 30px;
