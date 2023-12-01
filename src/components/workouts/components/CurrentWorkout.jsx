@@ -13,7 +13,7 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showCurrentWorkout,
         }, [currentWorkout, setShowCurrentWorkout])  
         
         function handleSave() {
-            setAllWorkouts([...allWorkouts, [...currentWorkout]])
+            setAllWorkouts([[...currentWorkout], ...allWorkouts])
             setCurrentWorkout([])
             setShowWorkoutHint(true)
             setShowCurrentWorkout(false)

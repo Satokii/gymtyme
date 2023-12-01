@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import NewWorkout from './components/NewWorkout'
 import CurrentWorkout from './components/CurrentWorkout'
 import AllWorkouts from './components/AllWorkouts'
 import '../../styles/workouts/workouts.css'
 
 function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, allWorkouts, setAllWorkouts, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, toggleShow, setToggleShow }) {
-
-    // const [toggleShow, setToggleShow] = useState(null)
 
     function toggleNew() {
         setToggleShow('new')
