@@ -56,7 +56,7 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
 
     return (
         <section className="exercises-container grid">
-            <div>
+            <div className="workout-preview-container">
                 <h2 className="workout-preview-header grid">Workout Preview</h2>
                 <button className="workout-preview-workout-btn" onClick={() => handleWorkoutNav()}>See your new workout</button>
                 <div className='workout-preview-table'>
@@ -85,10 +85,10 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
                                 <button className="add-btn grid" onClick={() => increaseRep(exercise)}>+</button>
                             </div>
                         </div>
-                        <div className="exercise-btn-container">
+                        <div className="exercise-btn-container grid">
                             <button className="add-to-workout-btn" onClick={() => addToWorkout(exercise)}>Add to New Workout</button>
                         </div>
-                        <div className="exercise-btn-container">
+                        <div className="exercise-btn-container grid">
                             <button className="add-to-favourites-btn" onClick={() => addToFavourites(exercise)}>Add to Favourites</button>
                         </div>
                         <div className="reset-container grid">
