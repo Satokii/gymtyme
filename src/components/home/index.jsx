@@ -24,7 +24,10 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
             {showInitialDisplay ? 
             <div className='home-cover-menu'>
                 <p>Welcome to <span>GymTyme</span></p>
-                <a className='click-to-start' href="#home" onClick={() => handlePageDisplay()}>Click to Start</a>
+                <a className='click-to-start' href="#home" onClick={() => {
+                    handlePageDisplay()
+                    window.scrollTo(0, 0)
+                }}>Click to Start</a>
             </div>
             :<div id='home' className='home-container'>
                 <div className='content grid'>
