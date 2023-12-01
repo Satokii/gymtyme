@@ -8,7 +8,10 @@ function Header() {
 
     return (
         <header className="header grid">
-            <h1 className='header-logo' onClick={() => navigate('/')}>
+            <h1 className='header-logo' onClick={() => {
+                window.scrollTo(0, 100)
+                navigate('/')
+            }}>
                 <span>G</span>
                 <span>y</span>
                 <span>m</span>
@@ -23,24 +26,30 @@ function Header() {
                     <NavLink
                         className={toggleClassName}
                         to="/"
+                        onClick={() => window.scrollTo(0, 100)}
                     >
                         Home
                     </NavLink>
                     <NavLink
                         className={toggleClassName}
                         to="/workouts"
+                        onClick={() => window.scrollTo(0, 0)}
                         >
                         Workouts
                     </NavLink>
                     <NavLink
                         className={toggleClassName}
                         to="/exercises"
+                        onClick={() => window.scrollTo(0, 0)}
                         >
                         Exercises
                     </NavLink>
                 </div>
             </nav>
-            <div className='header-profile grid' onClick={() => navigate('/profile')}>Profile</div>
+            <div className='header-profile grid' onClick={() => {
+                window.scrollTo(0, 0)
+                navigate('/profile')
+            }}>Profile</div>
         </header>
     )
 }
