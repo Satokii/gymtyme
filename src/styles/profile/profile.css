@@ -24,9 +24,8 @@
 }
 
 .profile--nav-list li {
+    cursor: pointer;
     border: solid 1px #0f0202;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     padding: 10px 20px;
     background-color: #0f0202;
     text-align: center;
@@ -35,16 +34,15 @@
     overflow: hidden;
 }
 
-.profile--nav-list li:hover {
-    cursor: pointer;
-    background-color: black;
-    transform: translate(20px);
-    cursor: pointer;
+.profile--nav-list li:active {
+    transform: scale(0.95);
 }
 
 .active-profile-nav {
     color: #07bd07;
-    box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
+    box-shadow: 0 0 1px #B71DDE, 0 0 2px 1px #B71DDE;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #nav-new {
