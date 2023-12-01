@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-.active {
+.active-profile-nav {
     color: #07bd07;
     box-shadow: 1px 1px 5px goldenrod, -1px -1px 10px red, 0 0 10px white;
 }

@@ -9,25 +9,25 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     const INITIAL_NAV_STATE = [
         {
             title:'New Workout',
-            className: 'inactive',
+            className: 'inactive-profile-nav btn-ani-target',
             click: 'new',
             id: 'nav-new'
         },
         {
             title: 'Current Workout',
-            className: 'inactive',
+            className: 'inactive-profile-nav btn-ani-target',
             click: 'current',
             id: 'nav-current'
         },
         {
             title: 'Completed Workout',
-            className: 'inactive',
+            className: 'inactive-profile-nav btn-ani-target',
             click: 'completed',
             id: 'nav-completed'
         },
         {
             title: 'Favourite Exercises',
-            className: 'inactive',
+            className: 'inactive-profile-nav btn-ani-target',
             click: 'favourites',
             id: 'nav-favourites'
         }
@@ -39,10 +39,10 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     function toggleSelectedNav(navItem) {
         const updatedNav = selectedNav.map((nav) => {
             if (nav.title === navItem.target.innerText) {
-                return {...nav, className: 'active'}
+                return {...nav, className: 'active-profile-nav'}
             }
             else {
-                return {...nav, className: 'inactive'}
+                return {...nav, className: 'inactive-profile-nav btn-ani-target'}
             }
         })
         setSelectedNav(updatedNav)
@@ -51,7 +51,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     return (
         <section className="profile--container grid">
             <nav className='profile--nav grid'>
-                <ul className='profile--nav-list btn-ani-target grid'>
+                <ul className='profile--nav-list grid'>
                     {selectedNav.map((nav, index) => 
                         <li 
                             key={`${nav.title}-${index}`}

@@ -32,16 +32,16 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
             :<div id='home' className='home-container'>
                 <div className='content grid'>
                     <h3 className='home-what-to-do-header grid'>What would you like to do?</h3>
-                    <ul className='home-options-list btn-ani-target grid'>
-                        <li onClick={() => {
+                    <ul className='home-options-list grid'>
+                        <li className='btn-ani-target' onClick={() => {
                             navigate('/workouts')
                             window.scrollTo(0, 0)
                         }}><span></span><span></span><span></span><span></span>Go To The Workouts Page </li>
-                        <li onClick={() => {
+                        <li className='btn-ani-target' onClick={() => {
                             navigate('/exercises')
                             window.scrollTo(0, 0)
                         }}><span></span><span></span><span></span><span></span>See Exercise Suggestions</li>
-                        <li><span></span><span></span><span></span><span></span>View Your Previous Workouts</li>
+                        <li className='btn-ani-target'><span></span><span></span><span></span><span></span>View Your Previous Workouts</li>
                     </ul>
                     <div onMouseOver={() => toggleGif()}>
                         {gif ? 
