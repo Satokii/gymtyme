@@ -10,8 +10,8 @@
 
 .home-cover-menu {
     position: absolute;
-    top: -150px;
-    bottom: -150px;
+    top: -100px;
+    bottom: -100px;
     width: 100vw;
     padding-top: 200px;
     background: linear-gradient(#1d1231, #411960);
@@ -51,11 +51,11 @@
 /* MAIN CONTENT */
 .content {
     grid-template-rows: 80px repeat(2, auto);
-    gap: 20px;
+    /* gap: 10px; */
     height: 100%;
     align-items: center;
     justify-items: center;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
     text-align: center;
     background: linear-gradient(#1d1231, #411960);
@@ -63,7 +63,6 @@
 
 /* SUB HEADER */
 .home-what-to-do-header {
-    align-self: end;
     font-size: 60px;
     opacity: 0;
     animation: 1s ease 0.2s forwards fade-in;
@@ -73,7 +72,7 @@
 .home-options-list {
     place-content: center;
     text-align: start;
-    gap: 30px;
+    gap: 20px;
     list-style-type: '🏋️';
     list-style-position: inside;
     padding: 30px;
@@ -104,7 +103,7 @@
 /* GIF */
 .home-gif {
     object-fit: cover;
-    width: 600px;
+    width: 400px;
     height: 300px;
     border: solid 1px white;
     border-radius: 20px;
