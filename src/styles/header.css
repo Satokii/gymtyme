@@ -87,20 +87,26 @@
     cursor: pointer;
     text-decoration: none;
     color: #181818;
-    color: white;
-    border-bottom: 3px solid transparent;
+    color: white;    
+    background-image: linear-gradient(#07bd07, #07bd07);
+    background-size: 0% 0.17em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
 }
 
-.inactive-link:hover {
-    transform: translateY(-1px);
-    text-shadow: 0 0 5px #07bd07, 0 0 10px #07bd07, 0 0 20px #07bd07;
+.inactive-link:hover, .inactive-link:focus, .inactive-link:active  {
+    background-size: 100% 0.17em;
+    background-position-x: 0%;
 }
- 
 
 .active_link {
     cursor: default;
     color: #07bd07;
-    text-shadow: 1px 1px 1px black;
-    border-bottom: 4px solid #07bd07;
-    transition: border-bottom .5s ease-in-out;
+    background-image: linear-gradient(#07bd07, #07bd07);
+    background-size: 100% 0.17em;
+    background-position-x: 0%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
 }
