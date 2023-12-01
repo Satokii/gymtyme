@@ -78,8 +78,8 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                     {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}
                     {showPage === 'favourites' && 
-                    <section id='fourth'>
-                        <h3>Menu 4</h3>
+                    <section id='fourth' className='profile--favourites grid'>
+                        <h3>🚧🚧👷🚧🚧 Favourites tab still under construction 🚧🚧👷🚧🚧</h3>
                     </section>}
                 </div>
             </div>

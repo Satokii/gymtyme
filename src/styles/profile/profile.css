@@ -89,3 +89,10 @@
     opacity: 0;
     animation: 2s ease 0.2s forwards fade-in;
 }
+
+/* FAVOURITES */
+
+.profile--favourites {
+    padding-top: 50px;
+    font-size: 22px;
+}

@@ -9,6 +9,7 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
     function handleWorkoutNav() {
         setToggleShow('new')
         navigate('/workouts')
+        window.scrollTo(0,0)
     }
 
     function increaseSet(exercise) {
