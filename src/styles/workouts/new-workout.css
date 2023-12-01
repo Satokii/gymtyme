@@ -184,21 +184,24 @@ td:nth-last-child(-n + 4) {
 }
 
 .cancel-add-exercise-btn {
-    color: red;
+    color: #F72119;
     margin-top: 10px;
 }
 
 .add-exercise-submit-btn:hover, .cancel-add-exercise-btn:hover {
     color: #fff;
-    box-shadow: 0 0 5px #03e9f4,0 0 20px #03e9f4,0 0 40px #03e9f4,0 0 60px #03e9f4;
+    /* box-shadow: 0 0 5px #03e9f4,0 0 20px #03e9f4,0 0 40px #03e9f4,0 0 60px #03e9f4; */
+    /* box-shadow: 0 0 10px #03e9f4; */
 }
 
 .add-exercise-submit-btn:hover {
     background-color: #03ac03;
+    box-shadow: 0 0 10px #03AC58;
 }
 
 .cancel-add-exercise-btn:hover {
-    background-color: red;
+    background-color: #F72119;
+    box-shadow: 0 0 10px #F71980;
 }
 
 .add-exercise-submit-btn:active, .cancel-add-exercise-btn:active {
