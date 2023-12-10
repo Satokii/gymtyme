@@ -2,12 +2,11 @@ import NewWorkoutTable from "../shared/NewWorkoutTable";
 import '../../styles/exercises/exercises.css';
 import '../../styles/exercises/exercises-filter.css'
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites, setToggleShow }) {
 
     const navigate = useNavigate()
-
 
     // FILTERS
     const [filter, setFilter] = useState('none')
@@ -31,10 +30,29 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
     else filteredExercises = exercises
 
     const [showDropdown, setShowDropdown] = useState(false)
+    const menuRef = useRef(null)
+    const buttonRef = useRef(null)
 
     function toggleDropdown() {
         setShowDropdown(!showDropdown)
     }
+
+    function handleOutsideClick(e) {
+        if (
+            menuRef.current &&
+            !menuRef.current.contains(e.target) &&
+            e.target !== buttonRef.current
+        ) {
+            setShowDropdown(false)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleOutsideClick)
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick)
+        }
+    }, [])
 
     // ADDING EXERCISES TO WORKOUT
     function handleWorkoutNav() {
@@ -96,9 +114,18 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
             </div>
             <div>
                 <h2 className="exercises-header">Exercise Suggestions</h2>
-                <button className="exercises-dropdown-filter-btn grid" onClick={() => toggleDropdown()}>Filters</button>
+                <button 
+                    className="exercises-dropdown-filter-btn grid" 
+                    ref={buttonRef}
+                    onClick={() => toggleDropdown()}
+                >
+                    Filters
+                </button>
                 {showDropdown && 
-                    <ul className="exercises-dropdown-filter-list">
+                    <ul 
+                        className="exercises-dropdown-filter-list"
+                        ref={menuRef}
+                    >
                         <li onClick={() => setFilter('Back')}>Back</li>
                         <li onClick={() => setFilter('Biceps')}>Biceps</li>
                         <li onClick={() => setFilter('Chest')}>Chest</li>
