@@ -1,11 +1,41 @@
 import NewWorkoutTable from "../shared/NewWorkoutTable";
-import "../../styles/exercises.css";
+import '../../styles/exercises/exercises.css';
+import '../../styles/exercises/exercises-filter.css'
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favourites, setFavourites, setToggleShow }) {
 
     const navigate = useNavigate()
 
+
+    // FILTERS
+    const [filter, setFilter] = useState('none')
+
+    const backExercises = exercises.filter((exercise) => exercise.group === 'Back')
+    const bicepsExercises = exercises.filter((exercise) => exercise.group === 'Biceps')
+    const tricepsExercises = exercises.filter((exercise) => exercise.group === 'Triceps')
+    const chestExercises = exercises.filter((exercise) => exercise.group === 'Chest')
+    const shouldersExercises = exercises.filter((exercise) => exercise.group === 'Shoulders')
+    const legsExercises = exercises.filter((exercise) => exercise.group === 'Legs')
+
+    let filteredExercises
+
+    if (filter === 'Back') filteredExercises = backExercises
+    if (filter === 'Biceps') filteredExercises = bicepsExercises
+    if (filter === 'Triceps') filteredExercises = tricepsExercises
+    if (filter === 'Chest') filteredExercises = chestExercises
+    if (filter === 'Shoulders') filteredExercises = shouldersExercises
+    if (filter === 'Legs') filteredExercises = legsExercises
+    else filteredExercises = exercises
+
+    const [showDropdown, setShowDropdown] = useState(false)
+
+    function toggleDropdown() {
+        setShowDropdown(!showDropdown)
+    }
+
+    // ADDING EXERCISES TO WORKOUT
     function handleWorkoutNav() {
         setToggleShow('new')
         navigate('/workouts')
@@ -65,8 +95,19 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
             </div>
             <div>
                 <h2 className="exercises-header">Exercise Suggestions</h2>
+                <button className="exercises-dropdown-filter-btn grid" onClick={() => toggleDropdown()}>Filters</button>
+                {showDropdown && 
+                    <ul className="exercises-dropdown-filter-list">
+                        <li>Back</li>
+                        <li>Biceps</li>
+                        <li>Chest</li>
+                        <li>Legs</li>
+                        <li>Shoulders</li>
+                        <li>Triceps</li>
+                    </ul>
+                }  
                 <ul className="exercises-list grid">
-                    {exercises.map((exercise, index) => (
+                    {filteredExercises.map((exercise, index) => (
                     <li className="exercise-item-container grid" key={`${exercise.id}-${index}`}>
                         <p className="exercise-name">{exercise.name}</p>
                         <div className="sets-container grid">

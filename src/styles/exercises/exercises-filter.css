@@ -1,0 +1,33 @@
+.exercises-dropdown-filter-btn {
+    background: linear-gradient(#5619c7, #50058a);
+    color: white;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    position: relative;
+    /* justify-content: end; */
+}
+
+.exercises-dropdown-filter-list {
+    position: absolute;
+    width: 250px;
+    box-shadow: #0000000d 0px 6px 10px 0px,
+    #0000001a 0px 0px 0px 1px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background: linear-gradient(#5619c7, #50058a);
+}
+
+.exercises-dropdown-filter-list li {
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+}
+
+.exercises-dropdown-filter-list li:hover {
+    background-color: #200237;
+    color: #07bd07;
+}
