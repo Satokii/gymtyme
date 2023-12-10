@@ -126,13 +126,34 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
                         className="exercises-dropdown-filter-list"
                         ref={menuRef}
                     >
-                        <li onClick={() => setFilter('Back')}>Back</li>
-                        <li onClick={() => setFilter('Biceps')}>Biceps</li>
-                        <li onClick={() => setFilter('Chest')}>Chest</li>
-                        <li onClick={() => setFilter('Legs')}>Legs</li>
-                        <li onClick={() => setFilter('Shoulders')}>Shoulders</li>
-                        <li onClick={() => setFilter('Triceps')}>Triceps</li>
-                        <li onClick={() => setFilter('None')}>Clear Filter</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Back')
+                        }}>Back</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Biceps')
+                        }}>Biceps</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Chest')
+                        }}>Chest</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Legs')
+                        }}>Legs</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Shoulders')
+                        }}>Shoulders</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('Triceps')
+                        }}>Triceps</li>
+                        <li onClick={() => {
+                            setShowDropdown(false)
+                            setFilter('None')
+                        }}>Clear Filter</li>
                     </ul>
                 }  
                 <ul className="exercises-list grid">
