@@ -22,11 +22,12 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
     let filteredExercises
 
     if (filter === 'Back') filteredExercises = backExercises
-    if (filter === 'Biceps') filteredExercises = bicepsExercises
-    if (filter === 'Triceps') filteredExercises = tricepsExercises
-    if (filter === 'Chest') filteredExercises = chestExercises
-    if (filter === 'Shoulders') filteredExercises = shouldersExercises
-    if (filter === 'Legs') filteredExercises = legsExercises
+    else if (filter === 'Biceps') filteredExercises = bicepsExercises
+    else if (filter === 'Triceps') filteredExercises = tricepsExercises
+    else if (filter === 'Chest') filteredExercises = chestExercises
+    else if (filter === 'Shoulders') filteredExercises = shouldersExercises
+    else if (filter === 'Legs') filteredExercises = legsExercises
+    else if (filter === 'None') filteredExercises = exercises
     else filteredExercises = exercises
 
     const [showDropdown, setShowDropdown] = useState(false)
@@ -98,12 +99,13 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
                 <button className="exercises-dropdown-filter-btn grid" onClick={() => toggleDropdown()}>Filters</button>
                 {showDropdown && 
                     <ul className="exercises-dropdown-filter-list">
-                        <li>Back</li>
-                        <li>Biceps</li>
-                        <li>Chest</li>
-                        <li>Legs</li>
-                        <li>Shoulders</li>
-                        <li>Triceps</li>
+                        <li onClick={() => setFilter('Back')}>Back</li>
+                        <li onClick={() => setFilter('Biceps')}>Biceps</li>
+                        <li onClick={() => setFilter('Chest')}>Chest</li>
+                        <li onClick={() => setFilter('Legs')}>Legs</li>
+                        <li onClick={() => setFilter('Shoulders')}>Shoulders</li>
+                        <li onClick={() => setFilter('Triceps')}>Triceps</li>
+                        <li onClick={() => setFilter('None')}>Clear Filter</li>
                     </ul>
                 }  
                 <ul className="exercises-list grid">
