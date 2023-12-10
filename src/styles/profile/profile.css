@@ -2,7 +2,8 @@
 .profile--container {
     grid-template-columns: auto 1fr;
     min-height: 100vh;
-    justify-items: center;
+    justify-content: center;
+    margin-right: 15px;
     background: linear-gradient(#1d1231, #411960);
     color: white;
 }
@@ -77,8 +78,8 @@
 /* PROFILE MAIN CONTENT */
 .profile--menu-pages-container {
     grid-template-rows: 60px 1fr;
-    padding: 50px;
     align-content: center;
+    overflow-y: scroll;
 }
 
 .profile--header {
@@ -97,4 +98,5 @@
 .profile--favourites {
     padding-top: 50px;
     font-size: 22px;
+    justify-items: center;
 }

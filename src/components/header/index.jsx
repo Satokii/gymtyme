@@ -1,7 +1,7 @@
 import '../../styles/header.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-function Header() {
+function Header({ setShowPage }) {
 
     const navigate = useNavigate()
     const toggleClassName = ({ isActive }) => (isActive ? "active_link" : "inactive-link");
@@ -55,6 +55,7 @@ function Header() {
             <div className='header-profile grid' onClick={() => {
                 window.scrollTo(0, 0)
                 navigate('/profile')
+                setShowPage('profile')
             }}>Profile</div>
         </header>
     )

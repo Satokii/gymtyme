@@ -1,0 +1,25 @@
+.profile-page--container {
+    grid-template-rows: repeat(2, auto);
+    gap: 50px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.profile-page--user-info-container {
+    gap: 50px;
+}
+
+.profile-page--user-info-container h4 {
+    font-size: 22px;
+    line-height: 2em;
+    color: #07bd07;
+}
+
+.profile-page--header {
+    font-size: 60px;
+    text-align: center;
+}
+
+.profile-page--personal-details, .profile-page--contact-details {
+    justify-content: start;
+}

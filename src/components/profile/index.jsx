@@ -1,12 +1,19 @@
 import { useState } from 'react'
+import ProfilePage from './components/ProfilePage'
 import NewWorkout from '../workouts/components/NewWorkout'
 import CurrentWorkout from '../workouts/components/CurrentWorkout'
 import AllWorkouts from '../workouts/components/AllWorkouts'
 import '../../styles/profile/profile.css'
 
-function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts }) {
+function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts, showPage, setShowPage }) {
     
     const INITIAL_NAV_STATE = [
+        {
+            title: 'My Profile',
+            className: 'active-profile-nav',
+            click: 'profile',
+            id: 'nav-profile'
+        },
         {
             title:'New Workout',
             className: 'inactive-profile-nav btn-ani-target',
@@ -34,7 +41,6 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     ]
 
     const [selectedNav, setSelectedNav] = useState(INITIAL_NAV_STATE)
-    const [showPage, setShowPage] = useState(null)
 
     function toggleSelectedNav(navItem) {
         const updatedNav = selectedNav.map((nav) => {
@@ -72,8 +78,9 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                 </ul>
             </nav>
             <div className='profile--menu-pages-container grid'>
-                <h3 className='profile--header'>Profile</h3>
+                {/* <h3 className='profile--header'>Profile</h3> */}
                 <div className='profile--page-content'>
+                    {showPage === 'profile' && <ProfilePage />}
                     {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
                     {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}

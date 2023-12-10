@@ -27,6 +27,8 @@ function App() {
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
   const [toggleShow, setToggleShow] = useState(null)
+  const [showPage, setShowPage] = useState(null)
+
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -41,7 +43,7 @@ function App() {
   return (
     <>
       <div className='container grid'>
-        <Header />
+        <Header setShowPage={setShowPage} />
         <Routes>
           <Route
             path='/'
@@ -65,7 +67,7 @@ function App() {
           </Route>
           <Route
             path='/profile'
-            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showPage={showPage} setShowPage={setShowPage} />}
           >
           </Route>
         </Routes>
