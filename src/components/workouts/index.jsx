@@ -2,8 +2,11 @@ import NewWorkout from './components/NewWorkout'
 import CurrentWorkout from './components/CurrentWorkout'
 import AllWorkouts from './components/AllWorkouts'
 import '../../styles/workouts/workouts.css'
+import { createContext } from 'react'
 
 function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, allWorkouts, setAllWorkouts, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, toggleShow, setToggleShow }) {
+
+    const WorkoutsContext = createContext()
 
     function toggleNew() {
         setToggleShow('new')
@@ -16,6 +19,7 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
     }
 
     return (
+        <WorkoutsContext.Provider value={toggleAll} >
         <section className='workouts-container grid'>
             <div className='workouts-content grid'>
                 <h2 className='workouts-header'>Workouts</h2>
@@ -33,11 +37,12 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
                 <div className='workouts-sections grid'>
                     {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
                     {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
-                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts} />}
+                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                 </div>
             </div>
         </section>
+        </WorkoutsContext.Provider>
     )
 }
 
-export default Workouts
+export { Workouts, WorkoutsContext }

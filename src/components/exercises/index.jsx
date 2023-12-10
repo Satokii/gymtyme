@@ -119,9 +119,9 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
                     ref={buttonRef}
                     onClick={() => toggleDropdown()}
                 >
-                    Filters
+                    Filter by Muscle Group
                 </button>
-                {showDropdown && 
+                {showDropdown &&
                     <ul 
                         className="exercises-dropdown-filter-list"
                         ref={menuRef}
