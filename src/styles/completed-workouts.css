@@ -1,0 +1,18 @@
+.completed-workouts--container {
+    background: linear-gradient(#1d1231, #411960);
+    justify-items: center;
+    padding: 50px;
+    color: white;
+}
+
+.completed-workouts--header {
+    font-size: 60px;
+    height: 80px;
+    opacity: 0;
+    animation: 1s ease 0.2s forwards fade-in;
+}
+
+.completed-workouts--content-container {
+    opacity: 0;
+    animation: 1s ease 0.4s forwards fade-in;
+}

@@ -6,6 +6,7 @@ import Footer from './components/footer'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ExerciseData from './data/exercise'
+import CompletedWorkouts from './components/completed-workouts'
 import Profile from './components/profile'
 
 import './App.css'
@@ -16,8 +17,6 @@ function App() {
 
   const retrievedWorkouts = localStorage.getItem('savedWorkouts')
   const getInitialWorkouts = JSON.parse(retrievedWorkouts) || []
-  console.log(getInitialWorkouts)
-  // localStorage.clear()
 
   const [showInitialDisplay, setShowInitialDisplay] = useState(true)
   const [exercises, setExercises] = useState(ExerciseData)
@@ -28,9 +27,6 @@ function App() {
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
   const [toggleShow, setToggleShow] = useState(null)
-  const [showPage, setShowPage] = useState(null)
-
-  console.log('allworkouts', allWorkouts)
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 
@@ -49,7 +45,7 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} setShowPage={setShowPage} />}
+            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} />}
           >
           </Route>
           <Route
@@ -63,8 +59,13 @@ function App() {
           >
           </Route>
           <Route
+            path='/completed-workouts'
+            element={<CompletedWorkouts allWorkouts={allWorkouts} />}
+          >
+          </Route>
+          <Route
             path='/profile'
-            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showPage={showPage} setShowPage={setShowPage} />}
+            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
           >
           </Route>
         </Routes>

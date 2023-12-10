@@ -19,7 +19,6 @@ function Header() {
                 <span>y</span>
                 <span>m</span>
                 <span>e</span>
-                {/* GymTyme */}
             </h1>
             <nav className='header-nav grid'>
                 <div className='header-nav-list grid'>
@@ -34,15 +33,22 @@ function Header() {
                         className={toggleClassName}
                         to="/workouts"
                         onClick={() => window.scrollTo(0, 0)}
-                        >
+                    >
                         Workouts
                     </NavLink>
                     <NavLink
                         className={toggleClassName}
                         to="/exercises"
                         onClick={() => window.scrollTo(0, 0)}
-                        >
+                    >
                         Exercises
+                    </NavLink>
+                    <NavLink
+                        className={toggleClassName}
+                        to='/completed-workouts'
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Completed Workouts
                     </NavLink>
                 </div>
             </nav>

@@ -4,7 +4,7 @@ import CurrentWorkout from '../workouts/components/CurrentWorkout'
 import AllWorkouts from '../workouts/components/AllWorkouts'
 import '../../styles/profile/profile.css'
 
-function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts, showPage, setShowPage }) {
+function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts }) {
     
     const INITIAL_NAV_STATE = [
         {
@@ -34,6 +34,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
     ]
 
     const [selectedNav, setSelectedNav] = useState(INITIAL_NAV_STATE)
+    const [showPage, setShowPage] = useState(null)
 
     function toggleSelectedNav(navItem) {
         const updatedNav = selectedNav.map((nav) => {
