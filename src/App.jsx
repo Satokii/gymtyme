@@ -24,11 +24,11 @@ function App() {
   const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
   const [currentWorkout, setCurrentWorkout] = useState([])
-  // const [allWorkouts, setAllWorkouts] = useState([])
   const [allWorkouts, setAllWorkouts] = useState(getInitialWorkouts)
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
   const [toggleShow, setToggleShow] = useState(null)
+  const [showPage, setShowPage] = useState(null)
 
   console.log('allworkouts', allWorkouts)
 
@@ -49,7 +49,7 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay}/>}
+            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} setShowPage={setShowPage} />}
           >
           </Route>
           <Route
@@ -64,7 +64,7 @@ function App() {
           </Route>
           <Route
             path='/profile'
-            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+            element={<Profile newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} showPage={showPage} setShowPage={setShowPage} />}
           >
           </Route>
         </Routes>

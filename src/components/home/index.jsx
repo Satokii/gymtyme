@@ -4,7 +4,7 @@ import HomeGif from '../../assets/home/home-exercise-gif.gif'
 import HomeGifAlt from '../../assets/home/home-exercise-gif-alt.gif'
 import '../../styles/home.css'
 
-function Home({ showInitialDisplay, setShowInitialDisplay }) {
+function Home({ showInitialDisplay, setShowInitialDisplay, setShowPage }) {
 
     const [gif, setGif] = useState(true)
 
@@ -12,7 +12,6 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
 
     function handlePageDisplay() {
         setShowInitialDisplay(false)
-        
     }
 
     function toggleGif() {
@@ -41,7 +40,11 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
                             navigate('/exercises')
                             window.scrollTo(0, 0)
                         }}><span></span><span></span><span></span><span></span>See Exercise Suggestions</li>
-                        <li className='btn-ani-target'><span></span><span></span><span></span><span></span>View Your Previous Workouts</li>
+                        <li className='btn-ani-target' onClick={() => {
+                            navigate('/profile')
+                            setShowPage('completed')
+                            window.scrollTo(0, 0)
+                        }}><span></span><span></span><span></span><span></span>View Your Previous Workouts</li>
                     </ul>
                     <div onMouseOver={() => toggleGif()}>
                         {gif ? 
