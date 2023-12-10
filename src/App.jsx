@@ -14,16 +14,23 @@ import './styles/btn-rotation.css'
 
 function App() {
 
+  const retrievedWorkouts = localStorage.getItem('savedWorkouts')
+  const getInitialWorkouts = JSON.parse(retrievedWorkouts) || []
+  console.log(getInitialWorkouts)
+  // localStorage.clear()
+
   const [showInitialDisplay, setShowInitialDisplay] = useState(true)
   const [exercises, setExercises] = useState(ExerciseData)
   const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
   const [currentWorkout, setCurrentWorkout] = useState([])
-  const [allWorkouts, setAllWorkouts] = useState([])
+  // const [allWorkouts, setAllWorkouts] = useState([])
+  const [allWorkouts, setAllWorkouts] = useState(getInitialWorkouts)
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
   const [toggleShow, setToggleShow] = useState(null)
 
+  console.log('allworkouts', allWorkouts)
 
   // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
 

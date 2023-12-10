@@ -19,6 +19,12 @@ function CurrentWorkout({ currentWorkout, setCurrentWorkout, showCurrentWorkout,
             setShowCurrentWorkout(false)
         }
 
+        useEffect(() => {
+            if (allWorkouts) {
+                localStorage.setItem('savedWorkouts', JSON.stringify(allWorkouts))
+            }
+        }, [allWorkouts])
+
         function handleDelete() {
             setCurrentWorkout([])
             setShowWorkoutHint(true)
