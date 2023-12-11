@@ -41,3 +41,7 @@
     color: red;
     box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
+
+.all-workouts--delete-btn:active {
+    transform: scale(0.95);
+}
