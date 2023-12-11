@@ -5,6 +5,7 @@ import CurrentWorkout from '../workouts/components/CurrentWorkout'
 import AllWorkouts from '../workouts/components/AllWorkouts'
 import '../../styles/profile/profile.css'
 
+
 function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts, showPage, setShowPage }) {
     
     const INITIAL_NAV_STATE = [
@@ -78,7 +79,6 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                 </ul>
             </nav>
             <div className='profile--menu-pages-container grid'>
-                {/* <h3 className='profile--header'>Profile</h3> */}
                 <div className='profile--page-content'>
                     {showPage === 'profile' && <ProfilePage />}
                     {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}

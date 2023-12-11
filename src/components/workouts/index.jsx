@@ -1,25 +1,14 @@
 import NewWorkout from './components/NewWorkout'
 import CurrentWorkout from './components/CurrentWorkout'
 import AllWorkouts from './components/AllWorkouts'
+import ToggleNewWorkout from './components/ToggleNewWorkout'
+import ToggleCurrentWorkout from './components/ToggleCurrentWorkout'
+import ToggleAllWorkouts from './components/ToggleAllWorkouts'
 import '../../styles/workouts/workouts.css'
-import { createContext } from 'react'
 
 function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, allWorkouts, setAllWorkouts, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, toggleShow, setToggleShow }) {
 
-    const WorkoutsContext = createContext()
-
-    function toggleNew() {
-        setToggleShow('new')
-    }
-    function toggleCurrent() {
-        setToggleShow('current')
-    }
-    function toggleAll() {
-        setToggleShow('all')
-    }
-
     return (
-        <WorkoutsContext.Provider value={toggleAll} >
         <section className='workouts-container grid'>
             <div className='workouts-content grid'>
                 <h2 className='workouts-header'>Workouts</h2>
@@ -30,19 +19,18 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
                     <p>Choose an option to get started:</p>
                 </div>
                 <div className='button-options grid'>
-                    <button className='create-new-workout-btn' onClick={() => toggleNew()}>Create a New Workout</button>
-                    <button className='view-current-workout-btn' onClick={() => toggleCurrent()}>View Current Workout</button>
-                    <button className='view-all-workouts-btn' onClick={() => toggleAll()}>View Completed Workouts</button>
+                    <button className='create-new-workout-btn' onClick={() => ToggleNewWorkout(setToggleShow)}>Create a New Workout</button>
+                    <button className='view-current-workout-btn' onClick={() => ToggleCurrentWorkout(setToggleShow)}>View Current Workout</button>
+                    <button className='view-all-workouts-btn' onClick={() => ToggleAllWorkouts(setToggleShow)}>View Completed Workouts</button>
                 </div>
                 <div className='workouts-sections grid'>
                     {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
                     {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
-                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
+                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts}/>}
                 </div>
             </div>
         </section>
-        </WorkoutsContext.Provider>
-    )
+    )    
 }
 
-export { Workouts, WorkoutsContext }
+export default Workouts

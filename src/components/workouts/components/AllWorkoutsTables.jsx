@@ -1,9 +1,10 @@
-function AllWorkoutsTables({ allWorkouts, setAllWorkouts }) {
+function AllWorkoutsTables({ allWorkouts }) {
 
-    function handleDeleteWorkout(workout) {
+    function handleDeleteWorkout(workout) {        
         const updatedAllWorkouts = allWorkouts.filter((workoutToDelete) => workoutToDelete !== workout)
         localStorage.setItem('savedWorkouts', JSON.stringify(updatedAllWorkouts))
         location.reload()
+        // toggleAll()
     }
 
     return (
