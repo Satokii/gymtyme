@@ -3,6 +3,7 @@
     justify-items: center;
     padding: 50px;
     color: white;
+    min-height: 100vh;
 }
 
 .completed-workouts--header {

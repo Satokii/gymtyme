@@ -1,3 +1,4 @@
+/* ALL WORKOUTS */
 .all-workouts--container {
     grid-template-rows: 40px 1fr;
     padding: 50px;
@@ -21,4 +22,22 @@
 .all-workouts--tables td:first-child {
     text-align: start;
     width: 300px;
+}
+
+/* DELETE WORKOUT BUTTON */
+.all-workouts--delete-btn {
+    cursor: pointer;
+    border: none;
+    height: fit-content;
+    color: white;
+    padding: 3px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #11032a;
+    box-shadow: 0 0 1px white, 0 0 3px white;
+}
+
+.all-workouts--delete-btn:hover {
+    color: red;
+    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
