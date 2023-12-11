@@ -1,7 +1,7 @@
 import AllWorkoutsTables from '../workouts/components/AllWorkoutsTables'
 import '../../styles/completed-workouts.css'
 
-function CompletedWorkouts({ allWorkouts }) {
+function CompletedWorkouts({ allWorkouts, setAllWorkouts }) {
 
     return (
         <section className="completed-workouts--container grid">
@@ -9,7 +9,7 @@ function CompletedWorkouts({ allWorkouts }) {
                 <h2 className="completed-workouts--header">Completed Workouts</h2>
             </div>
             <div className="completed-workouts--content-container">
-                <AllWorkoutsTables allWorkouts={allWorkouts} />
+                <AllWorkoutsTables allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />
             </div>
         </section>
     )

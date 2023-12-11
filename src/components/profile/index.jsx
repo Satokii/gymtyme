@@ -83,7 +83,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                     {showPage === 'profile' && <ProfilePage />}
                     {showPage === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
                     {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
-                    {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} />}
+                    {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'favourites' && 
                     <section id='fourth' className='profile--favourites grid'>
                         <h3>🚧🚧👷🚧🚧 Favourites tab still under construction 🚧🚧👷🚧🚧</h3>

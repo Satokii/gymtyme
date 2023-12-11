@@ -26,7 +26,7 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
                 <div className='workouts-sections grid'>
                     {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
                     {toggleShow === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
-                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts}/>}
+                    {toggleShow === 'all' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts}/>}
                 </div>
             </div>
         </section>

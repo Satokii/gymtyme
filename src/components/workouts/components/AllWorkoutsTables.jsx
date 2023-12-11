@@ -1,11 +1,16 @@
-function AllWorkoutsTables({ allWorkouts }) {
+import { useEffect } from "react"
+
+function AllWorkoutsTables({ allWorkouts, setAllWorkouts }) {
+
 
     function handleDeleteWorkout(workout) {        
         const updatedAllWorkouts = allWorkouts.filter((workoutToDelete) => workoutToDelete !== workout)
-        localStorage.setItem('savedWorkouts', JSON.stringify(updatedAllWorkouts))
-        location.reload()
-        // toggleAll()
+        setAllWorkouts(updatedAllWorkouts)
     }
+
+    useEffect(() => {
+        localStorage.setItem('savedWorkouts', JSON.stringify(allWorkouts))
+    }, [allWorkouts])
 
     return (
         <div className='all-workouts--tables-container grid'>
