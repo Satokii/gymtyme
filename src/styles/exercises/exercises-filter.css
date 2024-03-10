@@ -20,6 +20,7 @@
 
 .exercises-dropdown-filter-list {
     position: absolute;
+    z-index: 1;
     width: 250px;
     box-shadow: #0000000d 0px 6px 10px 0px,
     #0000001a 0px 0px 0px 1px;
