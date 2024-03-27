@@ -13,10 +13,6 @@ function Header({ setShowPage, showInitialDisplay }) {
         setIsOpen(!isOpen);
     };
 
-    const closeMenu = () => {
-        window.scrollTo(0, 0);
-    };
-
     return (
         <>
         {!showInitialDisplay ? 
@@ -32,28 +28,24 @@ function Header({ setShowPage, showInitialDisplay }) {
                         <NavLink
                             className={toggleClassName}
                             to="/"
-                            onClick={closeMenu}
                         >
                             Home
                         </NavLink>
                         <NavLink
                             className={toggleClassName}
                             to="/workouts"
-                            onClick={closeMenu}
                         >
                             Workouts
                         </NavLink>
                         <NavLink
                             className={toggleClassName}
                             to="/exercises"
-                            onClick={closeMenu}
                         >
                             Exercises
                         </NavLink>
                         <NavLink
                             className={toggleClassName}
                             to='/completed-workouts'
-                            onClick={closeMenu}
                         >
                             Completed Workouts
                         </NavLink>
