@@ -34,6 +34,11 @@ function App() {
         <Header setShowPage={setShowPage} showInitialDisplay={showInitialDisplay} />
         <Routes>
           <Route
+            path='/home'
+            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} />}
+          >
+          </Route>
+          <Route
             path='/'
             element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} />}
           >
