@@ -66,7 +66,7 @@ function App() {
           >
           </Route>
         </Routes>
-        <Footer />
+        {!isHome && <Footer />}
       </div>
     </>
   )
