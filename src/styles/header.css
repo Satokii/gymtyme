@@ -159,8 +159,15 @@
     .header-profile {
         background: none;
         border-radius: 6px;
-        padding: 5px 20px;
+        padding: 3px 18px;
         height: auto;
         width: auto;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .header {
+        gap: 5px;
+        padding: 10px 40px;
     }
 }
