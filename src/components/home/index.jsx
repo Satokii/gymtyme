@@ -4,15 +4,11 @@ import HomeGif from '../../assets/home/home-exercise-gif.gif'
 import HomeGifAlt from '../../assets/home/home-exercise-gif-alt.gif'
 import '../../styles/home.css'
 
-function Home({ showInitialDisplay, setShowInitialDisplay }) {
+function Home() {
 
     const [gif, setGif] = useState(true)
 
     const navigate = useNavigate()
-
-    function handlePageDisplay() {
-        setShowInitialDisplay(false)
-    }
 
     function toggleGif() {
         setGif(!gif)
@@ -20,15 +16,7 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
 
     return (
         <section className="home grid">
-            {showInitialDisplay ? 
-            <div className='home-cover-menu grid'>
-                <p>Welcome to <span>GymTyme</span></p>
-                <a className='click-to-start' href="#home" onClick={() => {
-                    handlePageDisplay()
-                    window.scrollTo(0, 0)
-                }}>Click to Start</a>
-            </div>
-            :<div id='home' className='home-container'>
+            <div id='home' className='home-container'>
                 <div className='content grid'>
                     <h3 className='home-what-to-do-header grid'>What would you like to do?</h3>
                     <ul className='home-options-list grid'>
@@ -53,7 +41,6 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
                     </div>
                 </div>    
             </div>
-            }
         </section>
     )
 }

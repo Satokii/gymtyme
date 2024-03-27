@@ -1,10 +1,11 @@
 import Header from './components/header'
+import WelcomePage from './components/welcome-page'
 import Home from './components/home'
 import Workouts from './components/workouts'
 import Exercises from './components/exercises'
 import Footer from './components/footer'
 import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import ExerciseData from './data/exercise'
 import CompletedWorkouts from './components/completed-workouts'
 import Profile from './components/profile'
@@ -16,8 +17,9 @@ import './styles/btn-rotation.css'
 function App() {
 
   const retrievedWorkouts = JSON.parse(localStorage.getItem('savedWorkouts')) || []
+  const location = useLocation()
+  const isHome = location.pathname === '/';
 
-  const [showInitialDisplay, setShowInitialDisplay] = useState(true)
   const [exercises, setExercises] = useState(ExerciseData)
   const [newWorkout, setNewWorkout] = useState([])
   const [favourites, setFavourites] = useState([])
@@ -31,16 +33,16 @@ function App() {
   return (
     <>
       <div className='container grid'>
-        <Header setShowPage={setShowPage} showInitialDisplay={showInitialDisplay} />
+        {!isHome && <Header setShowPage={setShowPage} />}
         <Routes>
           <Route
             path='/home'
-            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} />}
+            element={<Home />}
           >
           </Route>
           <Route
             path='/'
-            element={<Home showInitialDisplay={showInitialDisplay} setShowInitialDisplay={setShowInitialDisplay} />}
+            element={<WelcomePage />}
           >
           </Route>
           <Route
@@ -64,7 +66,7 @@ function App() {
           >
           </Route>
         </Routes>
-        <Footer showInitialDisplay={showInitialDisplay} />
+        <Footer />
       </div>
     </>
   )
