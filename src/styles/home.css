@@ -1,49 +1,8 @@
-/* Shared Styles */
-.home,
-.home-cover-menu {
-    color: white;
-}
-
 /* HOME */
 .home {
     place-items: center;
     position: relative;
-}
-
-/* HOME COVER MENU */
-.home-cover-menu {
-    width: 100vw;
-    height: 100vh;
-    place-content: center;
-    gap: 150px;
-    padding: 20px;
-    font-size: 80px;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-}
-
-.home-cover-menu > p > span {
-    text-decoration: underline #07bd07;
-    text-underline-offset: 18px;
-    text-decoration-skip-ink: none;
-}
-
-.click-to-start {
-    text-transform: uppercase;
-    padding: 10px 40px;
-    background-color: #11032a;
     color: white;
-    border: none;
-    box-shadow: 0 0 1px white, 0 0 3px white;
-    border-radius: 100px;
-    transition: 0.3s ease;
-}
-
-.click-to-start:hover {
-    cursor: pointer;
-    color: #07bd07;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
 }
 
 /* MAIN CONTENT */
