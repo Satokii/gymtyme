@@ -6,9 +6,9 @@ function WelcomePage() {
     return (
         <div className='home-cover-menu grid'>
                 <p>Welcome to <span>GymTyme</span></p>
-                <a className='click-to-start' href="#home" onClick={() => {
+                <button className='click-to-start' onClick={() => {
                     navigate('/home')
-                }}>Click to Start</a>
+                }}>Click to Start</button>
             </div>
     )
 }
