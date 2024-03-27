@@ -1,9 +1,14 @@
 import '../../styles/footer.css'
 
-function Footer() {
+function Footer({ showInitialDisplay }) {
     
     return (
-        <footer className='footer'></footer>
+        <>
+            {!showInitialDisplay ? 
+                <footer className='footer'></footer>
+            : null
+            }
+        </>
     )
 }
 

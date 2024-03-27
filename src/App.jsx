@@ -59,7 +59,7 @@ function App() {
           >
           </Route>
         </Routes>
-        <Footer />
+        <Footer showInitialDisplay={showInitialDisplay} />
       </div>
     </>
   )
