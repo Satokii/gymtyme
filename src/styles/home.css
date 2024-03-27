@@ -49,10 +49,7 @@
 /* MAIN CONTENT */
 .content {
     grid-template-rows: 80px repeat(2, auto);
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-items: center;
+    place-items: center;
     padding: 30px;
     text-align: center;
 }
