@@ -28,16 +28,6 @@ function App() {
   const [toggleShow, setToggleShow] = useState(null)
   const [showPage, setShowPage] = useState(null)
 
-  // const baseURL = 'https://wger.de/api/v2/exercise/?limit=10&language=2'
-
-  // TODO: INCLUDE A WORKOUT REFRESH BUTTON SO USER CAN CHANGE LIST OF WORKOUTS
-
-  // useEffect(() => {
-  //   fetch(baseURL)
-  //   .then(res => res.json())
-  //   .then(data => setExercises(data.results))
-  // }, [])
-  
   return (
     <>
       <div className='container grid'>
