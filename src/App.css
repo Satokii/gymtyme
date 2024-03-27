@@ -1,10 +1,9 @@
 .grid {
     display: grid;
-  }
+}
 
-  /* CONTAINER */
-  .container {
+/* CONTAINER */
+.container {
     grid-template-rows: minmax(100px, auto) 1fr 100px;
     background: linear-gradient(#1d1231, #411960);
-
-  }
+}
