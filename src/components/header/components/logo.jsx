@@ -8,7 +8,7 @@ function Logo() {
     return (
         <h1 className='header-logo' onClick={() => {
             window.scrollTo(0, 0);
-            navigate('/');
+            navigate('/home');
         }}>
             <span>G</span>
             <span>y</span>

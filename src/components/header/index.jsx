@@ -25,7 +25,7 @@ function Header({ setShowPage }) {
                 <div className='header-nav-list grid'>
                     <NavLink
                         className={toggleClassName}
-                        to="/"
+                        to="/home"
                     >
                         Home
                     </NavLink>
