@@ -9,50 +9,6 @@
     border-bottom: solid 1px #17a4a4;
 }
 
-/* HEADER LOGO */
-.header-logo {
-    place-self: center;
-    cursor: pointer;
-    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-    font-size: 40px;
-    border-bottom: solid 6px #07bd07;
-    border-bottom-style: inset;
-    z-index: 1;
-}
-
-.header-logo span {
-    display: inline-block;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    z-index: 2;
-}
-
-.header-logo span:first-child {
-    animation-delay: .1s;
-}
-.header-logo span:nth-child(2) {
-    animation-delay: .2s;
-}
-.header-logo span:nth-child(3) {
-    animation-delay: .3s;
-}
-.header-logo span:nth-child(4) {
-    animation-delay: .4s;
-}
-.header-logo span:nth-child(5) {
-    animation-delay: .5s;
-}
-.header-logo span:nth-child(6) {
-    animation-delay: .6s;
-}
-.header-logo span:nth-child(7) {
-    animation-delay: .7s;
-}
-
-.header-logo:hover span {
-    animation-name: jumpy-letters;
-}
-
 .header-nav {
     justify-items: end;
     margin-right: 20px;
@@ -110,4 +66,74 @@
     background-position-x: 0%;
     background-position-y: 100%;
     background-repeat: no-repeat;
+}
+
+/* HAMBURGER MENU */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    justify-self: center;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: 0.4s;
+}
+
+.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .header-nav {
+        grid-auto-flow: row;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 0;
+        margin: 0;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .header-profile {
+        display: none;
+    }
+
+    .header-nav.open {
+        max-height: 200px;
+    }
+
+    .header-nav-list {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .header-nav-list {
+        font-size: 20px;
+    }
 }
