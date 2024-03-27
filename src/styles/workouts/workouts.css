@@ -2,7 +2,6 @@
 .workouts-container {
     min-height: 100vh;
     justify-items: center;
-    background: linear-gradient(#1d1231, #411960);
 }
 
 .workouts-content {

@@ -96,6 +96,13 @@
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .header-nav-list {
+        font-size: 20px;
+        gap: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
