@@ -1,22 +1,25 @@
+/* Shared Styles */
+.home,
+.home-cover-menu {
+    color: white;
+    background: linear-gradient(#1d1231, #411960);
+}
+
 /* HOME */
 .home {
     min-height: 100vh;
-    justify-items: center;
-    align-items: center;
-    color: white;
-    background: linear-gradient(#1d1231, #411960);
+    place-items: center;
     position: relative;
 }
 
+/* HOME COVER MENU */
 .home-cover-menu {
     position: absolute;
     top: -100px;
     bottom: -100px;
     width: 100vw;
     padding-top: 200px;
-    background: linear-gradient(#1d1231, #411960);
     font-size: 80px;
-    text-decoration: none;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 2px black;
@@ -26,7 +29,7 @@
     margin-bottom: 150px;
 }
 
-.home-cover-menu > p >span {
+.home-cover-menu > p > span {
     text-decoration: underline #07bd07;
     text-underline-offset: 18px;
     text-decoration-skip-ink: none;
@@ -45,7 +48,7 @@
 .click-to-start:hover {
     cursor: pointer;
     color: #07bd07;
-    box-shadow: 0 0 5px #03e9f4,0 0 25px #03e9f4,0 0 50px #03e9f4,0 0 100px #03e9f4;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
 }
 
 /* MAIN CONTENT */
@@ -56,7 +59,6 @@
     align-items: center;
     justify-items: center;
     padding: 30px;
-    color: #fff;
     text-align: center;
 }
 
@@ -80,7 +82,7 @@
 }
 
 .home-options-list > li {
-    border:solid 1px #0f0202;
+    border: solid 1px #0f0202;
     padding: 10px 15px;
     font-size: 26px;
     letter-spacing: 1px;
