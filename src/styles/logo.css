@@ -39,3 +39,17 @@
 .header-logo:hover span {
     animation-name: jumpy-letters;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .header-logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-logo {
+        font-size: 30px;
+        border-bottom: solid 5px #07bd07;
+    }
+}
