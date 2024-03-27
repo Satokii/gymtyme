@@ -21,7 +21,7 @@ function Home({ showInitialDisplay, setShowInitialDisplay }) {
     return (
         <section className="home grid">
             {showInitialDisplay ? 
-            <div className='home-cover-menu'>
+            <div className='home-cover-menu grid'>
                 <p>Welcome to <span>GymTyme</span></p>
                 <a className='click-to-start' href="#home" onClick={() => {
                     handlePageDisplay()

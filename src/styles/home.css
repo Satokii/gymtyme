@@ -14,11 +14,10 @@
 
 /* HOME COVER MENU */
 .home-cover-menu {
-    position: absolute;
-    top: -100px;
-    bottom: -100px;
     width: 100vw;
-    padding-top: 200px;
+    height: 100vh;
+    overflow: hidden;
+    place-content: center;
     font-size: 80px;
     font-weight: bold;
     text-align: center;

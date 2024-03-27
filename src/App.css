@@ -5,4 +5,5 @@
   /* CONTAINER */
   .container {
     grid-template-rows: minmax(100px, auto) 1fr 100px;
+    height: 100vh;
   }
