@@ -92,7 +92,7 @@
 
 @media screen and (max-width: 768px) {
     .workouts-content {
-        padding: 40px 30px;
+        padding: 40px 30px 20px;
     }
     .button-options button {
         padding: 5px 10px;
@@ -102,7 +102,7 @@
 
 @media screen and (max-width: 426px) {
     .workouts-content {
-        padding: 40px 10px;
+        padding: 40px 10px 10px;
     }
     .workouts-header {
         font-size: 50px;
@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 376px) {
     .workouts-content {
-        padding: 30px 10px;
+        padding: 30px 10px 10px;
     }
     .workouts-header {
         font-size: 40px;
