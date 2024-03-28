@@ -49,6 +49,7 @@
 table, th, td {
   border: solid 1px white;
   font-size: 20px;
+  height: fit-content;
 }
 
 table {
