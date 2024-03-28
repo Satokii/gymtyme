@@ -19,9 +19,9 @@ function Workouts({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout
                     <p>Choose an option to get started:</p>
                 </div>
                 <div className='button-options grid'>
-                    <button className='create-new-workout-btn' onClick={() => ToggleNewWorkout(setToggleShow)}>Create a New Workout</button>
-                    <button className='view-current-workout-btn' onClick={() => ToggleCurrentWorkout(setToggleShow)}>View Current Workout</button>
-                    <button className='view-all-workouts-btn' onClick={() => ToggleAllWorkouts(setToggleShow)}>View Completed Workouts</button>
+                    <button className='create-new-workout-btn' onClick={() => ToggleNewWorkout(setToggleShow)}>New Workout</button>
+                    <button className='view-current-workout-btn' onClick={() => ToggleCurrentWorkout(setToggleShow)}>Current Workout</button>
+                    <button className='view-all-workouts-btn' onClick={() => ToggleAllWorkouts(setToggleShow)}>Completed Workouts</button>
                 </div>
                 <div className='workouts-sections grid'>
                     {toggleShow === 'new' && <NewWorkout newWorkout={newWorkout} setNewWorkout={setNewWorkout} currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showNewWorkout={showNewWorkout} setShowNewWorkout={setShowNewWorkout} />}
