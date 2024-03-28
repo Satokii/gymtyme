@@ -28,6 +28,7 @@
 
 /* WORKOUT PREVIEW */
 .workout-preview-container {
+    place-self: start;
     padding: 0 10px;
 }
 
@@ -63,24 +64,26 @@
 .exercises-list {
     opacity: 0;
     animation: 1s ease 0.5s forwards fade-in;
-    margin: 10px;
+    margin-top: 10px;
+    border: solid 1px rgba(255, 255, 255, 0.212);
 }
 
 /* INDIVIDUAL EXERCISE ITEM */
 .exercise-item-container {
     grid-template-columns: 300px repeat(2, 110px) repeat(2, 1fr) 50px;
-    gap: 20px;
-    padding: 10px 0;
+    gap: 10px;
+    padding: 10px 7px;
     height: fit-content;
     align-items: center;
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.212);
 }
 
 .exercise-name {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     border-left: none;
-    align-self: end;
+    align-self: center;
+    text-align: center;
 }
 
 /* SETS/REPS */
@@ -128,7 +131,7 @@
 
 /* ADD TO WORKOUT/FAVOURITES BUTTONS */
 .exercise-btn-container {
-    font-size: 18px;
+    font-size: 15px;
     align-self: end;
 }
 
@@ -157,11 +160,6 @@
 }
 
 /* RESET */
-.reset-container {
-    align-content: end;
-    padding-top: 10px;
-}
-
 .reset-btn {
     font-size: 16px;
     font-weight: bold;
@@ -186,6 +184,7 @@
     transform: scale(0.5);
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 1525px) {
     .exercise-item-container {
         grid-template-columns: 200px repeat(2, 110px) repeat(2, 1fr) 50px;

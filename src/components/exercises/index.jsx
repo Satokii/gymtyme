@@ -105,7 +105,7 @@ function Exercises({ exercises, setExercises, newWorkout, setNewWorkout, favouri
 
     return (
         <section className="exercises-container grid">
-            <div className="workout-preview-container">
+            <div className="workout-preview-container grid">
                 <h2 className="workout-preview-header grid">Workout Preview</h2>
                 <button className="workout-preview-workout-btn" onClick={() => handleWorkoutNav()}>See your new workout</button>
                 <div className='workout-preview-table'>
