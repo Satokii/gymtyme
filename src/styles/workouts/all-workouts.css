@@ -72,11 +72,26 @@
     .all-workouts--tables {
         min-width: 300px;
     }
+    .all-workouts--delete-btn {
+        padding: 2px 5px;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .all-workouts--container h3 {
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 426px) {
     .all-workouts--container h3 {
         font-size: 30px;
+    }
+    .all-workouts--tables-container {
+        margin-top: 20px;
+        gap: 20px;
     }
 }
 
@@ -87,6 +102,14 @@
     .all-workouts--tables {
         min-width: 250px;
     }
+    .all-workouts--tables-container {
+        margin-top: 10px;
+    }
+    .all-workouts--delete-btn {
+        padding: 1px 4px;
+        font-size: 12px;
+        margin-top: 2px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -95,5 +118,12 @@
     }
     .all-workouts--tables {
         min-width: 220px;
+    }
+    .all-workouts--tables-container {
+        margin-top: 0;
+    }
+    .all-workouts--delete-btn {
+        padding: 1px 2px;
+        font-size: 11px;
     }
 }
