@@ -154,6 +154,7 @@ td:nth-last-child(-n + 4) {
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
+    box-shadow: none;
     background-color: transparent;
 }
 
