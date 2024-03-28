@@ -395,3 +395,32 @@
         height: 22px;
     }
 }
+
+@media screen and (max-width: 426px) {
+    .workout-preview-header  {
+        font-size: 22px;
+    }
+    .exercises-header {
+        font-size: 24px;
+    }
+    .exercise-item-container {
+        grid-template-columns: 130px repeat(2, auto) repeat(2, 1fr) 22px;
+    }
+    .exercise-name {
+        font-size: 10px;
+    }
+    .sets-container, .reps-container {
+        font-size: 8px;
+        gap: 1px;
+    }
+    .count-container > * {
+        width: 10px;
+        height: 10px;
+        font-size: 7px;
+    }
+    .reset-btn {
+        font-size: 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
