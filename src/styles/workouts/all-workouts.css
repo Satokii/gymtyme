@@ -43,3 +43,57 @@
 .all-workouts--delete-btn:active {
     transform: scale(0.95);
 }
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .all-workouts--container  {
+        padding: 40px 20px;
+    }
+    .all-workouts--container > h3 {
+        font-size: 36px;
+    }
+    .all-workouts--tables-container {
+        margin-top: 30px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .all-workouts--tables {
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .all-workouts--container  {
+        padding: 30px 10px;
+    }
+    .all-workouts--tables {
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .all-workouts--container h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .all-workouts--container h3 {
+        font-size: 26px;
+    }
+    .all-workouts--tables {
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .all-workouts--container h3 {
+        font-size: 24px;
+    }
+    .all-workouts--tables {
+        min-width: 220px;
+    }
+}
