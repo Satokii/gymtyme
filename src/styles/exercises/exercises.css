@@ -289,14 +289,13 @@
 
 @media screen and (max-width: 768px) {
     .workout-preview-header  {
-        padding-bottom: 20px;
         font-size: 26px;
     }
     .exercises-header {
         font-size: 30px;
     }
     .exercise-item-container {
-        grid-template-columns: 200px repeat(2, auto) repeat(2, 1fr) 40px;
+        grid-template-columns: 200px repeat(2, auto) repeat(2, 1fr) 35px;
         gap: 13px;
         padding: 3px;
     }
@@ -318,5 +317,43 @@
         font-size: 8px;
         width: 30px;
         height: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .workout-preview-header  {
+        font-size: 24px;
+    }
+    .exercises-header {
+        font-size: 28px;
+    }
+    .exercise-item-container {
+        grid-template-columns: 160px repeat(2, auto) repeat(2, 1fr) 30px;
+        gap: 10px;
+        padding: 3px 2px;
+    }
+    .exercise-name {
+        font-size: 14px;
+    }
+    .sets-container, .reps-container {
+        font-size: 12px;
+        gap: 3px;
+    }
+    .count-container > * {
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+    }
+    .exercise-btn-container {
+        font-size: 9px;
+    }
+    .exercise-btn-container > button {
+        padding: 2px;
+        border-radius: 5px;
+    }
+    .reset-btn {
+        font-size: 7px;
+        width: 26px;
+        height: 26px;
     }
 }
