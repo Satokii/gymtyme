@@ -6,7 +6,7 @@
 
 .current-workout--container > h3 {
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .current-workout--workout-table {
@@ -55,6 +55,9 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
+    .current-workout--container {
+        padding: 40px 20px;
+    }
     .current-workout--container > h3 {
         font-size: 36px;
     }
@@ -74,11 +77,8 @@
 @media screen and (max-width: 500px) {
     .current-workout--container {
         grid-template-rows: 50px repeat(2, auto);
-        padding: 50px 20px;
+        padding: 30px 10px;
         gap: 0;
-    }
-    .current-workout--container > h3 {
-        font-size: 30px;
     }
     .current-workout--container > p {
         margin-top: 10px;
@@ -90,14 +90,17 @@
 }
 
 @media screen and (max-width: 426px) {
+    .current-workout--container > h3 {
+        font-size: 30px;
+    }
     .current-workout--btns-container > button {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 376px) {
-    .current-workout--container {
-        padding: 40px 10px;
+    .current-workout--container > h3 {
+        font-size: 26px;
     }
     .current-workout--container > p {
         font-size: 18px;
@@ -110,10 +113,9 @@
 @media screen and (max-width: 320px) {
     .current-workout--container {
         grid-template-rows: 40px repeat(2, auto);
-        padding: 40px 10px;
     }
     .current-workout--container > h3 {
-        font-size: 26px;
+        font-size: 24px;
     }
     .current-workout--container > p {
         font-size: 16px;
