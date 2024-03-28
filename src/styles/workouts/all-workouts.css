@@ -26,20 +26,18 @@
 
 /* DELETE WORKOUT BUTTON */
 .all-workouts--delete-btn {
+    justify-self: start;
     cursor: pointer;
-    border: none;
-    height: fit-content;
+    border: solid 1px white;
     color: white;
     padding: 3px 10px;
-    font-size: 20px;
-    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 18px;
     background-color: #11032a;
-    box-shadow: 0 0 1px white, 0 0 3px white;
 }
 
 .all-workouts--delete-btn:hover {
     color: red;
-    box-shadow: 0 0 2px #14072a, 0 0 4px white;
 }
 
 .all-workouts--delete-btn:active {

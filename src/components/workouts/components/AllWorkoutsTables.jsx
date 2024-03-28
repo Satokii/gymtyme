@@ -15,8 +15,7 @@ function AllWorkoutsTables({ allWorkouts, setAllWorkouts }) {
     return (
         <div className='all-workouts--tables-container grid'>
             {allWorkouts.map((workout, index) => 
-                <div key={index}>
-                    <button className="all-workouts--delete-btn" onClick={() => handleDeleteWorkout(workout)}>Delete Workout</button>
+                <div key={index} className="grid">
                     <table className='all-workouts--tables'>
                         <thead>
                             <tr>
@@ -37,6 +36,7 @@ function AllWorkoutsTables({ allWorkouts, setAllWorkouts }) {
                         )}
                         </tbody>
                     </table>
+                    <button className="all-workouts--delete-btn grid" onClick={() => handleDeleteWorkout(workout)}>Delete Workout</button>
                 </div>
             )}
         </div>

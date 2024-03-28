@@ -4,7 +4,7 @@ import '../../../styles/workouts/all-workouts.css'
 function AllWorkouts({ allWorkouts, setAllWorkouts }) {
 
     return (
-        <section className='all-workouts--container'>
+        <section className='all-workouts--container grid'>
             <h3>Completed workouts</h3>
             <AllWorkoutsTables allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />
         </section>
