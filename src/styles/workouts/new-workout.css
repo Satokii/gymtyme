@@ -131,18 +131,16 @@ td:nth-last-child(-n + 4) {
 
 .new-workout-form {
     min-width: 400px;
+    place-items: center;
 }
 
 .new-workout-form input, form label {
     display: block;
 }
 
-.new-workout-form label {
-    padding: 5px 0;
-}
-
-.new-workout-form input {
-    padding: 5px;
+.add-exercise-input-container {
+    width: 100%;
+    padding: 0 20px;
 }
 
 .add-exercise-input-container input {
@@ -210,7 +208,6 @@ td:nth-last-child(-n + 4) {
 @media screen and (max-width: 1024px) {
     .create-new-workout {
         grid-template-rows: auto repeat(3, auto) 1fr;
-        gap: 10px;
     }
     table, th, td {
         font-size: 18px;
@@ -218,7 +215,8 @@ td:nth-last-child(-n + 4) {
     .confirm-workout-btn {
         font-size: 20px;
     }
-    .add-exercise-btn, .see-example-exercises-btn {
+    .add-exercise-btn, 
+    .see-example-exercises-btn {
         font-size: 20px;
     }
     .add-exercise-form-container > h3 {
@@ -232,20 +230,77 @@ td:nth-last-child(-n + 4) {
     .add-exercise-input-container label {
         font-size: 20px;
     }
-    .add-exercise-submit-btn, .cancel-add-exercise-btn {
+    .add-exercise-submit-btn, 
+    .cancel-add-exercise-btn {
         font-size: 18px;
         letter-spacing: 1px;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .create-new-workout {
+        min-width: auto;
+        padding: 40px 20px;
+    }
+    .add-exercise-btn, 
+    .see-example-exercises-btn {
+        font-size: 18px;
+    }
+}
 
+@media screen and (max-width: 600px) {
+    table, th, td {
+        font-size: 16px;
+    }
+    table {
+        min-width: 300px;
+    }
+    th, td {
+        padding: 2px 4px;
+    }
+    .add-exercise-form-container {
+        padding: 30px 20px;
+        margin-top: 0;
+    }
+    .new-workout-form {
+        min-width: 350px;
+    }
+    .add-exercise-input-container input {
+        letter-spacing: normal;
+    }
+    .add-exercise-input-container label {
+        font-size: 18px;
+    }
+    .add-exercise-submit-btn, 
+    .cancel-add-exercise-btn {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 426px) {
-
+    .create-new-workout {
+        padding: 30px 0;
+    }
+    .create-new-workout > h3 {
+        font-size: 30px;
+    }
+    .add-exercise-hint {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    .add-exercise-btn, 
+    .see-example-exercises-btn {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 376px) {
-
+    .create-new-workout {
+        gap: 15px;
+    }
+    .add-exercise-btn, 
+    .see-example-exercises-btn {
+        font-size: 13px;
+        padding: 3px 5px;
+    }
 }
