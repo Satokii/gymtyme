@@ -160,6 +160,7 @@ td:nth-last-child(-n + 4) {
 .add-exercise-input-container label {
     padding: 10px 0;
     font-size: 24px;
+    text-align: start;
     color: #fff;
     pointer-events: none;
     transition: .5s;
@@ -168,9 +169,11 @@ td:nth-last-child(-n + 4) {
 /* FORM SUBMIT/CANCEL BUTTONS */
 .add-exercise-submit-btn, .cancel-add-exercise-btn {
     cursor: pointer;
+    place-self: center;
     padding: 10px 20px;
     font-size: 20px;
     letter-spacing: 2px;
+    width: 100%;
     border: none;
     border-radius: 30px;
     background-color: transparent;
@@ -234,6 +237,7 @@ td:nth-last-child(-n + 4) {
     .cancel-add-exercise-btn {
         font-size: 18px;
         letter-spacing: 1px;
+        width: 80%;
     }
 }
 
@@ -253,7 +257,7 @@ td:nth-last-child(-n + 4) {
         font-size: 16px;
     }
     table {
-        min-width: 300px;
+        min-width: auto;
     }
     th, td {
         padding: 2px 4px;
@@ -277,10 +281,47 @@ td:nth-last-child(-n + 4) {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
     .create-new-workout {
-        padding: 30px 0;
+        gap: 10px;
+        padding: 30px 10px;
     }
+    table, th, td {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 1px 3px;
+    }
+    .add-exercise-form-container {
+        margin-top: 10px;
+        padding: 30px 20px 20px;
+    }
+    .add-exercise-form-container > h3 {
+        font-size: 20px;
+    }
+    .new-workout-form {
+        min-width: 300px;
+    }
+    .add-exercise-input-container label {
+        font-size: 16px;
+    }
+    .add-exercise-input-container input {
+        margin-bottom: 5px;
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .add-exercise-submit-btn, 
+    .cancel-add-exercise-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+        width: 80%;
+    }
+    .add-exercise-submit-btn {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 426px) {
     .create-new-workout > h3 {
         font-size: 30px;
     }
@@ -292,15 +333,74 @@ td:nth-last-child(-n + 4) {
     .see-example-exercises-btn {
         font-size: 15px;
     }
+    .confirm-workout-btn {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .cancel-add-exercise-btn {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 376px) {
     .create-new-workout {
-        gap: 15px;
+        gap: 10px;
+    }
+    .create-new-workout > h3 {
+        font-size: 26px;
+    }
+    .add-exercise-hint {
+        font-size: 16px;
+    }
+    table, th, td {
+        font-size: 12px;
+    }
+    .confirm-workout-btn {
+        font-size: 15px;
+        margin-top: 15px;
     }
     .add-exercise-btn, 
     .see-example-exercises-btn {
         font-size: 13px;
         padding: 3px 5px;
     }
+    .new-workout-form {
+        min-width: 250px;
+    }
+    .add-exercise-input-container {
+        padding: 0 10px;
+    }    
+    .add-exercise-input-container label {
+        font-size: 14px;
+    }
+    .add-exercise-input-container input {
+        font-size: 12px;
+    }
+    .add-exercise-submit-btn, 
+    .cancel-add-exercise-btn {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .create-new-workout > h3 {
+        font-size: 24px;
+    }
+    table, th, td {
+        font-size: 11px;
+    }
+    .confirm-workout-btn {
+        font-size: 14px;
+    }
+    .add-exercise-btn, 
+    .see-example-exercises-btn {
+        font-size: 12px;
+    }
+    .new-workout-form {
+        min-width: 220px;
+    }
+    .add-exercise-form-container > h3 {
+        font-size: 18px;
+    }  
 }
