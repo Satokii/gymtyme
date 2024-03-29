@@ -79,7 +79,6 @@
     .current-workout--container {
         grid-template-rows: 50px repeat(2, auto);
         padding: 30px 10px;
-        gap: 0;
     }
     .current-workout--container > p {
         margin-top: 10px;
