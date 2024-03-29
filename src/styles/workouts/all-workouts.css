@@ -2,6 +2,7 @@
 .all-workouts--container {
     grid-template-rows: 40px 1fr;
     padding: 50px;
+    gap: 10px;
 }
 
 .all-workouts--container h3 {
