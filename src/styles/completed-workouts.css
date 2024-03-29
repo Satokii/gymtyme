@@ -1,11 +1,13 @@
 .completed-workouts--container {
     justify-items: center;
+    text-align: center;
     padding: 50px;
     color: white;
 }
 
 .completed-workouts--header {
     font-size: 60px;
+    margin-bottom: 10px;
     opacity: 0;
     animation: 1s ease 0.2s forwards fade-in;
 }
@@ -13,4 +15,34 @@
 .completed-workouts--content-container {
     opacity: 0;
     animation: 1s ease 0.4s forwards fade-in;
+}
+
+@media screen and (max-width: 768px) {
+    .completed-workouts--container {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .completed-workouts--container  {
+        padding: 40px 10px;
+    }
+    .completed-workouts--header {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .completed-workouts--container  {
+        padding: 30px 10px;
+    }
+    .completed-workouts--header {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .completed-workouts--header {
+        font-size: 26px;
+    }
 }
