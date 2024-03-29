@@ -23,3 +23,65 @@
 .profile-page--personal-details, .profile-page--contact-details {
     justify-content: start;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .profile-page--container {
+        gap: 30px;
+        place-items: start;
+    }
+    .profile-page--user-info-container {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-page--container {
+        gap: 20px;
+    }
+    .profile-page--user-info-container {
+        gap: 20px;
+        font-size: 15px;
+    }
+    .profile-page--user-info-container h4 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .profile-page--container {
+        gap: 16px;
+        padding: 30px;
+    }
+    .profile-page--user-info-container {
+        gap: 16px;
+        font-size: 12px;
+    }
+    .profile-page--header {
+        font-size: 50px;
+    }
+    .profile-page--user-info-container h4 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .profile-page--header {
+        font-size: 40px;
+    }
+    .profile-page--user-info-container {
+        font-size: 11px;
+    }
+    .profile-page--user-info-container h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .profile-page--user-info-container {
+        font-size: 10px;
+    }
+    .profile-page--user-info-container h4 {
+        font-size: 12px;
+    }
+}
