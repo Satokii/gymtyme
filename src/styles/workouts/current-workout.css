@@ -1,5 +1,6 @@
 .current-workout--container {
     grid-template-rows: 40px repeat(2, auto);
+    align-content: start;
     padding: 50px;
     gap: 10px;
 }
