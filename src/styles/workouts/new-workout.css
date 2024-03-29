@@ -309,7 +309,7 @@ td:nth-last-child(-n + 4) {
         font-size: 20px;
     }
     .new-workout-form {
-        min-width: 300px;
+        min-width: auto;
     }
     .add-exercise-input-container label {
         font-size: 16px;
@@ -375,9 +375,9 @@ td:nth-last-child(-n + 4) {
         font-size: 13px;
         padding: 3px 5px;
     }
-    .new-workout-form {
-        min-width: 250px;
-    }
+    /* .new-workout-form {
+        min-width: auto;
+    } */
     .add-exercise-input-container {
         padding: 0 10px;
     }    
@@ -409,9 +409,9 @@ td:nth-last-child(-n + 4) {
     .see-example-exercises-btn {
         font-size: 12px;
     }
-    .new-workout-form {
+    /* .new-workout-form {
         min-width: 220px;
-    }
+    } */
     .add-exercise-form-container > h3 {
         font-size: 18px;
     }  
