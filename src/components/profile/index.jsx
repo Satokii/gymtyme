@@ -86,7 +86,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                     {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'favourites' && 
                     <section id='fourth' className='profile--favourites grid'>
-                        <h3>🚧🚧👷🚧🚧 Favourites tab still under construction 🚧🚧👷🚧🚧</h3>
+                        <h3>🚧🚧👷🚧🚧 <br /> Favourites tab still under construction <br /> 🚧🚧👷🚧🚧</h3>
                     </section>}
                 </div>
             </div>
