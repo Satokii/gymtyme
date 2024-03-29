@@ -474,3 +474,18 @@
         height: 18px;
     }
 }
+
+@media screen and (max-width: 330px) {
+    .workout-preview-header  {
+        font-size: 16px;
+    }
+    .workout-preview-workout-btn {
+        font-size: 10px;
+    }
+    .exercises-header {
+        font-size: 18px;
+    }
+    .exercise-item-container {
+        grid-template-columns: 70px repeat(2, auto) repeat(2, 1fr) 20px;
+    }
+}
