@@ -309,9 +309,31 @@
         width: 18px;
         height: 18px;
         font-size: 12px;
+        box-shadow: none;
+        border: solid 1px rgba(255, 255, 255, 0.188);
+    }
+    .add-btn {
+        color: #07bd07;
+    }
+    .minus-btn {
+        color: red;
+    }
+    .add-btn:hover, .minus-btn:hover {
+        cursor: pointer;
+        box-shadow: none;
     }
     .exercise-btn-container {
         font-size: 12px;
+    }
+    .exercise-btn-container > button {
+        padding: 3px 5px;
+        border-radius: 5px;
+        box-shadow: none;
+        border: solid 1px rgba(255, 255, 255, 0.188);
+    }
+    .add-to-workout-btn:hover,
+    .add-to-favourites-btn:hover {
+        box-shadow: none;
     }
     .reset-btn {
         font-size: 8px;
