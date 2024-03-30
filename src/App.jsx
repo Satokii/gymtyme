@@ -30,6 +30,12 @@ function App() {
   const [toggleShow, setToggleShow] = useState(null)
   const [showPage, setShowPage] = useState(null)
 
+  useEffect(() => {
+    if (favourites) {
+        localStorage.setItem('favExercises', JSON.stringify(favourites))
+    }
+  }, [favourites])
+
   return (
     <>
       <div className='container grid'>
