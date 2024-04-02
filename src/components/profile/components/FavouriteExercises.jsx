@@ -1,4 +1,5 @@
-function FavouriteExercises() {
+function FavouriteExercises({ favourites }) {
+    console.log(favourites)
 
     return (
         <section id='fourth' className='profile--favourites grid'>

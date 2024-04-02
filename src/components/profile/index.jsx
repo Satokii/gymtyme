@@ -86,7 +86,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                     {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'favourites' && 
-                    <FavouriteExercises />}
+                    <FavouriteExercises favourites={favourites} />}
                 </div>
             </div>
         </section>
