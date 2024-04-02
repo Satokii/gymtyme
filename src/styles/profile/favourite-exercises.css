@@ -15,7 +15,6 @@
     justify-content: center;
     padding: 30px 60px;
     text-align: center;
-
 }
 
 .profile--favourites-headers,
@@ -24,8 +23,8 @@
     gap: 50px;
 }
 
-
 .profile--favourites-headers {
+    align-items: center;
     text-decoration: underline;
     color: #ffbf00;
     margin-bottom: 10px;
@@ -44,7 +43,7 @@
     background-color: #4CAF50;
     color: white;
     font-size: 16px;
-    border: 2px solid #4CAF50;
+    border: 1px solid #4CAF50;
     border-radius: 25px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -59,4 +58,26 @@
 
 .profile--favourites-add-btn:active {
     transform: translateY(2px);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .profile--favourites-content {
+        padding: 20px 0;
+    }
+    .profile--favourites-headers,
+    .profile--favourites-exercises  {
+        grid-template-columns: 1fr repeat(2, 70px) 1fr 120px;
+        gap: 30px;
+    }   
+    .profile--favourites-headers {
+        font-size: 20px;
+    }
+    .profile--favourites-exercises {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+    .profile--favourites-add-btn {
+        padding: 8px 10px;
+    }
 }
