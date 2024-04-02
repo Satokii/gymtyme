@@ -17,19 +17,20 @@ import './styles/btn-rotation.css'
 function App() {
 
   const retrievedWorkouts = JSON.parse(localStorage.getItem('savedWorkouts')) || []
+  const retrievedFavExercises = JSON.parse(localStorage.getItem('favExercises')) || []
   const location = useLocation()
   const isHome = location.pathname === '/';
 
   const [exercises, setExercises] = useState(ExerciseData)
   const [newWorkout, setNewWorkout] = useState([])
-  const [favourites, setFavourites] = useState([])
+  const [favourites, setFavourites] = useState(retrievedFavExercises)
   const [currentWorkout, setCurrentWorkout] = useState([])
   const [allWorkouts, setAllWorkouts] = useState(retrievedWorkouts)
   const [showNewWorkout, setShowNewWorkout] = useState(false)
   const [showCurrentWorkout, setShowCurrentWorkout] = useState(false)
   const [toggleShow, setToggleShow] = useState(null)
   const [showPage, setShowPage] = useState(null)
-
+  
   useEffect(() => {
     if (favourites) {
         localStorage.setItem('favExercises', JSON.stringify(favourites))

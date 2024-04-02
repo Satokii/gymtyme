@@ -5,7 +5,7 @@ function FavouriteExercises({ favourites }) {
 
     return (
         <section className='profile--favourites grid'>
-            
+            <h2>Favourite Exercises</h2>
         </section>
     )
 }
