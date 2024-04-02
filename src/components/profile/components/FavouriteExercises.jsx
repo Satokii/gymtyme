@@ -25,7 +25,7 @@ function FavouriteExercises({ favourites, newWorkout, setNewWorkout }) {
                         <p>{exercise.reps}</p>
                         <p>{exercise.sets}</p>
                         <p>{exercise.group}</p>
-                        <button onClick={() => addToWorkout(exercise)}>Add</button>
+                        <button className='profile--favourites-add-btn' onClick={() => addToWorkout(exercise)}>Add</button>
                     </div>
                 ))}
             </div>
