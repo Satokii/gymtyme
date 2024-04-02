@@ -1,0 +1,8 @@
+/* FAVOURITES */
+.profile--favourites {
+    background-color: red;
+    padding-top: 50px;
+    font-size: 22px;
+    justify-items: center;
+    text-align: center;
+}
