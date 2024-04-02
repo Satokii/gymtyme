@@ -1,6 +1,12 @@
 import '../../../styles/profile/favourite-exercises.css'
 
-function FavouriteExercises({ favourites }) {
+function FavouriteExercises({ favourites, newWorkout, setNewWorkout }) {
+
+    function addToWorkout(exercise) {
+        const updatedExercise = {...exercise, id: `${exercise.name.split(" ").join("-")}-${Math.random()}`}
+
+        setNewWorkout([...newWorkout, updatedExercise]);
+    }
 
     return (
         <section className='profile--favourites grid'>
@@ -19,7 +25,7 @@ function FavouriteExercises({ favourites }) {
                         <p>{exercise.reps}</p>
                         <p>{exercise.sets}</p>
                         <p>{exercise.group}</p>
-                        <p>Add</p>
+                        <p onClick={() => addToWorkout(exercise)}>Add</p>
                     </div>
                 ))}
             </div>
