@@ -108,3 +108,21 @@
         padding: 6px 10px;
     }
 }
+
+@media screen and (max-width: 625px) {
+    .profile--favourites-headers,
+    .profile--favourites-exercises  {
+        grid-template-columns: 1fr repeat(2, 50px) 1fr 80px;
+        gap: 10px;
+    }   
+    .profile--favourites-headers {
+        font-size: 16px;
+    }
+    .profile--favourites-exercises {
+        font-size: 13px;
+    }
+    .profile--favourites-add-btn {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
