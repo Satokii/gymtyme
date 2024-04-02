@@ -3,6 +3,7 @@ import ProfilePage from './components/ProfilePage'
 import NewWorkout from '../workouts/components/NewWorkout'
 import CurrentWorkout from '../workouts/components/CurrentWorkout'
 import AllWorkouts from '../workouts/components/AllWorkouts'
+import FavouriteExercises from './components/FavouriteExercises'
 import '../../styles/profile/profile.css'
 
 
@@ -85,9 +86,7 @@ function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout,
                     {showPage === 'current' && <CurrentWorkout currentWorkout={currentWorkout} setCurrentWorkout={setCurrentWorkout} showCurrentWorkout={showCurrentWorkout} setShowCurrentWorkout={setShowCurrentWorkout} allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'completed' && <AllWorkouts allWorkouts={allWorkouts} setAllWorkouts={setAllWorkouts} />}
                     {showPage === 'favourites' && 
-                    <section id='fourth' className='profile--favourites grid'>
-                        <h3>🚧🚧👷🚧🚧 <br /> Favourites tab still under construction <br /> 🚧🚧👷🚧🚧</h3>
-                    </section>}
+                    <FavouriteExercises />}
                 </div>
             </div>
         </section>
