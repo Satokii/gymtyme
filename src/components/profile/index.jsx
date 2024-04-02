@@ -6,7 +6,7 @@ import AllWorkouts from '../workouts/components/AllWorkouts'
 import '../../styles/profile/profile.css'
 
 
-function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts, showPage, setShowPage }) {
+function Profile({ newWorkout, setNewWorkout, currentWorkout, setCurrentWorkout, showNewWorkout, setShowNewWorkout, showCurrentWorkout, setShowCurrentWorkout, allWorkouts, setAllWorkouts, showPage, setShowPage, favourites }) {
     
     const INITIAL_NAV_STATE = [
         {
