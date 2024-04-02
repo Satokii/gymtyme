@@ -1,9 +1,40 @@
 /* FAVOURITES */
 .profile--favourites {
-    /* background-color: red; */
-    /* padding-top: 50px; */
-    height: 100vh;
-    font-size: 22px;
-    justify-items: center;
+    grid-template-rows: 70px auto;
+    gap: 20px;
+    padding: 50px;
+}
+
+.profile--favourites-header {
     text-align: center;
+    font-size: 36px;
+}
+
+.profile--favourites-content {
+    place-self: center;
+    justify-content: center;
+    border: solid 1px rgb(81, 80, 80);
+    padding: 30px 60px;
+    text-align: center;
+
+}
+
+.profile--favourites-headers,
+.profile--favourites-exercises  {
+    grid-template-columns: 1fr repeat(2, 100px) 1fr 200px;
+    gap: 50px;
+}
+
+
+.profile--favourites-headers {
+    text-decoration: underline;
+    color: #ffbf00;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.profile--favourites-exercises {
+    font-size: 18px;
+    border-bottom: solid 1px black;
+    padding: 20px 0;
 }
