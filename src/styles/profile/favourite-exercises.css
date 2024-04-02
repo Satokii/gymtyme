@@ -128,10 +128,13 @@
 }
 
 @media screen and (max-width: 550px) {
+    .profile--favourites {
+        padding: 30px 10px;
+    }
     .profile--favourites-headers,
     .profile--favourites-exercises  {
         grid-template-columns: 1fr repeat(2, 50px) 1fr 70px;
-        gap: 5px;
+        gap: 10px;
     }   
     .profile--favourites-headers {
         font-size: 14px;
@@ -143,5 +146,23 @@
         font-size: 12px;
         padding: 5px 15px;
         place-self: center;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .profile--favourites-headers,
+    .profile--favourites-exercises  {
+        grid-template-columns: 1fr repeat(2, 50px) 1fr 60px;
+        gap: 5px;
+    }   
+    .profile--favourites-headers {
+        font-size: 12px;
+    }
+    .profile--favourites-exercises {
+        font-size: 11px;
+    }
+    .profile--favourites-add-btn {
+        font-size: 11px;
+        padding: 4px 14px;
     }
 }
