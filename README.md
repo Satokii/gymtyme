@@ -40,3 +40,7 @@ Click [here](https://gymtyme.netlify.app/) to see the deployed app.
 ### Exercises
 <img src = https://github.com/Satokii/spotify-clone/assets/125318469/9356da7c-f689-4088-b98a-dc3db16a81ff width = 90% >
 <br/>
+
+### Profile
+<img src = https://github.com/Satokii/gymtyme/assets/125318469/c5a06949-2115-4d81-9865-fdee8ccd7028 width = 90% >
+<br/>
