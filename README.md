@@ -32,3 +32,7 @@ Click [here](https://gymtyme.netlify.app/) to see the deployed app.
 ### Current Workout Page
 <img src = https://github.com/Satokii/gymtyme/assets/125318469/998620d2-c47d-44fa-ae52-6ec3b9b7e20b width = 90% >
 <br/>
+
+### Completed Workout Page
+<img src = https://github.com/Satokii/gymtyme/assets/125318469/051a7d0b-b6e0-416c-a0d5-7194eea8571f width = 90% >
+<br/>
