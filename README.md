@@ -24,3 +24,7 @@ Click [here](https://gymtyme.netlify.app/) to see the deployed app.
 ### Home Page
 <img src = https://github.com/Satokii/gymtyme/assets/125318469/b4f156f0-2b11-49a1-895c-be8866969228 width = 90% >
 <br/>
+
+### Add Exercise Form
+<img src = https://github.com/Satokii/gymtyme/assets/125318469/10054e27-63b4-495a-8bd6-dba9ecdc9f98 width = 90% >
+<br/>
