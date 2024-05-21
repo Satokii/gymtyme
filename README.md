@@ -29,10 +29,14 @@ Click [here](https://gymtyme.netlify.app/) to see the deployed app.
 <img src = https://github.com/Satokii/gymtyme/assets/125318469/10054e27-63b4-495a-8bd6-dba9ecdc9f98 width = 90% >
 <br/>
 
-### Current Workout Page
+### Current Workout
 <img src = https://github.com/Satokii/gymtyme/assets/125318469/998620d2-c47d-44fa-ae52-6ec3b9b7e20b width = 90% >
 <br/>
 
-### Completed Workout Page
+### Completed Workout
 <img src = https://github.com/Satokii/gymtyme/assets/125318469/051a7d0b-b6e0-416c-a0d5-7194eea8571f width = 90% >
+<br/>
+
+### Exercises
+<img src = https://github.com/Satokii/spotify-clone/assets/125318469/9356da7c-f689-4088-b98a-dc3db16a81ff width = 90% >
 <br/>
