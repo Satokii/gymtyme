@@ -14,3 +14,13 @@ Click [here](https://gymtyme.netlify.app/) to see the deployed app.
 - Clone the forked repository to your local machine
 - In the root directory, run `npm ci` to install dependencies
 - Finally, use `npm run dev` to run the application in your browser
+
+## Image Gallery
+
+### Welcome Page
+<img src = https://github.com/Satokii/gymtyme/assets/125318469/bbcbaf62-2b56-431e-8d9f-42d55a90903e width = 90% >
+<br/>
+
+### Home Page
+<img src = https://github.com/Satokii/gymtyme/assets/125318469/b4f156f0-2b11-49a1-895c-be8866969228 width = 90% >
+<br/>
