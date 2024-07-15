@@ -16,6 +16,8 @@
 .workouts-header {
     font-size: 60px;
     opacity: 0;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
     animation: 1s ease 0.2s forwards fade-in;
 }
 
