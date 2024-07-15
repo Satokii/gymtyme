@@ -5,5 +5,5 @@
 /* CONTAINER */
 .container {
     grid-template-rows: minmax(100px, auto) 1fr 50px;
-    background: linear-gradient(#1d1231, #411960);
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
