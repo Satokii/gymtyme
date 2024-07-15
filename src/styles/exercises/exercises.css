@@ -23,6 +23,8 @@
     height: 80px;
     margin-bottom: 10px;
     opacity: 0;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
     animation: 1s ease 0.4s forwards fade-in;
 }
 
