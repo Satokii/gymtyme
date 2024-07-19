@@ -60,10 +60,12 @@
       font-size: 60px;
       gap: 100px;
     }
-    .home-cover-menu > p > span {
-      text-underline-offset: 14px;
+    .click-to-start {
+        font-size: 20px;
+        padding: 8px 30px;
     }
   }
+
 
   @media screen and (max-width: 768px) {
     .home-cover-menu {
