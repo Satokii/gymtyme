@@ -46,7 +46,7 @@
 .click-to-start:hover {
     cursor: pointer;
     color: #07bd07;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5), 0 0 20px rgba(3, 233, 244, 0.3), 0 0 30px rgba(3, 233, 244, 0.2);
     transform: scale(1.05);
 }
 
