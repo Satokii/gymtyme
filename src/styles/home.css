@@ -78,16 +78,6 @@
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1024px) {
-  .home-cover-menu {
-    font-size: 60px;
-    gap: 100px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 14px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .home-what-to-do-header {
     font-size: 50px;
@@ -95,13 +85,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .home-cover-menu {
-    font-size: 58px;
-    gap: 70px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 12px;
-  }
   .content {
     grid-template-rows: auto repeat(2, auto);
   }
@@ -110,23 +93,7 @@
   }
 }
 
-@media screen and (max-width: 676px) {
-  .home-cover-menu {
-    font-size: 52px;
-    gap: 60px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 10px;
-  }
-}
-
 @media screen and (max-width: 600px) {
-  .home-cover-menu {
-    font-size: 46px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 9px;
-  }
   .home-what-to-do-header {
     font-size: 30px;
   }
@@ -142,24 +109,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
-  .home-cover-menu {
-    font-size: 40px;
-    gap: 50px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 9px;
-  }
-}
-
 @media screen and (max-width: 470px) {
-  .home-cover-menu {
-    font-size: 30px;
-    gap: 70px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 7px;
-  }
   .content {
     padding: 30px 20px;
   }
@@ -196,12 +146,3 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .home-cover-menu {
-    font-size: 24px;
-    gap: 50px;
-  }
-  .home-cover-menu > p > span {
-    text-underline-offset: 5px;
-  }
-}
