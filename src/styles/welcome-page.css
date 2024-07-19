@@ -50,6 +50,9 @@
     transform: scale(1.05);
 }
 
+.click-to-start:active {
+    transform: scale(0.95);
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1024px) {
