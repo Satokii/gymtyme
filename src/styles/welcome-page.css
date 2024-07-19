@@ -104,15 +104,19 @@
     }
   }
 
-  @media screen and (max-width: 470px) {
+  @media screen and (max-width: 480px) {
     .home-cover-menu {
-      font-size: 30px;
-      gap: 70px;
+        gap: 40px;
+        font-size: 35px;
+    }
+    .click-to-start {
+        font-size: 14px;
+        padding: 6px 15px;
     }
     .home-cover-menu > p > span {
-      text-underline-offset: 7px;
+        text-underline-offset: 10px;
     }
-  }
+}
 
   @media screen and (max-width: 320px) {
     .home-cover-menu {
