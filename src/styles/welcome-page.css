@@ -103,17 +103,7 @@
       text-underline-offset: 8px;
     }
   }
-  
-  @media screen and (max-width: 540px) {
-    .home-cover-menu {
-      font-size: 40px;
-      gap: 50px;
-    }
-    .home-cover-menu > p > span {
-      text-underline-offset: 9px;
-    }
-  }
-  
+
   @media screen and (max-width: 470px) {
     .home-cover-menu {
       font-size: 30px;
