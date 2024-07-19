@@ -83,20 +83,24 @@
   
   @media screen and (max-width: 676px) {
     .home-cover-menu {
-      font-size: 52px;
+      font-size: 50px;
       gap: 60px;
     }
     .home-cover-menu > p > span {
-      text-underline-offset: 10px;
+      text-underline-offset: 9px;
     }
   }
   
   @media screen and (max-width: 600px) {
     .home-cover-menu {
-      font-size: 46px;
+        font-size: 40px;
+    }
+    .click-to-start {
+        font-size: 16px;
+        padding: 6px 20px;
     }
     .home-cover-menu > p > span {
-      text-underline-offset: 9px;
+      text-underline-offset: 8px;
     }
   }
   
