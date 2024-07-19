@@ -25,7 +25,7 @@
 
 .home-cover-menu > p > span {
     text-decoration: underline #07bd07;
-    text-underline-offset: 18px;
+    text-underline-offset: 12px;
     text-decoration-skip-ink: none;
     font-size: 0.8em;
 }
@@ -69,11 +69,15 @@
 
   @media screen and (max-width: 768px) {
     .home-cover-menu {
-      font-size: 58px;
-      gap: 70px;
+        gap: 80px;
+        font-size: 50px;
     }
     .home-cover-menu > p > span {
-      text-underline-offset: 12px;
+      text-underline-offset: 8px;
+    }
+    .click-to-start {
+        font-size: 18px;
+        padding: 8px 25px;
     }
   }
   
