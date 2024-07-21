@@ -25,10 +25,11 @@
 .header-profile {
     height: 60px;
     width: 60px;
-    border: solid 1px green;
-    background-color: green;
+    border: solid 1px #28a745;
     border-radius: 9999px;
     place-content: center;
+    background-color: #28a745;
+    transition: background-color 0.3s ease;
 }
 
 .header-profile:hover {
