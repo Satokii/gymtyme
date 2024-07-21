@@ -34,8 +34,8 @@
 
 .header-profile:hover {
   cursor: pointer;
-  background-color: darkgreen;
-  box-shadow: 0 0 3px white, 0 0 10px white;
+  background-color: #218838;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* NAV LINKS */
