@@ -49,6 +49,7 @@
   font-weight: bold;
   color: white;
   line-height: normal;
+  transition: all 0.3s ease;
 }
 
 .create-new-workout-btn {
