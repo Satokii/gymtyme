@@ -66,7 +66,7 @@
 
 .button-options button:hover {
   cursor: pointer;
-  box-shadow: 0 0 2px white, 0 0 10px white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .button-options button:active {
