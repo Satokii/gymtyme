@@ -26,13 +26,15 @@
 }
 
 .add-exercise-btn, .see-example-exercises-btn {
-    padding: 3px 10px;
     color: white;
+    padding: 10px 20px;
     background-color: #11032a;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
-    box-shadow: 0 0 1px white, 0 0 3px white;
     border-radius: 5px;
+    background-color: #2d2f31;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .add-exercise-btn:hover, .see-example-exercises-btn:hover {
