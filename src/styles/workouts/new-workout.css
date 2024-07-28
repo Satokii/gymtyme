@@ -49,12 +49,12 @@
 }
 
 /* WORKOUT TABLE */
-table, th, td {
+/* table, th, td {
   border: solid 1px white;
   font-size: 20px;
   height: fit-content;
   line-height: normal;
-}
+} */
 
 table {
     border-spacing: 0;
