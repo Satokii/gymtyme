@@ -40,7 +40,8 @@
 .add-exercise-btn:hover, .see-example-exercises-btn:hover {
     cursor: pointer;
     color: #07bd07;
-    box-shadow: 0 0 2px #14072a, 0 0 4px white;
+    background-color: #3e4145;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .add-exercise-btn:active, .see-example-exercises-btn:active {
