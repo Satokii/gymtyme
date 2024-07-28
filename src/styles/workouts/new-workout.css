@@ -67,18 +67,16 @@ table {
     overflow: hidden;
 }
 
+th, td {
+
+}
+
 th {
     background-color: dodgerblue;
 }
 
 th:first-child {
     text-align: start;
-}
-
-th, td {
-    padding: 5px 10px;
-    border-top-width: 0;
-    border-left-width: 0;
 }
 
 th:last-child, td:last-child {
