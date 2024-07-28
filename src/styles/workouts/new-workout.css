@@ -64,6 +64,7 @@ table {
     border-collapse: collapse;
     background-color: #2d2f31;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 th {
