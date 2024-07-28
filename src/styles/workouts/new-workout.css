@@ -61,6 +61,8 @@ table {
     min-width: 400px;
     margin-top: 20px;
     width: 100%;
+    border-collapse: collapse;
+    background-color: #2d2f31;
 }
 
 th {
