@@ -63,6 +63,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     background-color: #2d2f31;
+    border-radius: 10px;
 }
 
 th {
