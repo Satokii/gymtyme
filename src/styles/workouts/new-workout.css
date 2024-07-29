@@ -49,13 +49,6 @@
 }
 
 /* WORKOUT TABLE */
-/* table, th, td {
-  border: solid 1px white;
-  font-size: 20px;
-  height: fit-content;
-  line-height: normal;
-} */
-
 table {
     border-spacing: 0;
     min-width: 400px;
@@ -77,18 +70,6 @@ th, td {
 th {
     background-color: #3e4145;
 }
-
-/* th:first-child {
-    text-align: start;
-} */
-
-/* th:last-child, td:last-child {
-    border-right-width: 0;
-}
-   */
-/* tr:last-child td {
-    border-bottom-width: 0;
-} */
 
 td:nth-last-child(-n + 4) {
     text-align: center;
