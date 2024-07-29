@@ -78,17 +78,17 @@ th {
     background-color: #3e4145;
 }
 
-th:first-child {
+/* th:first-child {
     text-align: start;
-}
+} */
 
-th:last-child, td:last-child {
+/* th:last-child, td:last-child {
     border-right-width: 0;
 }
-  
-tr:last-child td {
+   */
+/* tr:last-child td {
     border-bottom-width: 0;
-}
+} */
 
 td:nth-last-child(-n + 4) {
     text-align: center;
