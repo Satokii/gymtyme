@@ -86,11 +86,11 @@ td:nth-last-child(-n + 4) {
     color: white;
     font-size: 22px;
     padding: 3px 10px;
-    background-color: #11032a;
     border: none;
-    box-shadow: 0 0 1px white, 0 0 3px white;
-    border-radius: 10px;
-    transition: 0.3s ease;
+    background-color: #00bfff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .confirm-workout-btn:hover {
