@@ -95,8 +95,8 @@ td:nth-last-child(-n + 4) {
 
 .confirm-workout-btn:hover {
     cursor: pointer;
-    color: orange;
-    box-shadow: 0 0 2px #14072a, 0 0 4px white;
+    background-color: #00a2d1;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .confirm-workout-btn:active {
