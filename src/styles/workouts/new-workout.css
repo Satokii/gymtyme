@@ -108,7 +108,7 @@ td:nth-last-child(-n + 4) {
     background: rgba(0,0,0,.5);
     padding: 30px 50px;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     place-content: center;
 }
