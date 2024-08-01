@@ -115,6 +115,7 @@ td:nth-last-child(-n + 4) {
 
 .add-exercise-form-container > h3 {
     font-size: 28px;
+    color: #00d4ff;
     text-decoration: underline 2px;
     text-underline-offset: 4px;
     margin-bottom: 30px;
