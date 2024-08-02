@@ -129,6 +129,7 @@ td:nth-last-child(-n + 4) {
 
 .new-workout-form input, form label {
     display: block;
+    width: 100%;
 }
 
 .add-exercise-input-container {
