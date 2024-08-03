@@ -178,6 +178,7 @@ td:nth-last-child(-n + 4) {
 
 .add-exercise-submit-btn {
     color: #03ac03;
+    background-color: rgba(3, 172, 3, 0.1);
 }
 
 .cancel-add-exercise-btn {
