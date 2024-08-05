@@ -182,8 +182,9 @@ td:nth-last-child(-n + 4) {
 }
 
 .cancel-add-exercise-btn {
-    color: #F72119;
+    color: #f72119;
     margin-top: 10px;
+    background-color: rgba(247, 33, 25, 0.1);
 }
 
 .add-exercise-submit-btn:hover, .cancel-add-exercise-btn:hover {
