@@ -198,7 +198,7 @@ td:nth-last-child(-n + 4) {
 
 .cancel-add-exercise-btn:hover {
     background-color: #F72119;
-    box-shadow: 0 0 10px #F71980;
+    box-shadow: 0 4px 10px rgba(247, 33, 25, 0.4);
 }
 
 .add-exercise-submit-btn:active, .cancel-add-exercise-btn:active {
