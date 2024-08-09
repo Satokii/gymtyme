@@ -16,8 +16,8 @@
 .all-workouts--tables-container {
     justify-content: center;
     align-content: start;
-    margin-top: 50px;
-    gap: 50px;
+    margin-top: 30px;
+    gap: 30px;
 }
 
 .all-workouts--tables {
