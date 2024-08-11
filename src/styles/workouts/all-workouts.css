@@ -34,7 +34,7 @@
 .all-workouts--delete-btn {
     justify-self: start;
     cursor: pointer;
-    border: solid 1px white;
+    border: none;
     color: white;
     height: fit-content;
     padding: 3px 10px;
