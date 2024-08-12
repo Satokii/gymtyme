@@ -47,7 +47,6 @@
 }
 
 .all-workouts--delete-btn:hover {
-    color: #fff;
     background-color: #f44336;
     box-shadow: 0 5px 6px rgba(243, 67, 54, 0.5);
 }
