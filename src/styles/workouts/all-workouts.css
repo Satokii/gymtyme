@@ -1,152 +1,151 @@
 /* ALL WORKOUTS */
 .all-workouts--container {
-    grid-template-rows: 40px 1fr;
-    padding: 50px;
-    gap: 10px;
+  grid-template-rows: 40px 1fr;
+  padding: 50px;
+  gap: 10px;
 }
 
 .all-workouts--container h3 {
-    text-align: center;
-    font-size: 36px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
-    letter-spacing: 1px;
+  text-align: center;
+  font-size: 36px;
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+  letter-spacing: 1px;
 }
 
 .all-workouts--tables-container {
-    justify-content: center;
-    align-content: start;
-    margin-top: 30px;
-    gap: 30px;
+  justify-content: center;
+  align-content: start;
+  margin-top: 30px;
+  gap: 30px;
 }
 
 .all-workouts--tables {
-    min-width: 400px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  min-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .all-workouts--tables td:first-child {
-    text-align: start;
-    width: 300px;
+  text-align: start;
+  width: 300px;
 }
 
 /* DELETE WORKOUT BUTTON */
 .all-workouts--delete-btn {
-    justify-self: start;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    height: fit-content;
-    padding: 8px 15px;
-    margin-top: 5px;
-    font-size: 18px;
-    background-color: #d32f2f;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+  justify-self: start;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: fit-content;
+  padding: 8px 15px;
+  margin-top: 5px;
+  font-size: 18px;
+  background-color: #d32f2f;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .all-workouts--delete-btn:hover {
-    background-color: #f44336;
-    box-shadow: 0 5px 6px rgba(243, 67, 54, 0.5);
+  background-color: #f44336;
+  box-shadow: 0 5px 6px rgba(243, 67, 54, 0.5);
 }
 
 .all-workouts--delete-btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
-
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-    .all-workouts--container  {
-        padding: 40px 20px;
-    }
-    .all-workouts--container > h3 {
-        font-size: 36px;
-    }
-    .all-workouts--tables-container {
-        margin-top: 30px;
-        gap: 30px;
-    }
-    .all-workouts--tables td:first-child {
-        width: 250px;
-    }
+  .all-workouts--container {
+    padding: 40px 20px;
+  }
+  .all-workouts--container > h3 {
+    font-size: 36px;
+  }
+  .all-workouts--tables-container {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .all-workouts--tables td:first-child {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .all-workouts--tables {
-        min-width: 350px;
-    }
-    .all-workouts--tables td:first-child {
-        width: 220px;
-    }
+  .all-workouts--tables {
+    min-width: 350px;
+  }
+  .all-workouts--tables td:first-child {
+    width: 220px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .all-workouts--container  {
-        padding: 30px 10px;
-    }
-    .all-workouts--tables {
-        min-width: 300px;
-    }
-    .all-workouts--delete-btn {
-        padding: 2px 5px;
-        font-size: 14px;
-        margin-top: 3px;
-    }
-    .all-workouts--tables td:first-child {
-        width: 200px;
-    }
+  .all-workouts--container {
+    padding: 30px 10px;
+  }
+  .all-workouts--tables {
+    min-width: 300px;
+  }
+  .all-workouts--delete-btn {
+    padding: 2px 5px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  .all-workouts--tables td:first-child {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 460px) {
-    .all-workouts--container h3 {
-        font-size: 32px;
-    }
+  .all-workouts--container h3 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 426px) {
-    .all-workouts--container h3 {
-        font-size: 30px;
-    }
-    .all-workouts--tables-container {
-        margin-top: 20px;
-        gap: 20px;
-    }
-    .all-workouts--tables td:first-child {
-        width: 150px;
-    }
+  .all-workouts--container h3 {
+    font-size: 30px;
+  }
+  .all-workouts--tables-container {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .all-workouts--tables td:first-child {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 376px) {
-    .all-workouts--container h3 {
-        font-size: 26px;
-    }
-    .all-workouts--tables {
-        min-width: 250px;
-    }
-    .all-workouts--tables-container {
-        margin-top: 10px;
-    }
-    .all-workouts--delete-btn {
-        padding: 1px 4px;
-        font-size: 12px;
-        margin-top: 2px;
-    }
+  .all-workouts--container h3 {
+    font-size: 26px;
+  }
+  .all-workouts--tables {
+    min-width: 250px;
+  }
+  .all-workouts--tables-container {
+    margin-top: 10px;
+  }
+  .all-workouts--delete-btn {
+    padding: 1px 4px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .all-workouts--container h3 {
-        font-size: 24px;
-    }
-    .all-workouts--tables {
-        min-width: 220px;
-    }
-    .all-workouts--tables-container {
-        margin-top: 0;
-    }
-    .all-workouts--delete-btn {
-        padding: 1px 2px;
-        font-size: 11px;
-    }
+  .all-workouts--container h3 {
+    font-size: 24px;
+  }
+  .all-workouts--tables {
+    min-width: 220px;
+  }
+  .all-workouts--tables-container {
+    margin-top: 0;
+  }
+  .all-workouts--delete-btn {
+    padding: 1px 2px;
+    font-size: 11px;
+  }
 }
