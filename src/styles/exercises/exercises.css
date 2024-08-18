@@ -16,6 +16,7 @@
   height: 80px;
   opacity: 0;
   animation: 1s ease 0.2s forwards fade-in;
+  text-shadow: 0 0 8px rgba(201, 214, 255, 0.8);
 }
 
 .exercises-header {
