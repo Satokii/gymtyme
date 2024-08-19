@@ -46,6 +46,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
   animation: 1s ease 0.3s forwards fade-in;
+  transition: 0.3s ease;
 }
 
 .workout-preview-workout-btn:hover {
