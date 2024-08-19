@@ -60,6 +60,7 @@
 }
 
 .workout-preview-table {
+  padding: 0 10px;
   opacity: 0;
   animation: 1s ease 0.3s forwards fade-in;
 }
