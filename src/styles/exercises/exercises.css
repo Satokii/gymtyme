@@ -52,7 +52,7 @@
 .workout-preview-workout-btn:hover {
   cursor: pointer;
   color: #07bd07;
-  box-shadow: 0 6px 15px rgba(76, 225, 225, 0.6);
+  box-shadow: 0 2px 10px rgba(76, 225, 225, 0.6);
 }
 
 .workout-preview-workout-btn:active {
