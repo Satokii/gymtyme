@@ -123,7 +123,7 @@
   color: white;
   border: none;
   background-color: #2e1e5e;
-  box-shadow: 0 0 1px white, 0 0 3px white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .add-btn:hover {
