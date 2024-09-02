@@ -129,7 +129,7 @@
 .add-btn:hover {
   cursor: pointer;
   color: #07bd07;
-  box-shadow: 0 0 2px #14072a, 0 0 4px white;
+  box-shadow: 0 0 8px #07bd07;
 }
 
 .minus-btn:hover {
