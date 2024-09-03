@@ -135,7 +135,7 @@
 .minus-btn:hover {
   cursor: pointer;
   color: red;
-  box-shadow: 0 0 2px #14072a, 0 0 4px white;
+  box-shadow: 0 0 8px red;
 }
 
 .add-btn:active,
