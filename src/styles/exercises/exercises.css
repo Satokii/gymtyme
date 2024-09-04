@@ -151,7 +151,7 @@
 
 .exercise-btn-container > button {
   cursor: pointer;
-  padding: 5px;
+  padding: 10px 15px;
   border-radius: 10px;
   border: none;
   color: white;
