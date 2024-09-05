@@ -152,7 +152,7 @@
 .exercise-btn-container > button {
   cursor: pointer;
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: 25px;
   border: none;
   color: white;
   background-color: #11032a;
