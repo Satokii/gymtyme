@@ -157,6 +157,7 @@
   color: white;
   background-color: #2e1e5e;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .add-to-workout-btn:hover {
