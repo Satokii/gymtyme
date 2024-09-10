@@ -167,7 +167,7 @@
 
 .add-to-favourites-btn:hover {
   color: #0080ff;
-  box-shadow: 0 0 2px #14072a, 0 0 4px white;
+  box-shadow: 0 0 4px rgba(0, 128, 255, 0.7);
 }
 
 .add-to-workout-btn:active,
