@@ -183,16 +183,8 @@
   height: 50px;
   border: none;
   border-radius: 9999px;
-  background: linear-gradient(
-    to right,
-    darkred,
-    red,
-    darkred,
-    darkred,
-    red,
-    darkred
-  );
-  background-size: 250%;
+  background: linear-gradient(135deg, darkred, red);
+  background-size: 200%;
   color: white;
   transition-duration: 1s;
 }
