@@ -191,9 +191,7 @@
 
 .reset-btn:hover {
   cursor: pointer;
-  background-color: #ff0505;
-  background-position: right;
-  transition-duration: 0.8s;
+  background-position: right center;
 }
 
 .reset-btn:active {
