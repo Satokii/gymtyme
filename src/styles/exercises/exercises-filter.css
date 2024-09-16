@@ -5,8 +5,7 @@
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     opacity: 0;
     animation: 1s ease 0.5s forwards fade-in;
