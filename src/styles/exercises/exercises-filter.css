@@ -9,6 +9,7 @@
     position: relative;
     opacity: 0;
     animation: 1s ease 0.5s forwards fade-in;
+    transition: all 0.3s ease;
 }
 
 .exercises-dropdown-filter-btn:active {
