@@ -18,6 +18,10 @@
     background: linear-gradient(#340a81, #270242);
 }
 
+.exercises-dropdown-filter-btn:hover {
+    background: linear-gradient(135deg, #8033ff, #5e128a);
+}
+
 .exercises-dropdown-filter-list {
     position: absolute;
     z-index: 1;
