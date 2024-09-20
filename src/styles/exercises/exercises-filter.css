@@ -20,7 +20,7 @@
 .exercises-dropdown-filter-btn:active {
     transform: scale(0.95);
     color: #07bd07;
-    background: linear-gradient(#340a81, #270242);
+    background: linear-gradient(135deg, #430b9e, #270242);
 }
 
 .exercises-dropdown-filter-list {
