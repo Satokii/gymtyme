@@ -29,7 +29,7 @@
     width: 250px;
     box-shadow: #0000000d 0px 6px 10px 0px,
     #0000001a 0px 0px 0px 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 1rem;
     background: linear-gradient(#5619c7, #50058a);
 }
