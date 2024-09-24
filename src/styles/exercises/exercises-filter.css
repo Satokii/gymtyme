@@ -30,7 +30,7 @@
     border-radius: 10px;
     margin-top: 1rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(#5619c7, #50058a);
+    background: linear-gradient(135deg, #661de9, #50058a);
 }
 
 .exercises-dropdown-filter-list li {
