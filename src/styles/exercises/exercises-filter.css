@@ -37,6 +37,7 @@
 .exercises-dropdown-filter-list li {
     cursor: pointer;
     padding: 0.8rem 1rem;
+    color: white;
     text-decoration: none;
 }
 
