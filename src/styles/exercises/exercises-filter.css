@@ -44,7 +44,7 @@
 
 .exercises-dropdown-filter-list li:hover {
     background-color: #32024f;
-    color: #07bd07;
+    color: #00e676;
 }
 
 @media screen and (max-width: 768px) {
